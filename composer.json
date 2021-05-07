@@ -1,0 +1,19 @@
+{
+    "name": "htg/htgventasikasa",
+    "description": "Software de ventas online",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+     {
+         "name": "HTG",
+         "email": "jhonydanielsalazar53@gmail.com"
+     }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Libs\\":"libs/",
+            "App\\Controllers\\":"app/controllers/"
+        }
+    },
+    "require": {}
+}
