@@ -1,4 +1,6 @@
 <?php
+namespace App\Controllers;
+use Libs\Controller;
 
 class TestController extends Controller
 {
@@ -27,7 +29,10 @@ class TestController extends Controller
         //array asociativo
         $data=[
             'nombre'=>$nombre,
-        
+            'dato 2'=>'Juaneco',
+            'dato 3'=>56
+
+
         ];
         $this->renderView('test/saludo',$data);
 
@@ -38,14 +43,7 @@ class TestController extends Controller
         $num1 = isset($_POST[0]) ? $_POST[0] : 0;
         $num2 = isset($_POST[1]) ? $_POST[1] : 0;
         $rpta = $num1 + $num2;
-        // require_once '../app/views/test/suma.php';
-        $data=[
-            'num1'=>$num1,
-            'num2'=>$num2,
-            'rpta'=>$rpta,
-
-        ];
-        $this->renderView('test/suma',$data)
+        require_once '../app/views/test/suma.php';
 
         // echo "LA SUMA DE: {$num1} + {$num2} = {$rpta}";
        
@@ -59,15 +57,8 @@ class TestController extends Controller
             $num2 = isset($_POST[1]) ? $_POST[1] : 0;
         
             $rpta = $num1  * $num2;
-
-            $data=[
-                'num1'=>$num1,
-                'num2'=>$num2,
-                'rpta'=>$rpta,
-    
-            ];
-            $this->renderView('test/multi',$data)
-            //    echo "LA MULTI DE: {$num1} * {$num2} = {$rpta}";
+            require_once '../app/views/test/multi.php';
+        //    echo "LA MULTI DE: {$num1} * {$num2} = {$rpta}";
        
     }
 }

@@ -1,4 +1,7 @@
 <?php
+namespace Libs;
+
+use App\Controllers\HomeController;
 
 class Core
 {
@@ -19,7 +22,7 @@ class Core
 
             //Llamamos al controlador predeterminado
             require_once '../app/controllers/homeController.php';
-            (new HomeController())->index();
+            (new \App\Controllers\HomeController())->index();
             return false;
         }
 
@@ -32,7 +35,7 @@ class Core
 
             //Creamos una instancia de dicho controlador
             require_once $path_controller;
-            $controller_name = $url[0] . 'Controller';
+            $controller_name = '\\App\\Controllers\\'. $url[0] . 'Controller';
             $controller = new $controller_name();
             // echo "El cantrolador  {$url[0]} existe";
 
