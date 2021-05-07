@@ -21,11 +21,11 @@
           <form action="<?=URL?>test/suma" method="post">
             <div class="form-group">
                <label for="">Numero 1</label>
-               <input type="text" name="0" id="0"class="form-control"value="<?=$num1?>">
+               <input type="text" name="0" id="0"class="form-control"value="<?='num1'?>">
             </div> 
             <div class="form-group">
                <label for="">Numero 2 </label>
-               <input type="text" name="1" id="1"class="form-control"value="<?=$num2?>">
+               <input type="text" name="1" id="1"class="form-control"value="<?='num2'?>">
             </div> 
             <div class="form-group">
               <button type="submit" class="btn btn-primary">Enviar</button>
