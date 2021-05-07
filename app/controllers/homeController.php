@@ -4,11 +4,14 @@ use Libs\Controller;
 
 class HomeController extends Controller
 {
+    //constructor sirve para cargar el directorio de plantillas y acceder llamando a las vistas
+    public function __construct()
+    {
+        $this->loadDirectoryTemplate('home');
+    }
     public function index()
     {
-        //traer toda la vista con el require_once
-        // require_once '../app/views/home/index.php';
-        $this->renderView('home/index');
+        echo $this->template->render('index');
     }
     
 }

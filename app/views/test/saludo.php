@@ -21,7 +21,7 @@
           <form action="<?=URL?>test/saludo" method="post">
             <div class="form-group">
                <label for="">nombre</label>
-               <input type="text" name="nombre" id="nombre"class="form-control"value="<?=$data['nombre']?>">
+               <input type="text" name="nombre" id="nombre"class="form-control"value="<?=$nombre?>">
             </div> 
             <div class="form-group">
               <button type="submit" class="btn btn-primary">Enviar</button>
@@ -32,7 +32,7 @@
     <br>
           <div class="row">
              <div class="col-sm-8">
-               Respuesta:Hola <label><?=$data['nombre']?></label> <input type="text" class="form-control"value="<?=$data['nombre']?>" disabled>
+               Respuesta:Hola <label><?=$nombre?></label> <input type="text" class="form-control"value="<?=$nombre?>" disabled>
           </div>
           </div>
     </div>

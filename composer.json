@@ -15,5 +15,7 @@
             "App\\Controllers\\":"app/controllers/"
         }
     },
-    "require": {}
+    "require": {
+        "league/plates": "^3.4"
+    }
 }
