@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<?php
+$this->layout('../layouts/layout',['title'=>'HTGVentas| Inicio']);?>
+<!----------------------------------------------------------------------------------->
 
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
+<?php $this->push('styles')?>
+<!--Colocar los links a los archivos css-->
+<?php $this->end()?>
+
+<?php $this->start('contents')?>
+<?php $title_jumbotron ='BIENVENIDO A SUMA'?>
+<?php $text_jumbotron ='LA PAGINA SUMA'?>
+<?php include MAINPATH . 'app/views/layouts/partials/_jumbotron.php' ?>
+
+<div class="container">
       <div class="row">
         <div class="col-sm-8">
-        <h1>SUMA</h1>
+        <h2>SUMA</h2>
         </div>
     </div>
 
@@ -40,5 +42,12 @@
           </div>
           </div>
     </div>
-</body>
-</html>
+  <?php $this->stop()?>
+  <?php $this->push('scripts')?>
+
+
+
+
+
+
+   
