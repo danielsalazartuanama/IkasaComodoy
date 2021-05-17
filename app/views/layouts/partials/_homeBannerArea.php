@@ -4,24 +4,26 @@
                     <div class="col-lg-4">
                         <div class="img-container img-full fix mb-md-30 mb-sm-30">
                             <a href="#">
-                                <img src="assets/img/banner/home3_static6.jpg" alt="">
+                                <img src="<?=URL .'assets/img/banner/home3_static88.jpg'?>"alt="">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="img-container img-full fix mb-md-30 mb-sm-30">
                             <a href="#">
-                                <img src="assets/img/banner/home3_static7.jpg" alt="">
+                                <img src="<?=URL .'assets/img/banner/home3_static881.jpg'?>"  alt="">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="img-container img-full fix mb-md-30 mb-sm-30">
                             <a href="#">
-                                <img src="assets/img/banner/home3_static8.jpg" alt="">
+                                <img src="assets/img/banner/home3_static882.jpg" alt="">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+       

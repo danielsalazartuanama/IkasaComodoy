@@ -7,11 +7,10 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Inicio']);?>
 <?php $this->end()?>
 
 <?php $this->start('contents')?>
-<?php $title_jumbotron ='BIENVENIDO A SUMA'?>
-<?php $text_jumbotron ='LA PAGINA SUMA'?>
-<?php include MAINPATH . 'app/views/layouts/partials/_jumbotron.php' ?>
 
-<div class="container">
+<?php include_once MAINPATH . 'app/views/layouts/partials/_heroSliderStart.php' ?>
+
+<!-- <div class="container">
       <div class="row">
         <div class="col-sm-8">
         <h2>SUMA</h2>
@@ -41,7 +40,7 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Inicio']);?>
                Respuesta:LA SUMA ES <label><?=$rpta?></label> <input type="text" class="form-control"value="<?=$rpta?>" disabled>
           </div>
           </div>
-    </div>
+    </div> -->
   <?php $this->stop()?>
   <?php $this->push('scripts')?>
 

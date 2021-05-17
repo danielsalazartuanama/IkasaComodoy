@@ -5,7 +5,7 @@
                     <div class="col-lg-6">
                         <div class="hot-deals-wrap3 mb-30 mb-md-36 mb-sm-22 mt-xs-28">
                             <div class="section-title-2 d-flex justify-content-between mb-28">
-                                 <h3>hot deals</h3>
+                                 <h3>Las Mejores Ofertas</h3>
                                  <div class="category-append"></div>
                             </div> <!-- section title end -->
                             <div class="deals-carousel-active2 slick-padding slick-arrow-style">
@@ -13,8 +13,8 @@
                                 <div class="product-item fix">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
-                                            <img src="assets/img/product/product-f-1.jpg" class="img-pri" alt="">
-                                            <img src="assets/img/product/product-f-2.jpg" class="img-sec" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-1.jpg'?>" class="img-pri" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-2.jpg'?>" class="img-sec" alt="">
                                         </a>
                                         <div class="product-label">
                                             <span>hot</span>
@@ -48,8 +48,8 @@
                                 <div class="product-item fix">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
-                                            <img src="assets/img/product/product-f-3.jpg" class="img-pri" alt="">
-                                            <img src="assets/img/product/product-f-4.jpg" class="img-sec" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-3.jpg'?>" class="img-pri" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-4.jpg'?>" class="img-sec" alt="">
                                         </a>
                                         <div class="product-label">
                                             <span>hot</span>
@@ -83,8 +83,8 @@
                                 <div class="product-item fix">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
-                                            <img src="assets/img/product/product-f-2.jpg" class="img-pri" alt="">
-                                            <img src="assets/img/product/product-f-1.jpg" class="img-sec" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-5.jpg'?>" class="img-pri" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-6.jpg'?>" class="img-sec" alt="">
                                         </a>
                                         <div class="product-label">
                                             <span>hot</span>
@@ -122,7 +122,7 @@
                     <div class="col-lg-6">
                         <div class="hot-deals-wrap3 mb-30 mb-md-22 mb-sm-22 mt-sm-14">
                             <div class="section-title-2 d-flex justify-content-between mb-28">
-                                 <h3>featured</h3>
+                                 <h3>Destacados</h3>
                                  <div class="category-append"></div>
                             </div> <!-- section title end -->
                             <div class="deals-carousel-active2 slick-padding slick-arrow-style">
@@ -130,8 +130,8 @@
                                 <div class="product-item fix">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
-                                            <img src="assets/img/product/product-s-5.jpg" class="img-pri" alt="">
-                                            <img src="assets/img/product/product-s-6.jpg" class="img-sec" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-7.jpg'?>" class="img-pri" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-8.jpg'?>" class="img-sec" alt="">
                                         </a>
                                         <div class="product-label">
                                             <span>hot</span>
@@ -165,8 +165,8 @@
                                 <div class="product-item fix">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
-                                            <img src="assets/img/product/product-s-3.jpg" class="img-pri" alt="">
-                                            <img src="assets/img/product/product-s-4.jpg" class="img-sec" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-9.jpg'?>" class="img-pri" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-10.jpg'?>" class="img-sec" alt="">
                                         </a>
                                         <div class="product-label">
                                             <span>hot</span>
@@ -200,8 +200,8 @@
                                 <div class="product-item fix">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
-                                            <img src="assets/img/product/product-s-1.jpg" class="img-pri" alt="">
-                                            <img src="assets/img/product/product-s-2.jpg" class="img-sec" alt="">
+                                            <img src="<?=URL .'assets/img/product/product-a-11.jpg'?>" class="img-pri" alt="">
+                                        <img src="<?=URL .'assets/img/product/product-a-12.jpg'?>" class="img-sec" alt="">
                                         </a>
                                         <div class="product-label">
                                             <span>hot</span>

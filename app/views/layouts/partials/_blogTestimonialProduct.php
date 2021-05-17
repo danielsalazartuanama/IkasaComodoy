@@ -12,7 +12,7 @@
                                 <div class="blog-item">
                                     <div class="blog-thumb img-full fix">
                                         <a href="blog-details.html">
-                                            <img src="assets/img/blog/img_blog1.jpg" alt="">
+                                            <img src="<?=URL .'assets/img/blog/img_blog1.jpg'?>" alt="">
                                         </a>
                                     </div>
                                     <div class="blog-content">
@@ -27,7 +27,7 @@
                                 <div class="blog-item">
                                     <div class="blog-thumb img-full fix">
                                         <a href="blog-details.html">
-                                            <img src="assets/img/blog/img_blog2.jpg" alt="">
+                                            <img src="<?=URL .'assets/img/blog/img_blog2.jpg'?>" alt="">
                                         </a>
                                     </div>
                                     <div class="blog-content">
@@ -52,7 +52,7 @@
                             <div class="testimonial-carousel-active slick-dot-style">
                                 <div class="testimonial-item text-center">
                                     <div class="testimonial-thumb">
-                                        <img src="assets/img/testimonial/team_member1.jpg" alt="">
+                                        <img src="<?=URL .'assets/img/testimonial/team_member1.jpg'?>" alt="">
                                     </div>
                                     <div class="testimonial-content">
                                         <h3><a href="#">Elizabeth Taylor</a></h3>
@@ -61,7 +61,7 @@
                                 </div> <!-- end single testimonial item -->
                                 <div class="testimonial-item text-center">
                                     <div class="testimonial-thumb">
-                                        <img src="assets/img/testimonial/team_member2.jpg" alt="">
+                                        <img src="<?=URL .'assets/img/testimonial/team_member2.jpg'?>" alt="">
                                     </div>
                                     <div class="testimonial-content">
                                         <h3><a href="#">Elizabeth Taylor</a></h3>
@@ -70,7 +70,7 @@
                                 </div> <!-- end single testimonial item -->
                                 <div class="testimonial-item text-center">
                                     <div class="testimonial-thumb">
-                                        <img src="assets/img/testimonial/team_member3.jpg" alt="">
+                                        <img src="<?=URL .'assets/img/testimonial/team_member3.jpg'?>" alt="">
                                     </div>
                                     <div class="testimonial-content">
                                         <h3><a href="#">Elizabeth Taylor</a></h3>
@@ -93,7 +93,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-f-1.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-f-1.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -123,7 +123,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-f-2.jpg" alt="">
+                                                <img src=<?=URL .'"assets/img/product/product-f-2.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -153,7 +153,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-f-3.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-f-3.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -183,7 +183,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-f-4.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-f-4.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -213,7 +213,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-1.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-s-1.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -243,7 +243,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-2.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-s-2.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -285,7 +285,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-1.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-s-1.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -315,7 +315,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-2.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-s-2.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -345,7 +345,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-3.jpg" alt="">
+                                                <img src=<?=URL .'"assets/img/product/product-s-3.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -375,7 +375,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-4.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-s-4.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -405,7 +405,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-5.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-s-5.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -435,7 +435,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-6.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-s-6.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">

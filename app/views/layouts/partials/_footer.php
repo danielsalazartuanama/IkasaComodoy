@@ -97,11 +97,11 @@
                                 </div>
                                 <div class="widget-body">
                                     <ul>
-                                        <li><a href="#">computer</a></li>
-                                        <li><a href="#">camera</a></li>
-                                        <li><a href="#">smart phone</a></li>
+                                        <li><a href="#">camas</a></li>
+                                        <li><a href="#">dormitorio</a></li>
+                                        <li><a href="#">sofas</a></li>
                                         <li><a href="#">watch</a></li>
-                                        <li><a href="#">tablet</a></li>
+                                        <li><a href="#">sillon</a></li>
                                     </ul>
                                 </div>
                             </div> <!-- single widget end -->
@@ -119,7 +119,7 @@
                             <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
                         </div>
                         <div class="payment-method-img">
-                            <img src="assets/img/payment.png" alt="">
+                            <img src="<?=URL .'assets/img/payment.png'?>" alt="">
                         </div>
                     </div>
                 </div>

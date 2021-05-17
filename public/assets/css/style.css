@@ -714,7 +714,7 @@ body.modal-open {
 }
 
 .header-top-area .header-call-action a {
-    color: #444444;
+    color: white;
     font-size: 12px;
     display: inline-block;
     padding-right: 20px;
@@ -786,7 +786,7 @@ body.modal-open {
 }
 
 .header-top-area .header-top-right ul li a {
-    color: #444444;
+    color: white;
     font-size: 12px;
     text-transform: capitalize;
 }

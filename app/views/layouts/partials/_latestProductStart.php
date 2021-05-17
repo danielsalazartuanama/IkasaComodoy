@@ -4,7 +4,7 @@
                     <div class="title-icon">
                         <i class="fa fa-flash"></i>
                     </div>
-                    <h3>latest product</h3>
+                    <h3>último producto</h3>
                 </div> <!-- section title end -->
                 <!-- featured category start -->
                 <div class="latest-product-active slick-padding slick-arrow-style">
@@ -12,8 +12,8 @@
                     <div class="product-item fix">
                         <div class="product-thumb">
                             <a href="product-details.html">
-                                <img src="assets/img/product/product-f-1.jpg" class="img-pri" alt="">
-                                <img src="assets/img/product/product-f-2.jpg" class="img-sec" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-1.jpg'?>" class="img-pri" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-2.jpg'?>" class="img-sec" alt="">
                             </a>
                             <div class="product-label">
                                 <span>hot</span>
@@ -47,8 +47,8 @@
                     <div class="product-item fix">
                         <div class="product-thumb">
                             <a href="product-details.html">
-                                <img src="assets/img/product/product-s-1.jpg" class="img-pri" alt="">
-                                <img src="assets/img/product/product-s-2.jpg" class="img-sec" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-5.jpg'?>" class="img-pri" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-3.jpg'?>" class="img-sec" alt="">
                             </a>
                             <div class="product-label">
                                 <span>new</span>
@@ -82,8 +82,8 @@
                     <div class="product-item fix">
                         <div class="product-thumb">
                             <a href="product-details.html">
-                                <img src="assets/img/product/product-f-3.jpg" class="img-pri" alt="">
-                                <img src="assets/img/product/product-f-4.jpg" class="img-sec" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-14.jpg'?>" class="img-pri" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-24.jpg'?>" class="img-sec" alt="">
                             </a>
                             <div class="product-label">
                                 <span>hot</span>
@@ -117,8 +117,8 @@
                     <div class="product-item fix">
                         <div class="product-thumb">
                             <a href="product-details.html">
-                                <img src="assets/img/product/product-b-1.jpg" class="img-pri" alt="">
-                                <img src="assets/img/product/product-b-2.jpg" class="img-sec" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-19.jpg'?>" class="img-pri" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-20.jpg'?>" class="img-sec" alt="">
                             </a>
                             <div class="product-label">
                                 <span>new</span>
@@ -152,8 +152,8 @@
                     <div class="product-item fix">
                         <div class="product-thumb">
                             <a href="product-details.html">
-                                <img src="assets/img/product/product-s-3.jpg" class="img-pri" alt="">
-                                <img src="assets/img/product/product-s-4.jpg" class="img-sec" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-30.jpg'?>" class="img-pri" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-10.jpg'?>" class="img-sec" alt="">
                             </a>
                             <div class="product-label">
                                 <span>new</span>
@@ -187,8 +187,8 @@
                     <div class="product-item fix">
                         <div class="product-thumb">
                             <a href="product-details.html">
-                                <img src="assets/img/product/product-s-5.jpg" class="img-pri" alt="">
-                                <img src="assets/img/product/product-s-6.jpg" class="img-sec" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-23.jpg'?>" class="img-pri" alt="">
+                                <img src="<?=URL .'assets/img/product/product-a-22.jpg'?>" class="img-sec" alt="">
                             </a>
                             <div class="product-label">
                                 <span>new</span>

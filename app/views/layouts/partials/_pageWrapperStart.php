@@ -4,7 +4,7 @@
                     <div class="col-lg-3">
                         <div class="main-sidebar category-wrapper mb-24 mt-4 mt-md-8 mt-sm-8">
                             <div class="section-title-2 d-flex justify-content-between mb-28">
-                                <h3>best seller</h3>
+                                <h3>Mejor Vendido</h3>
                                 <div class="category-append"></div>
                             </div> <!-- section title end -->
                             <div class="category-carousel-active row" data-row="4">
@@ -12,7 +12,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-1.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-a-1.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -42,7 +42,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-2.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-a-2.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -72,7 +72,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-3.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-a-14.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -102,7 +102,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-s-4.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-a-15.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -132,7 +132,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-b-1.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-a-16.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -162,7 +162,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-b-2.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-a-17.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -192,7 +192,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-b-3.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-a-18.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -222,7 +222,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-b-4.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-a-19.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -252,7 +252,7 @@
                                     <div class="category-item">
                                         <div class="category-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-f-1.jpg" alt="">
+                                                <img src="<?=URL .'assets/img/product/product-a-20.jpg'?>" alt="">
                                             </a>
                                         </div>
                                         <div class="category-content">
@@ -287,7 +287,7 @@
                         <div class="banner-statistic pt-6 pb-34">
                             <div class="img-container fix img-full">
                                 <a href="#">
-                                    <img src="assets/img/banner/home3_static5.jpg" alt="">
+                                    <img src="<?=URL .'assets/img/banner/home3_static51.jpg'?>" alt="">
                                 </a>
                             </div>
                         </div>
@@ -300,13 +300,13 @@
                                         <i class="fa fa-flask"></i>
                                     </li>
                                     <li>
-                                        <a class="active" data-toggle="tab" href="#tab_one">featured</a>
+                                        <a class="active" data-toggle="tab" href="#tab_one">Destacados</a>
                                     </li>
                                     <li>
-                                        <a data-toggle="tab" href="#tab_two">new</a>
+                                        <a data-toggle="tab" href="#tab_two">Nuevos</a>
                                     </li>
                                     <li>
-                                        <a data-toggle="tab" href="#tab_three">sale</a>
+                                        <a data-toggle="tab" href="#tab_three">Ventas</a>
                                     </li>
                                 </ul>
                             </div>
@@ -319,8 +319,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-s-1.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-2.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-1.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-2.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -354,8 +354,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-s-3.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-4.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-14.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-15.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -389,8 +389,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-s-5.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-6.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-16.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-17.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -424,8 +424,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-s-6.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-5.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-18.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-19.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -459,8 +459,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-s-2.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-3.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-20.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-21.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -494,8 +494,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-s-4.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-6.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-5.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-7.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -535,8 +535,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-f-1.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-f-2.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-8.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-9.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -570,8 +570,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-f-3.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-f-4.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-21.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-22.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -605,8 +605,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-f-2.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-4.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-23.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-24.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -640,8 +640,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-f-4.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-2.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-25.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-26.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -675,8 +675,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-f-2.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-f-3.jpg" class="img-sec" alt="">
+                                                    <img src="assets/img/product/product-a-27.jpg" class="img-pri" alt="">
+                                                    <img src="assets/img/product/product-a-28.jpg" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -710,8 +710,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-b-1.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-b-2.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-29.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-30.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -751,8 +751,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-f-1.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-f-2.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-10.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-20.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -786,8 +786,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-f-3.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-f-4.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-5.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-4.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -821,8 +821,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-b-2.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-b-4.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-8.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-7.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -855,9 +855,9 @@
                                         <!-- product single item start -->
                                         <div class="product-item fix">
                                             <div class="product-thumb">
-                                                <a href="product-details.html">
-                                                    <img src="assets/img/product/product-f-3.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-1.jpg" class="img-sec" alt="">
+                                                <a href="product-details.html">UYYUY
+                                                    <img src="<?=URL .'assets/img/product/product-a-13.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-12.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -891,8 +891,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-b-2.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-b-3.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-25.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-14.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>
@@ -926,8 +926,8 @@
                                         <div class="product-item fix">
                                             <div class="product-thumb">
                                                 <a href="product-details.html">
-                                                    <img src="assets/img/product/product-s-1.jpg" class="img-pri" alt="">
-                                                    <img src="assets/img/product/product-s-2.jpg" class="img-sec" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-11.jpg'?>" class="img-pri" alt="">
+                                                    <img src="<?=URL .'assets/img/product/product-a-27.jpg'?>" class="img-sec" alt="">
                                                 </a>
                                                 <div class="product-label">
                                                     <span>hot</span>

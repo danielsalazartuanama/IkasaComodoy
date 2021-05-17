@@ -1,13 +1,13 @@
 <header>
 
             <!-- header top start -->
-            <div class="header-top-area bg-gray text-center text-md-left">
+            <div class="header-top-area bg-black text-center text-md-left">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-5">
                             <div class="header-call-action">
                                 <a href="#">
-                                    <i class="fa fa-envelope"></i>
+                                    <i class="fa fa-envelope "></i>
                                     info@website.com
                                 </a>
                                 <a href="#">
@@ -23,21 +23,21 @@
                                         <li>
                                             <div class="dropdown header-top-dropdown">
                                                 <a class="dropdown-toggle" id="myaccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    my account
+                                                    my Cuenta
                                                     <i class="fa fa-angle-down"></i>
                                                 </a>
-                                                <div class="dropdown-menu" aria-labelledby="myaccount">
-                                                    <a class="dropdown-item" href="my-account.html">my account</a>
+                                                <div class="dropdown-menu bg-dark"   aria-labelledby="myaccount">
+                                                    <a class="dropdown-item" href="my-account.html">My cuenta</a>
                                                     <a class="dropdown-item" href="login-register.html"> login</a>
                                                     <a class="dropdown-item" href="login-register.html">register</a>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
-                                            <a href="#">my wishlist</a>
+                                            <a href="#">My lista de deseos</a>
                                         </li>
                                         <li>
-                                            <a href="#">my cart</a>
+                                            <a href="#">My carrito</a>
                                         </li>
                                         <li>
                                             <a href="#">checkout</a>
@@ -58,7 +58,7 @@
                         <div class="col-lg-3">
                             <div class="brand-logo">
                                 <a href="index-2.html">
-                                    <img src="assets/img/logo/logo.png" alt="brand logo">
+                                    <img src="<?=URL .'assets/img/logo/log.png'?>" alt="brand logo">
                                 </a>
                             </div>
                         </div> <!-- end logo area -->
@@ -110,7 +110,7 @@
                                         <ul class="cart-list">
                                             <li>
                                                 <div class="cart-img">
-                                                    <a href="product-details.html"><img src="assets/img/cart/cart-1.jpg" alt=""></a>
+                                                    <a href="product-details.html"><img src="<?=URL .'assets/img/product/product-a-1.jpg'?>" alt=""></a>
                                                 </div>
                                                 <div class="cart-info">
                                                     <h4><a href="product-details.html">simple product 09</a></h4>
@@ -122,7 +122,7 @@
                                             </li>
                                             <li>
                                                 <div class="cart-img">
-                                                    <a href="product-details.html"><img src="assets/img/cart/cart-2.jpg" alt=""></a>
+                                                    <a href="product-details.html"><img src="<?=URL .'assets/img/product/product-a-2.jpg'?>" alt=""></a>
                                                 </div>
                                                 <div class="cart-info">
                                                     <h4><a href="product-details.html">virtual product 10</a></h4>
@@ -157,106 +157,124 @@
                             <div class="main-header-inner">
                                 <div class="category-toggle-wrap">
                                     <div class="category-toggle">
-                                        category
+                                        Categoria
                                         <div class="cat-icon">
                                             <i class="fa fa-angle-down"></i>
                                         </div>
                                     </div>
                                     <nav class="category-menu category-style-2">
                                         <ul>
-                                            <li><a href="shop-grid-left-sidebar.html"><i class="fa fa-desktop"></i> computer</a></li>
-                                            <li class="menu-item-has-children"><a href="shop-grid-left-sidebar.html"><i class="fa fa-camera"></i> camera</a>   
+                                            <li><a href="shop-grid-left-sidebar.html"><i class="fa fa-desktop"></i> Oficina Organizadora</a></li>
+                                            <li class="menu-item-has-children"><a href="shop-grid-left-sidebar.html"><i class="fa fa-camera"></i> Muebles Exclusivos</a>   
                                                 <!-- Mega Category Menu Start -->
                                                 <ul class="category-mega-menu">
                                                     <li class="menu-item-has-children">
-                                                        <a href="shop-grid-left-sidebar.html">Smartphone</a>
+                                                        <a href="shop-grid-left-sidebar.html">Salas Vintage</a>
                                                         <ul>
-                                                            <li><a href="shop-grid-left-sidebar.html">Samsome</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">GL Stylus</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Uawei</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Cherry Berry</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Sillones y Butacas Vintage</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Seccionales Vintage</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Organizadores Vintage</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Sofas Vintage</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="menu-item-has-children">
-                                                        <a href="shop-grid-left-sidebar.html">headphone</a>
+                                                        <a href="shop-grid-left-sidebar.html">Comedores Vintage</a>
                                                         <ul>
-                                                            <li><a href="shop-grid-left-sidebar.html">Desktop Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Mobile Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Wireless Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">LED Headphone</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Juego de comendor Vintage</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Mesa de comedor Vintage</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Silla de comedor Vintage</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="menu-item-has-children">
-                                                        <a href="shop-grid-left-sidebar.html">accessories</a>
+                                                        <a href="shop-grid-left-sidebar.html">Dormitorios Vintage</a>
                                                         <ul>
-                                                            <li><a href="shop-grid-left-sidebar.html">Power Bank</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Data Cable</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Power Cable</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Battery</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Juegos de dormitorios</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Roperos</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Veladores</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Cabecera</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li class="menu-item-has-children">
-                                                        <a href="shop-grid-left-sidebar.html">headphone</a>
-                                                        <ul>
-                                                            <li><a href="shop-grid-left-sidebar.html">Desktop Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Mobile Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Wireless Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">LED Headphone</a></li>
-                                                        </ul>
-                                                    </li>
+                                                    
                                                 </ul><!-- Mega Category Menu End --> 
                                             </li>
-                                            <li class="menu-item-has-children"><a href="shop-grid-left-sidebar.html"><i class="fa fa-book"></i> smart phones</a> 
+                                            <li class="menu-item-has-children"><a href="shop-grid-left-sidebar.html"><i class="fa fa-book"></i> Salas</a> 
                                                 <!-- Mega Category Menu Start -->
                                                 <ul class="category-mega-menu">
                                                     <li class="menu-item-has-children">
-                                                        <a href="shop-grid-left-sidebar.html">Smartphone</a>
+                                                        <a href="shop-grid-left-sidebar.html">Juego de Salas</a>
                                                         <ul>
-                                                            <li><a href="shop-grid-left-sidebar.html">Samsome</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">GL Stylus</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Uawei</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Cherry Berry</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">uPhone</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Otras salas :</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">1-2 Cuerpos</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">2-3 Cuerpos</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">1-2-3 Cuerpos</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="menu-item-has-children">
-                                                        <a href="shop-grid-left-sidebar.html">headphone</a>
+                                                        <a href="shop-grid-left-sidebar.html">CENTRO DE ENTRETENIMIENTO</a>
                                                         <ul>
-                                                            <li><a href="shop-grid-left-sidebar.html">Desktop Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Mobile Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Wireless Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">LED Headphone</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Over-ear</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Centro de entretenimiento Empotrable</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Centro de entretenimiento movible</a></li>
+                                                            
                                                         </ul>
                                                     </li>
                                                     <li class="menu-item-has-children">
-                                                        <a href="shop-grid-left-sidebar.html">accessories</a>
+                                                        <a href="shop-grid-left-sidebar.html">SOFA</a>
                                                         <ul>
-                                                            <li><a href="shop-grid-left-sidebar.html">Power Bank</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Data Cable</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Power Cable</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Battery</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">OTG Cable</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Sofá</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Sofá Reclinable</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Banqueta</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Puff</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="menu-item-has-children">
-                                                        <a href="shop-grid-left-sidebar.html">accessories</a>
+                                                        <a href="shop-grid-left-sidebar.html">SILLONES Y BUTACAS</a>
                                                         <ul>
-                                                            <li><a href="shop-grid-left-sidebar.html">Power Bank</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Data Cable</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Power Cable</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">Battery</a></li>
-                                                            <li><a href="shop-grid-left-sidebar.html">OTG Cable</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Sillones</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Sillón reclinable</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Sillones Combo</a></li>
+                                                            
                                                         </ul>
                                                     </li>
                                                 </ul><!-- Mega Category Menu End -->
                                             </li>
-                                            <li><a href="shop-grid-left-sidebar.html"><i class="fa fa-clock-o"></i> watch</a></li>
-                                            <li><a href="shop-grid-left-sidebar.html"><i class="fa fa-television"></i> electronic</a></li>
-                                            <li><a href="shop-grid-left-sidebar.html"><i class="fa fa-tablet"></i> tablet</a></li>
-                                            <li><a href="shop-grid-left-sidebar.html"><i class="fa fa-book"></i> books</a></li>
-                                            <li><a href="shop-grid-left-sidebar.html"><i class="fa fa-microchip"></i> microchip</a></li>
-                                            <li><a href="shop-grid-left-sidebar.html"><i class="fa fa-bullhorn"></i> bullhorn</a></li>
+                                            <li class="menu-item-has-children"><a href="shop-grid-left-sidebar.html"><i class="fa fa-book"></i> COMEDOR</a> 
+                                                <!-- Mega Category Menu Start -->
+                                                <ul class="category-mega-menu">
+                                                    <li class="menu-item-has-children">
+                                                        <a href="shop-grid-left-sidebar.html">JUEGO DE COMEDOR</a>
+                                                        <ul>
+                                                            <li><a href="shop-grid-left-sidebar.html">Comedor 4 sillas</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Comedor 6 sillas</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Comedor 8 sillas</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item-has-children">
+                                                        <a href="shop-grid-left-sidebar.html">MESAS DE COMEDOR</a>
+                                                        <ul>
+                                                            <li><a href="shop-grid-left-sidebar.html"></a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html"></a></li>
+                                                            
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item-has-children">
+                                                        <a href="shop-grid-left-sidebar.html">SILLAS DE COMEDOR</a>
+                                                        <ul>
+                                                            <li><a href="shop-grid-left-sidebar.html">Silllas convencionales</a></li>
+                                                            <li><a href="shop-grid-left-sidebar.html">Sillas vintage</a></li>
+                                                            
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item-has-children">
+                                                        <a href="shop-grid-left-sidebar.html">MUEBLES DE BAR</a>
+                                                        <ul>
+                                                            
+                                                            
+                                                            
+                                                        </ul>
+                                                    </li>
+                                                </ul><!-- Mega Category Menu End -->
+                                            </li>
+                                            
                                         </ul>
                                     </nav>
                                 </div>
