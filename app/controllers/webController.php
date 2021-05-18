@@ -27,9 +27,9 @@ class WebController extends Controller
     {
         echo $this->template->render('compare');
     }
-    public function sidebar()
+    public function login()
     {
-        echo $this->template->render('contact');
+        echo $this->template->render('login');
     }
     public function product_details()
     {
