@@ -35,9 +35,9 @@ class WebController extends Controller
     {
         echo $this->template->render('product_details');
     }
-    public function shop_right()
+    public function shop_left()
     {
-        echo $this->template->render('shop_right');
+        echo $this->template->render('shop_left');
     }
     public function shop_full()
     {

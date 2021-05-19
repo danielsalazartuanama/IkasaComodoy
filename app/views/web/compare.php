@@ -40,21 +40,21 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Productos Comparar
                                     <td class="first-column">Product</td>
                                     <td class="product-image-title">
                                         <a href="single-product.html" class="image">
-                                            <img class="img-fluid" src="assets/img/product/product-img4.jpg" alt="Compare Product">
+                                            <img class="img-fluid" src="<?= URL . 'assets/img/shop/cama3.jpg' ?>" alt="Compare Product">
                                         </a>
                                         <a href="#" class="category">Daimond</a>
                                         <a href="single-product-sale.html" class="title">wet food</a>
                                     </td>
                                     <td class="product-image-title">
                                         <a href="single-product.html" class="image">
-                                            <img class="img-fluid" src="assets/img/product/product-img5.jpg" alt="Compare Product">
+                                            <img class="img-fluid" src="<?= URL . 'assets/img/shop/cama4.jpg' ?>" alt="Compare Product">
                                         </a>
                                         <a href="#" class="category">Gold</a>
                                         <a href="single-product-group.html" class="title">organic food</a>
                                     </td>
                                     <td class="product-image-title">
                                         <a href="single-product.html" class="image">
-                                            <img class="img-fluid" src="assets/img/product/product-img2.jpg" alt="Compare Product">
+                                            <img class="img-fluid" src="<?= URL . 'assets/img/shop/cama5.jpg' ?>" alt="Compare Product">
                                         </a>
                                         <a href="#" class="category">Ring</a>
                                         <a href="single-product.html" class="title">dry food</a>
