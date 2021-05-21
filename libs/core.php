@@ -15,8 +15,10 @@ class Core
         //Convertir en arrau los elementos se la URL (petición)
         $url = explode('/', $url);
 
+        // require_once '../app/helpers/helper.php';
+        // myEcho($url);
         // echo "<pre>", print_r($url), "</pre>";
-
+    
         //Si el usuario no proporciona un controlador
         if (empty($url[0])) {
 

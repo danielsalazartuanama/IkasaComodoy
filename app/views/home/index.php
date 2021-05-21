@@ -9,7 +9,9 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Inicio']);?>
 
 <!--contenido de la pagina-->
 <?php $this->start('contents')?>
+<!-- <?php echo env('DB_DATABASE')?> -->
 <?php $this->stop()?>
+
 
 <!-----scripts personalizados-->
 <?php $this->push('scripts')?>

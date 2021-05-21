@@ -8,6 +8,6 @@ require_once '../config/config.php';
 // echo realpath(__DIR__ . '/../');
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
-echo $_ENV['DB_DATABASE'];
+// echo $_ENV['DB_DATABASE'];
 
 $core=new Core();
