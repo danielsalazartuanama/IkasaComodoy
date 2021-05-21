@@ -4,16 +4,19 @@
     "type": "project",
     "license": "proprietary",
     "authors": [
-     {
-         "name": "HTG",
-         "email": "jhonydanielsalazar53@gmail.com"
-     }
+        {
+            "name": "HTG",
+            "email": "jhonydanielsalazar53@gmail.com"
+        }
     ],
     "autoload": {
         "psr-4": {
-            "Libs\\":"libs/",
-            "App\\Controllers\\":"app/controllers/"
-        }
+            "Libs\\": "libs/",
+            "App\\Controllers\\": "app/controllers/"
+        },
+        "files": [
+            "app/helpers/helper.php"
+        ]
     },
     "require": {
         "league/plates": "^3.4",

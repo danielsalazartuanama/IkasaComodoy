@@ -6,8 +6,8 @@ use Dotenv\Dotenv;
 
 require_once '../vendor/autoload.php';
 require_once '../config/config.php';
-echo realpath(__DIR__ . '/../');
-echo MAINPATH;
+//echo realpath(__DIR__ . '/../');
+//echo MAINPATH;
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 $core = new Core();

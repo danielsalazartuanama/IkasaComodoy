@@ -1,4 +1,5 @@
 <?php
+
 namespace Libs;
 
 use App\Controllers\HomeController;
@@ -16,7 +17,7 @@ class Core
         $url = explode('/', $url);
 
         // echo "<pre>", print_r($url), "</pre>";
-
+        //myecho($url);
         //Si el usuario no proporciona un controlador
         if (empty($url[0])) {
 
@@ -35,7 +36,7 @@ class Core
 
             //Creamos una instancia de dicho controlador
             require_once $path_controller;
-            $controller_name = '\\App\\Controllers\\'. $url[0] . 'Controller';
+            $controller_name = '\\App\\Controllers\\' . $url[0] . 'Controller';
             $controller = new $controller_name();
             // echo "El cantrolador  {$url[0]} existe";
 
