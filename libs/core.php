@@ -16,7 +16,7 @@ class Core
         $url = explode('/', $url);
 
         // require_once '../app/helpers/helper.php';
-        // myEcho($url);
+        myEcho($url);
         // echo "<pre>", print_r($url), "</pre>";
     
         //Si el usuario no proporciona un controlador

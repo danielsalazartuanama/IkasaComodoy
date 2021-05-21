@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '095dbf9ee6587a6fe69b16e6733dba7aea932209',
+    'reference' => '48bb1fe2e31a01be6de240ff252f444779e19a2f',
     'name' => 'htg/htgventasikasa',
   ),
   'versions' => 
@@ -53,7 +53,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '095dbf9ee6587a6fe69b16e6733dba7aea932209',
+      'reference' => '48bb1fe2e31a01be6de240ff252f444779e19a2f',
     ),
     'league/plates' => 
     array (
