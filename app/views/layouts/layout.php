@@ -13,35 +13,35 @@
         <!-- Material Design Iconic Font-V2.2.0 -->
         <link rel="stylesheet" href="<?=URL .'css/material-design-iconic-font.min.css'?>">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="<?=URL .'css/font-awesome.min.css'?>">
         <!-- Font Awesome Stars-->
-        <link rel="stylesheet" href="css/fontawesome-stars.css">
+        <link rel="stylesheet" href="<?=URL .'css/fontawesome-stars.css'?>">
         <!-- Meanmenu CSS -->
-        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="<?=URL .'css/meanmenu.css'?>">
         <!-- owl carousel CSS -->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?=URL .'css/owl.carousel.min.css'?>">
         <!-- Slick Carousel CSS -->
-        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="<?=URL .'css/slick.css'?>">
         <!-- Animate CSS -->
-        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="<?=URL .'css/animate.css'?>">
         <!-- Jquery-ui CSS -->
-        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="<?=URL .'css/jquery-ui.min.css'?>">
         <!-- Venobox CSS -->
-        <link rel="stylesheet" href="css/venobox.css">
+        <link rel="stylesheet" href="<?=URL .'css/venobox.css'?>">
         <!-- Nice Select CSS -->
-        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="<?=URL .'css/nice-select.css'?>">
         <!-- Magnific Popup CSS -->
-        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="<?=URL .'css/magnific-popup.css'?>">
         <!-- Bootstrap V4.1.3 Fremwork CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?=URL .'css/bootstrap.min.css'?>">
         <!-- Helper CSS -->
-        <link rel="stylesheet" href="css/helper.css">
+        <link rel="stylesheet" href="<?=URL .'css/helper.css'?>">
         <!-- Main Style CSS -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="<?=URL .'style.css'?>">
         <!-- Responsive CSS -->
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="<?=URL .'css/responsive.css'?>">
         <!-- Modernizr js -->
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="<?=URL .'js/vendor/modernizr-2.8.3.min.js'?>"></script>
 
         <?= $this->section('styles')?>
     </head>
@@ -105,47 +105,47 @@
         </div>
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="<?=URL .'js/vendor/jquery-1.12.4.min.js'?>"></script>
         <!-- Popper js -->
-        <script src="js/vendor/popper.min.js"></script>
+        <script src="<?=URL .'js/vendor/popper.min.js'?>"></script>
         <!-- Bootstrap V4.1.3 Fremwork js -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="<?=URL .'js/bootstrap.min.js'?>"></script>
         <!-- Ajax Mail js -->
-        <script src="js/ajax-mail.js"></script>
+        <script src="<?=URL .'js/ajax-mail.js'?>"></script>
         <!-- Meanmenu js -->
-        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="<?=URL .'js/jquery.meanmenu.min.js'?>"></script>
         <!-- Wow.min js -->
-        <script src="js/wow.min.js"></script>
+        <script src="<?=URL .'js/wow.min.js'?>"></script>
         <!-- Slick Carousel js -->
-        <script src="js/slick.min.js"></script>
+        <script src="<?=URL .'js/slick.min.js'?>"></script>
         <!-- Owl Carousel-2 js -->
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="<?=URL .'js/owl.carousel.min.js'?>"></script>
         <!-- Magnific popup js -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="<?=URL .'js/jquery.magnific-popup.min.js'?>"></script>
         <!-- Isotope js -->
-        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="<?=URL .'js/isotope.pkgd.min.js'?>"></script>
         <!-- Imagesloaded js -->
-        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="<?=URL .'js/imagesloaded.pkgd.min.js'?>"></script>
         <!-- Mixitup js -->
-        <script src="js/jquery.mixitup.min.js"></script>
+        <script src="<?=URL .'js/jquery.mixitup.min.js'?>"></script>
         <!-- Countdown -->
-        <script src="js/jquery.countdown.min.js"></script>
+        <script src="<?=URL .'js/jquery.countdown.min.js'?>"></script>
         <!-- Counterup -->
-        <script src="js/jquery.counterup.min.js"></script>
+        <script src="<?=URL .'js/jquery.counterup.min.js'?>"></script>
         <!-- Waypoints -->
-        <script src="js/waypoints.min.js"></script>
+        <script src="<?=URL .'js/waypoints.min.js'?>"></script>
         <!-- Barrating -->
-        <script src="js/jquery.barrating.min.js"></script>
+        <script src="<?=URL .'js/jquery.barrating.min.js'?>"></script>
         <!-- Jquery-ui -->
-        <script src="js/jquery-ui.min.js"></script>
+        <script src="<?=URL .'js/jquery-ui.min.js'?>"></script>
         <!-- Venobox -->
-        <script src="js/venobox.min.js"></script>
+        <script src="<?=URL .'js/venobox.min.js'?>"></script>
         <!-- Nice Select js -->
-        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="<?=URL .'js/jquery.nice-select.min.js'?>"></script>
         <!-- ScrollUp js -->
-        <script src="js/scrollUp.min.js"></script>
+        <script src="<?=URL .'js/scrollUp.min.js'?>"></script>
         <!-- Main/Activator js -->
-        <script src="js/main.js"></script>
+        <script src="<?=URL .'js/main.js'?>"></script>
 
         <?= $this->section('scripts') ?>
     </body>
