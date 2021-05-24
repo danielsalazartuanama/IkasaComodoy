@@ -39,6 +39,7 @@ class ComposerStaticInitf5d6569ec2b50ea815c3db7c4e047f81
         ),
         'A' => 
         array (
+            'App\\Daos\\' => 9,
             'App\\Controllers\\' => 16,
         ),
     );
@@ -75,6 +76,10 @@ class ComposerStaticInitf5d6569ec2b50ea815c3db7c4e047f81
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'App\\Daos\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/daos',
         ),
         'App\\Controllers\\' => 
         array (
