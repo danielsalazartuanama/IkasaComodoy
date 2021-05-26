@@ -1,154 +1,128 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-    
-<!-- index-431:41-->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title><?=$this->e($title)?></title><!--llamamos a la funcion e y lo asignamos una variable-->
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="<?=URL .'images/favicon.png'?>">
-        <!-- Material Design Iconic Font-V2.2.0 -->
-        <link rel="stylesheet" href="<?=URL .'css/material-design-iconic-font.min.css'?>">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <!-- Font Awesome Stars-->
-        <link rel="stylesheet" href="css/fontawesome-stars.css">
-        <!-- Meanmenu CSS -->
-        <link rel="stylesheet" href="css/meanmenu.css">
-        <!-- owl carousel CSS -->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <!-- Slick Carousel CSS -->
-        <link rel="stylesheet" href="css/slick.css">
-        <!-- Animate CSS -->
-        <link rel="stylesheet" href="css/animate.css">
-        <!-- Jquery-ui CSS -->
-        <link rel="stylesheet" href="css/jquery-ui.min.css">
-        <!-- Venobox CSS -->
-        <link rel="stylesheet" href="css/venobox.css">
-        <!-- Nice Select CSS -->
-        <link rel="stylesheet" href="css/nice-select.css">
-        <!-- Magnific Popup CSS -->
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <!-- Bootstrap V4.1.3 Fremwork CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Helper CSS -->
-        <link rel="stylesheet" href="css/helper.css">
-        <!-- Main Style CSS -->
-        <link rel="stylesheet" href="style.css">
-        <!-- Responsive CSS -->
-        <link rel="stylesheet" href="css/responsive.css">
-        <!-- Modernizr js -->
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
 
-        <?= $this->section('styles')?>
-    </head>
-    <body>
+    <!-- Site title -->
+    <title><?= $this->e($title); ?></title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="<?= URL . 'assets/img/ikasa.jpg' ?>" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="<?= URL . 'assets/css/bootstrap.min.css' ?>" rel="stylesheet">
+    <!-- Font-Awesome CSS -->
+    <link href="<?= URL . 'assets/css/font-awesome.min.css' ?>" rel="stylesheet">
+    <!-- helper class css -->
+    <link href="<?= URL . 'assets/css/helper.min.css' ?>" rel="stylesheet">
+    <!-- Plugins CSS -->
+    <link href="<?= URL . 'assets/css/plugins.css' ?>" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link href="<?= URL . 'assets/css/style.css' ?>" rel="stylesheet">
+    <link href="<?= URL . 'assets/css/skin-default.css' ?>" rel="stylesheet" id="galio-skin">
+</head>
 
-        <div class="body-wrapper">
+<?= $this->section('styles') ?>
 
-            <!-- TRAEMOS DEL PARTIAL EL HEADER CON INCLUDE_ONE Y LA RUTA -->
-            <?php include_once MAINPATH . 'app/views/layouts/partials/_header.php' ?>
+<body>
 
 
-            <!-- Static Top Area End Here -->
+    <div class="wrapper box-layout">
 
-                <!-- Content -->
-                <?=$this->section('contents')?>
+        <!-- header cabecera -->
+        <?php include_once MAINPATH . 'app/views/layouts/partials/_header.php' ?>
+        <!-- header area end -->
 
 
 
-            <!-- product-area start -->
-            
-            <!-- product-area end -->
 
-
-            <!-- Begin Li's Static Banner Area -->
-            
-            <!-- Li's Static Banner Area End Here -->
-
-
-            <!-- Begin Li's Laptop Product Area -->
-            
-            <!-- Li's Laptop Product Area End Here -->
+        <!-- hero slider start -->
+        <!-- hero slider end -->
 
 
 
-            <!-- Begin Li's TV & Audio Product Area -->
-            
-            <!-- Li's TV & Audio Product Area End Here -->
+
+        <!-- home banner area start -->
+        <!-- home banner area end -->
 
 
-            <!-- Begin Li's Static Home Area -->
-            
-            <!-- Li's Static Home Area End Here -->
+
+        <!-- product wrapper area strat -->
+        <!-- product wrapper area end -->
 
 
-            <!-- Begin Group Featured Product Area -->
-            
-            <!-- Group Featured Product Area End Here -->
+
+        <!-- page wrapper start -->
+        <!-- page wrapper end -->
 
 
-            <!-- Begin Footer Area -->
-            <?php include_once MAINPATH . 'app/views/layouts/partials/_footer.php' ?>
 
-            <!-- Footer Area End Here -->
+        <!-- home banner area start -->
+        <!-- home banner area end -->
 
 
-            <!-- Begin Quick View | Modal Area -->
-            
-            <!-- Quick View | Modal Area End Here -->
 
-            
-        </div>
-        <!-- Body Wrapper End Here -->
-        <!-- jQuery-V1.12.4 -->
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
-        <!-- Popper js -->
-        <script src="js/vendor/popper.min.js"></script>
-        <!-- Bootstrap V4.1.3 Fremwork js -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Ajax Mail js -->
-        <script src="js/ajax-mail.js"></script>
-        <!-- Meanmenu js -->
-        <script src="js/jquery.meanmenu.min.js"></script>
-        <!-- Wow.min js -->
-        <script src="js/wow.min.js"></script>
-        <!-- Slick Carousel js -->
-        <script src="js/slick.min.js"></script>
-        <!-- Owl Carousel-2 js -->
-        <script src="js/owl.carousel.min.js"></script>
-        <!-- Magnific popup js -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <!-- Isotope js -->
-        <script src="js/isotope.pkgd.min.js"></script>
-        <!-- Imagesloaded js -->
-        <script src="js/imagesloaded.pkgd.min.js"></script>
-        <!-- Mixitup js -->
-        <script src="js/jquery.mixitup.min.js"></script>
-        <!-- Countdown -->
-        <script src="js/jquery.countdown.min.js"></script>
-        <!-- Counterup -->
-        <script src="js/jquery.counterup.min.js"></script>
-        <!-- Waypoints -->
-        <script src="js/waypoints.min.js"></script>
-        <!-- Barrating -->
-        <script src="js/jquery.barrating.min.js"></script>
-        <!-- Jquery-ui -->
-        <script src="js/jquery-ui.min.js"></script>
-        <!-- Venobox -->
-        <script src="js/venobox.min.js"></script>
-        <!-- Nice Select js -->
-        <script src="js/jquery.nice-select.min.js"></script>
-        <!-- ScrollUp js -->
-        <script src="js/scrollUp.min.js"></script>
-        <!-- Main/Activator js -->
-        <script src="js/main.js"></script>
+        <!-- blog-testimonial-product area start -->
 
-        <?= $this->section('scripts') ?>
-    </body>
+        <!-- blog-testimonial-product area end -->
 
-<!-- index-431:47-->
+
+
+        <!-- latest product start -->
+
+        <!-- latest product end -->
+
+
+
+
+        <!-- brand area start -->
+
+        <!-- brand area end -->
+
+
+        <main role="main"><?= $this->section('contents') ?></main>
+
+        <!-- footer area start -->
+        <?php include_once MAINPATH . 'app/views/layouts/partials/_footer.php' ?>
+        <!-- footer area end -->
+
+    </div>
+
+
+
+    <!-- Quick view modal start -->
+    <!-- Quick view modal end -->
+
+
+    <!-- Scroll to top start -->
+    <!-- Scroll to Top End -->
+
+
+
+
+    <!--All jQuery, Third Party Plugins & Activation (main.js) Files-->
+    <script src="<?= URL . 'assets/js/vendor/modernizr-3.6.0.min.js' ?>"></script>
+    <!-- Jquery Min Js -->
+    <script src="<?= URL . 'assets/js/vendor/jquery-3.3.1.min.js' ?>"></script>
+    <!-- Popper Min Js -->
+    <script src="<?= URL . 'assets/js/vendor/popper.min.js' ?>"></script>
+    <!-- Bootstrap Min Js -->
+    <script src="<?= URL . 'assets/js/vendor/bootstrap.min.js' ?>"></script>
+    <!-- Plugins Js-->
+    <script src="<?= URL . 'assets/js/plugins.js' ?>"></script>
+    <!-- Ajax Mail Js -->
+    <script src="<?= URL . 'assets/js/ajax-mail.js' ?>"></script>
+    <!-- Active Js -->
+    <script src="<?= URL . 'assets/js/main.js' ?>"></script>
+    <!-- Switcher JS [Please Remove this when Choose your Final Projct] -->
+    <script src="<?= URL . 'assets/js/switcher.js' ?>"></script>
+
+    <?= $this->section('scripts') ?>
+
+</body>
+
+
 </html>
