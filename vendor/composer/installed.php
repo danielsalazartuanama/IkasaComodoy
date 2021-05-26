@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '2fbd104161406cb372261834cbe4b149f661a945',
+    'reference' => 'ef8f7a50d627354ff4c6b08f86a3c4911119ebda',
     'name' => 'htg/htgventasikasa',
   ),
   'versions' => 
@@ -27,7 +27,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '2fbd104161406cb372261834cbe4b149f661a945',
+      'reference' => 'ef8f7a50d627354ff4c6b08f86a3c4911119ebda',
     ),
     'league/plates' => 
     array (

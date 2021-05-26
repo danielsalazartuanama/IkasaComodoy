@@ -14,5 +14,6 @@ return array(
     'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
+    'App\\Daos\\' => array($baseDir . '/app/daos'),
     'App\\Controllers\\' => array($baseDir . '/app/controllers'),
 );
