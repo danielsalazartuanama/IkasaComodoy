@@ -9,13 +9,13 @@ class Connection
     private $user;
     private $pass;
     private $db;
-    private $pdo=null;
+    private $pdo = null;
     private static $_instance = null;
 
     private function __construct()
     {
         $this->host = env('DB_HOST');
-        $this->user = env('DB_USER');
+        $this->user = env('DB_USERNAME');
         $this->pass = env('DB_PASSWORD');
         $this->db = env('DB_DATABASE');
         $this->connect();
@@ -37,7 +37,7 @@ class Connection
                 \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES  'utf8'",
             );
 
-            $dns = 'mysql:host=' . $this->host . ',dbname=' . $this->db;
+            $dns = 'mysql:host=' . $this->host . ';dbname=' . $this->db;
             $this->pdo = new \PDO(
                 $dns,
                 $this->user,
@@ -45,7 +45,7 @@ class Connection
                 $options
             );
         } catch (\PDOException $e) {
-            myEcho($e->getMessage());
+            myEcho("Error de conexion: " . $e->getMessage());
             throw $e;
         }
     }
