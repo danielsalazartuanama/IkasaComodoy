@@ -24,6 +24,8 @@ private function __construct()
     $this->db=env('DB_DATABASE');
 
     $this->connect();
+
+   
 }
     public static function getInstance(){
         
@@ -45,10 +47,9 @@ private function __construct()
 
             );
 
-            $dsn = 'mysql:host='. $this->host . ',dbname=' . $this->db;
+            $dsn = 'mysql:host='. $this->host . ';dbname=' . $this->db;
 
             $this->pdo = new \PDO(
-
              $dsn,
              $this->user,
              $this->pass,
