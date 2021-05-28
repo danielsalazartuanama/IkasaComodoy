@@ -27,9 +27,9 @@ class MarcaDAO extends Dao
          
         if ($id>0) {
          
-            $sql= "SELECT idmarca, nombre, descripcion FROM marcas WHERE idmarca=?".$id;
+            $sql= "SELECT idmarca, nombre, descripcion FROM marcas WHERE idmarca=?";
             $stmt=$this->pdo->prepare($sql);
-            $stmt->birindParam(1, $id, \PDO::PARAM_INT);
+            $stmt->bindParam(1, $id, \PDO::PARAM_INT);
             $stmt->execute();
             $result=$stmt->fetch(\PDO::FETCH_OBJ);
            

@@ -47,7 +47,7 @@ private function __construct()
 
             );
 
-            $dsn = 'mysql:host='. $this->host . ',dbname=' . $this->db;
+            $dsn = 'mysql:host='. $this->host . ';dbname=' . $this->db;
 
             $this->pdo = new \PDO(
              $dsn,
