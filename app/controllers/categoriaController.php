@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Daos\CategoriaDAO;
-use App\Daos\CategoriDAO;
+
 use Libs\Controller;
 
 class CategoriaController extends Controller

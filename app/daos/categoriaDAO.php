@@ -4,7 +4,7 @@ namespace App\Daos;
 
 use Libs\Connection;
 use Libs\Dao;
-use Libs\Daos;
+
 
 class CategoriaDAO extends Dao
 {
@@ -13,8 +13,8 @@ class CategoriaDAO extends Dao
         $this->loadConnection();
     }
     public function getAll()
-    {        
-        $sql = "SELECT id,nombre, descripcion FROM categoria";
+    {
+        $sql = "SELECT categoryid,categoryname,description FROM categories";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll(\PDO::FETCH_OBJ);
@@ -23,7 +23,7 @@ class CategoriaDAO extends Dao
     public function get(int $id)
     {
         $result = null;
-       
+
         if ($id > 0) {
             $sql = "SELECT id,nombre, descripcion FROM categoria WHERE id=?";
             $stmt = $this->pdo->prepare($sql);

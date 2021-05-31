@@ -4,7 +4,6 @@ namespace Libs;
 
 class Connection
 {
-
     private $host;
     private $user;
     private $pass;
@@ -23,7 +22,7 @@ class Connection
     public static function getInstance()
     {
         if (self::$_instance == null) {
-            self::$_instance == new Connection();
+            self::$_instance = new Connection();
         }
         return self::$_instance;
     }
