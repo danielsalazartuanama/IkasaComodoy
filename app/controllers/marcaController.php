@@ -38,6 +38,7 @@ class MarcaController extends Controller{
         $obj->estado=isset($_POST['estado'])?$_POST['estado']:false;
 
 
+
         if ($obj->id>0) {
          $this->dao->update($obj);
         }else{
