@@ -13,7 +13,7 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| MARCAS']);?>
     <h1 class="text-center">Tabla Marca</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="#" class="btn btn-primary btn-block">Nuevo</a>
+            <a href="<?=URL.'marca/detail'?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -35,6 +35,10 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| MARCAS']);?>
                             <td><?= $row-> idmarca ?></td>
                             <td><?= $row->nombre ?></td>
                             <td><?= $row->descripcion ?></td>
+                            <td>
+                            <a href="<?=URL. "marca/detail/{$row->idmarca}"?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
+                            <a href="<?=URL. "marca/delete/{$row->idmarca}"?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
