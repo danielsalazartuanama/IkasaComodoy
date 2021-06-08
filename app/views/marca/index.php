@@ -37,7 +37,7 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| MARCAS']);?>
                             <td><?= $row->descripcion ?></td>
                             <td>
                             <a href="<?=URL. "marca/detail/{$row->idmarca}"?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
-                            <a href="<?=URL. "marca/delete/{$row->idmarca}"?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                            <a href="<?=URL. "marca/eliminar/{$row->idmarca}"?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
