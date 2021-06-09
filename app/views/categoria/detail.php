@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout',['title'=>'HTGVentas| Marcas|Detalle ']);?>
+$this->layout('../layouts/layout',['title'=>'HTGVentas| Categoria|Detalle ']);?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles')?>
@@ -8,14 +8,14 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Marcas|Detalle ']);?>
 <!----------------------------------------------------------------------------------->
 
 <!--contenido de la pagina-->
-<?php $this->start('contents')?>
-
+<?php $this->start('contents') ?>
+<!-- <?php myEcho($data) ?> -->
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Marca-<small>Detalle</small></h1>
-            <form action="<?= URL .'marca/save' ?>" method="post">
-            <input type="text" name="idmarca" value="<?= $data->idmarca ?>">
+            <h1>Categorias-<small>Detalle</small></h1>
+            <form action="<?= URL . 'categoria/save' ?>" method="post">
+            <input type="text" name="idcateg" value="<?= $data->idcateg ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
@@ -53,24 +53,8 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Marcas|Detalle ']);?>
 
         </div>
     </div>
+    <?php $this->stop() ?>
 
-<!-- <?php myEcho($data)?> -->
-<?php $this->stop()?>
-
-
-<!-----scripts personalizados-->
-<?php $this->push('scripts')?>
-<?php $this->end()?>
-<!----------------------------------------------------------------------------------->
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-----scripts personalizados-->
+    <?php $this->push('scripts') ?>
+    <?php $this->end() ?>
