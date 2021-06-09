@@ -40,6 +40,18 @@ class CategoriaDAO extends Dao
         }
         return $result;
     }
+    public function getAllSimple(int $id)
+    {
+
+        $sql = "SELECT idcateg,nombre FROM categorias WHERE idcateg=?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
+        //$stmt->bindParam(2, $id, \PDO::PARAM_STR);
+        $stmt->execute();
+        //si es fetch retorna objeto nulo
+        $result = $stmt->fetch(\PDO::FETCH_OBJ);
+        return $result;
+    }
     public function create($obj)
     {
         $sql = "INSERT INTO categorias(nombre, descripcion,estado)values(?,?,?)";

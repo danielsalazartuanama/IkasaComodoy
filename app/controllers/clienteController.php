@@ -7,7 +7,7 @@ use App\Daos\ClienteDAO;
 use Libs\Controller;
 use stdClass;
 
-class ClieneController extends Controller
+class ClienteController extends Controller
 {    
     public function __construct()
     {
@@ -30,7 +30,7 @@ class ClieneController extends Controller
     {
         $obj = new stdClass();
         $obj->idcliente = isset($_POST['idcliente']) ? $_POST['idcliente'] : 0;        
-        $obj->nombres = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->nombres = isset($_POST['nombres']) ? $_POST['nombres'] : '';
         $obj->apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : '';
         $obj->direccion = isset($_POST['direccion']) ? $_POST['direccion'] : '';
         $obj->telf = isset($_POST['telf']) ? $_POST['telf'] : '';

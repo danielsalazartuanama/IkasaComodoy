@@ -1,32 +1,26 @@
 <?php
-$this->layout('../layouts/layout',['title'=>'HTGVentas| Unidad|Detalle ']);?>
+$this->layout('../layouts/layout', ['title' => 'HTGVentas| Unidad|Detalle ']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
-<?php $this->push('styles')?>
-<?php $this->end()?>
+<?php $this->push('styles') ?>
+<?php $this->end() ?>
 
 <!----------------------------------------------------------------------------------->
 
 <!--contenido de la pagina-->
-<?php $this->start('contents')?>
+<?php $this->start('contents') ?>
 
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
             <h1>Unidad-<small>Detalle</small></h1>
-            <form action="<?= URL .'unidad/save' ?>" method="post">
-            <input type="text" name="idunidad" value="<?= $data->idunidad ?>">
+            <form action="<?= URL . 'unidad/save' ?>" method="post">
+                <input type="text" name="idunidad" value="<?= $data->idunidad ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_nombre">Nombre</label>
                             <input type="text" name="nombre" id="id_nombre" value="<?= $data->nombre ?>" class=" form-control">
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="form-group">
-                            <label for="id_descripcion">Descripcion</label>
-                            <input type="text" name="descripcion" id="id_descripcion" value="<?= $data->descripcion ?>" class=" form-control">
                         </div>
                     </div>
                 </div>
@@ -54,11 +48,11 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Unidad|Detalle ']);?>
         </div>
     </div>
 
-<!-- <?php myEcho($data)?> -->
-<?php $this->stop()?>
+    <!-- <?php myEcho($data) ?> -->
+    <?php $this->stop() ?>
 
 
-<!-----scripts personalizados-->
-<?php $this->push('scripts')?>
-<?php $this->end()?>
-<!----------------------------------------------------------------------------------->
+    <!-----scripts personalizados-->
+    <?php $this->push('scripts') ?>
+    <?php $this->end() ?>
+    <!----------------------------------------------------------------------------------->

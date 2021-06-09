@@ -62,7 +62,7 @@ class cLienteDAO extends Dao
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':nombres', $obj->nombres, \PDO::PARAM_STR);
         $stmt->bindParam(':apellidos', $obj->apellidos, \PDO::PARAM_STR);
-        $stmt->bindParam(':rireccion', $obj->direccion, \PDO::PARAM_STR);
+        $stmt->bindParam(':direccion', $obj->direccion, \PDO::PARAM_STR);
         $stmt->bindParam(':telf', $obj->telf, \PDO::PARAM_STR);
         $stmt->bindParam(':creditolimite', $obj->creditolimite, \PDO::PARAM_INT);
         $stmt->bindParam(':ruc', $obj->ruc, \PDO::PARAM_STR);

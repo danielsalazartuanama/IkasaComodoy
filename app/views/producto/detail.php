@@ -1,9 +1,9 @@
 <?php
-$this->layout('../layouts/layout',['title'=>'HTGVentas| Producto|Detalle ']);?>
+$this->layout('../layouts/layout', ['title' => 'HTGVentas| Producto|Detalle ']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
-<?php $this->push('styles')?>
-<?php $this->end()?>
+<?php $this->push('styles') ?>
+<?php $this->end() ?>
 
 <!----------------------------------------------------------------------------------->
 
@@ -11,12 +11,12 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Producto|Detalle ']);?>
 <?php $this->start('contents') ?>
 <!-- <?php myEcho($data) ?> -->
 <div class="container">
-   
+
     <div class="row">
         <div class="col-sm-12">
             <h1>Producto-<small>Detalle</small></h1>
             <form action="<?= URL . 'producto/save' ?>" method="post">
-            <input type="text" name="idproduct" value="<?= $data->idproduct ?>">
+                <input type="text" name="idproduct" value="<?= $data->idproduct ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
@@ -31,15 +31,16 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Producto|Detalle ']);?>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="category">Categoria</label>
-                    <select class="select2" id="category" style="width: 100%; ">                         
-                        @foreach ($data as $row)
-                            <option value="{{$row->idcateg}}">{{$row->nombre}}</option>
-                        @endforeach
+                    <select class="select2" id="categoria" style="width: 100%; ">
+                        <?php foreach ($categorias as $row) : ?>
+                            <!-- <option value="<?= $row->idcateg ?>"><?= $row->nombre ?> </option> -->
+                            <option value="<?php echo $row['idcateg'] ?><?php echo $row['nombre'] ?>"></option>
+                        <?php endforeach; ?>
                     </select>
-                </div> 
+                </div>
 
                 <div class="row">
                     <div class="col-sm-4">
@@ -64,7 +65,7 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Producto|Detalle ']);?>
                     </div>
                     <div class="col-sm-8">
                         <div class="form-group">
-                           
+
                         </div>
                     </div>
                 </div>
@@ -80,7 +81,7 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Producto|Detalle ']);?>
 
                     </div>
                 </div>
-    
+
                 <br>
                 <div class="row">
                     <div class="col-sm-4">

@@ -58,7 +58,7 @@ class ProductoDAO extends Dao
         $stmt->bindParam(6, $obj->precioventa, \PDO::PARAM_INT);
         $stmt->bindParam(7, $obj->stock, \PDO::PARAM_INT);
         $stmt->bindParam(8, $obj->stockminimo, \PDO::PARAM_INT);
-        $stmt->bindParam(9, $obj->stockminimo, \PDO::PARAM_BOOL);
+        $stmt->bindParam(9, $obj->estado, \PDO::PARAM_BOOL);
 
         return $stmt->execute();
         // $data = $stmt->fetch(\PDO::FETCH_OBJ);
@@ -77,7 +77,7 @@ class ProductoDAO extends Dao
         $stmt->bindParam(':precioventa', $obj->precioventa, \PDO::PARAM_INT);
         $stmt->bindParam(':stock', $obj->stock, \PDO::PARAM_INT);
         $stmt->bindParam(':stockminimo', $obj->stockminimo, \PDO::PARAM_INT);
-        $stmt->bindParam(':stock', $obj->stockminimo, \PDO::PARAM_BOOL);
+        $stmt->bindParam(':estado', $obj->estado, \PDO::PARAM_BOOL);
         $stmt->bindParam(':idproduct', $obj->idproduct, \PDO::PARAM_INT);
         return $stmt->execute();
     }

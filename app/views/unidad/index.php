@@ -22,8 +22,7 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| UNIDADES']);?>
                 <thead>
                     <tr>
                         <th style="width: 10%;">ID</th>
-                        <th style="width: 30%;">NOMBRE</th>
-                        <th style="width: 50%;">DESCRIPCION</th>
+                        <th style="width: 30%;">NOMBRE</th>                        
                         <th style="width: 10%;">ACCION</th>
                     </tr>
 
@@ -32,9 +31,8 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| UNIDADES']);?>
 
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row-> idmarca ?></td>
-                            <td><?= $row->nombre ?></td>
-                            <td><?= $row->descripcion ?></td>
+                            <td><?= $row-> idunidad ?></td>
+                            <td><?= $row->nombre ?></td>                            
                             <td>
                             <a href="<?=URL. "unidad/detail/{$row->idunidad}"?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
                             <a href="<?=URL. "unidad/eliminar/{$row->idunidad}"?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
