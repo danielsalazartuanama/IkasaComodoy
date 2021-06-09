@@ -1,20 +1,18 @@
 <?php
-
 namespace App\Controllers;
-
 use Libs\Controller;
-
-class OperacionesController extends Controller
-{
-    public function  index()
+class OperacionesController extends Controller {
+    
+   
+    public function index()
     {
-        echo "bienvenido";
+        echo "Bienvenidos";
     }
 
-    public function suma(int $n1, int $n2)
-    {
-        return $n1 + $n2;
+    public function suma(int $n1, int $n2): int{
+        return $n1+$n2;
     }
+
 }
-$obj = new OperacionesController();
-echo $obj->suma(5, 6);
+
+

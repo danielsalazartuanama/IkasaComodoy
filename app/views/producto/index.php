@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
+$this->layout('../layouts/layout', ['title' => 'HTGVentas| Producto']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles') ?>
@@ -12,10 +12,10 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
 <?php $this->start('contents') ?>
 <!-- <?php myEcho($data) ?> -->
 <div class="container">
-    <h1 class="text-center">Tabla Categorias</h1>
+    <h1 class="text-center">Tabla Producto</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'categoria/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a href="<?= URL . 'producto/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -23,9 +23,15 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="width: 10%;">ID</th>
-                        <th style="width: 30%;">NOMBRE</th>
-                        <th style="width: 50%;">DESCRIPCION</th>
+                        <th style="width: 5%;">ID</th>
+                        <th style="width: 5%;">IDMARCA</th>
+                        <th style="width: 5%;">IDCATEGORIA</th>
+                        <th style="width: 10%;">IDUNIDAD</th>
+                        <th style="width: 10%;">NOMBRE</th>
+                        <th style="width: 10%;">PRECIO</th>
+                        <th style="width: 10%;">PRECIOVENTA</th>
+                        <th style="width: 10%;">STOCK</th>
+                        <th style="width: 10%;">STOCKMINIMO</th>
                         <th style="width: 10%;">ACCION</th>
                     </tr>
 
@@ -33,12 +39,21 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
+                            <td><?= $row->idproduct ?></td>
+                            <td><?= $row->idmarca ?></td>
                             <td><?= $row->idcateg ?></td>
+                            <td><?= $row->idunidad ?></td>
                             <td><?= $row->nombre ?></td>
-                            <td><?= $row->descripcion ?></td>
+                            <td><?= $row->precio ?></td>
+                            <td><?= $row->precioventa ?></td>
+                            <td><?= $row->stock ?></td>
+                            <td><?= $row->stockminimo ?></td>
+
+
+
                             <td>
-                                <a href="<?= URL . "categoria/detail/{$row->idcateg}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "categoria/eliminar/{$row->idcateg}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= URL . "producto/detail/{$row->idproduct}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "producto/eliminar/{$row->idproduct}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
+$this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles') ?>
@@ -12,10 +12,10 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
 <?php $this->start('contents') ?>
 <!-- <?php myEcho($data) ?> -->
 <div class="container">
-    <h1 class="text-center">Tabla Categorias</h1>
+    <h1 class="text-center">Tabla Clientes</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'categoria/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a href="<?= URL . 'cliente/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -24,8 +24,12 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
                 <thead>
                     <tr>
                         <th style="width: 10%;">ID</th>
-                        <th style="width: 30%;">NOMBRE</th>
-                        <th style="width: 50%;">DESCRIPCION</th>
+                        <th style="width: 20%;">NOMBRE</th>
+                        <th style="width: 20%;">APELLIDO</th>
+                        <th style="width: 10%;">DIRECCION</th>
+                        <th style="width: 10%;">TELEFONO</th>
+                        <th style="width: 10%;">CRÉDITOLIMITE</th>
+                        <th style="width: 10%;">RUC</th>
                         <th style="width: 10%;">ACCION</th>
                     </tr>
 
@@ -33,12 +37,17 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->idcateg ?></td>
-                            <td><?= $row->nombre ?></td>
-                            <td><?= $row->descripcion ?></td>
+                            <td><?= $row->idcliente ?></td>
+                            <td><?= $row->nombres ?></td>
+                            <td><?= $row->apellidos ?></td>
+                            <td><?= $row->direccion ?></td>
+                            <td><?= $row->telf ?></td>
+                            <td><?= $row->creditolimite ?></td>
+                            <td><?= $row->ruc ?></td>
+
                             <td>
-                                <a href="<?= URL . "categoria/detail/{$row->idcateg}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "categoria/eliminar/{$row->idcateg}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= URL . "cliente/detail/{$row->idcliente}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "cliente/eliminar/{$row->idcliente}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

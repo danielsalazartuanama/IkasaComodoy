@@ -2,18 +2,19 @@
 
 namespace App\Controllers;
 
+use App\Daos\ProductoDAO;
 use App\Daos\CategoriaDAO;
 
 use Libs\Controller;
 use stdClass;
 
-class CategoriaController extends Controller
+class ProductoController extends Controller
 {
-    public    int  $param;
     public function __construct()
     {
-        $this->loadDirectoryTemplate('categoria');
-        $this->loadDAO('categoria');
+        $this->loadDirectoryTemplate('producto');
+        $this->loadDAO('producto');
+        //$this->loadDAOcategoria('categoria');
     }
     public function index()
     {
@@ -23,19 +24,26 @@ class CategoriaController extends Controller
     public function detail($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
-        //$categorias = $this->dao->getAllSimple(1);
         $data = $this->dao->get($id);
-        echo $this->template->render('detail', ['data' => $data]);
-        //myEcho($data);
+        //$categorias = $this->categ->getAllSimple($id);
+
+        echo $this->template->render('detail', [
+            'data' => $data,
+        ]);
+        //myEcho($categorias);
     }
     public function save()
     {
         $obj = new stdClass();
+        $obj->idproduct = isset($_POST['idproduct']) ? $_POST['idproduct'] : 0;
+        $obj->idmarca = isset($_POST['idmarca']) ? $_POST['idmarca'] : 0;
         $obj->idcateg = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
-        $this->param = $obj->idcateg;
+        $obj->idunidad = isset($_POST['idunidad']) ? $_POST['idunidad'] : 0;
         $obj->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
-        $obj->descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
-        //$obj->estado = isset($_POST['estado']) ? $_POST['estado'] : '';
+        $obj->precio = isset($_POST['precio']) ? $_POST['precio'] : '';
+        $obj->precioventa = isset($_POST['precioventa']) ? $_POST['precioventa'] : '';
+        $obj->stock = isset($_POST['stock']) ? $_POST['stock'] : '';
+        $obj->stockminimo = isset($_POST['stockminimo']) ? $_POST['stockminimo'] : '';
 
         if (isset($_POST['estado'])) {
             if ($_POST['estado'] == 'on') {
@@ -47,17 +55,17 @@ class CategoriaController extends Controller
             $obj->estado = false;
         }
 
-        if ($obj->idcateg > 0) {
+        if ($obj->idproduct > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);
         }
-        header('Location:' . URL . 'categoria/index');
+        header('Location:' . URL . 'producto/index');
     }
     public function eliminar($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
         $this->dao->delete($id);
-        header('Location:' . URL . 'categoria/index');
+        header('Location:' . URL . 'producto/index');
     }
 }

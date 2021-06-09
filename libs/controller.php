@@ -5,6 +5,7 @@ use Directory;
 //padre de los controladores
 class Controller 
 {
+    protected $dao;
     //parametros data
     protected $template;//protegida solo los hijos pueden acceder
     public function renderView(string $view, $data = null){
@@ -16,5 +17,9 @@ class Controller
 
         $this->template=new \League\Plates\Engine(MAINPATH .'app/views/'.$directory);
         $this->template->setFileExtension('php');
+    }
+    public function loadDAO(string $daoName){
+        $classDAO="App\\Daos\\".$daoName."DAO";
+        $this->dao=new $classDAO();
     }
 }

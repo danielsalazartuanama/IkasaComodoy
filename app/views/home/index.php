@@ -1,18 +1,19 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Inicio']); ?>
+$this->layout('../layouts/layout',['title'=>'HTGVentas| Inicio']);?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
-<?php $this->push('styles') ?>
-<?php $this->end() ?>
+<?php $this->push('styles')?>
+<?php $this->end()?>
 
 <!----------------------------------------------------------------------------------->
 
 <!--contenido de la pagina-->
-<?php $this->start('contents') ?>
-<?php echo  env('DB_DATABASE', 'hola') ?>
-<?php $this->stop() ?>
+<?php $this->start('contents')?>
+<!-- <?php echo env('DB_DATABASE')?> -->
+<?php $this->stop()?>
+
 
 <!-----scripts personalizados-->
-<?php $this->push('scripts') ?>
-<?php $this->end() ?>
+<?php $this->push('scripts')?>
+<?php $this->end()?>
 <!----------------------------------------------------------------------------------->

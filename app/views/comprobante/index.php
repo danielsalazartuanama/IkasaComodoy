@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
+$this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobantes']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles') ?>
@@ -12,10 +12,10 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
 <?php $this->start('contents') ?>
 <!-- <?php myEcho($data) ?> -->
 <div class="container">
-    <h1 class="text-center">Tabla Categorias</h1>
+    <h1 class="text-center">Tabla Comprobantes</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'categoria/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a href="<?= URL . 'comprobante/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -23,22 +23,22 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="width: 10%;">ID</th>
-                        <th style="width: 30%;">NOMBRE</th>
-                        <th style="width: 50%;">DESCRIPCION</th>
-                        <th style="width: 10%;">ACCION</th>
+                        <th style="width: 40%;">ID</th>
+                        <th style="width: 40%;">NOMBRE</th>
+                        <th style="width: 20%;">ACCION</th>
                     </tr>
 
                 </thead>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->idcateg ?></td>
-                            <td><?= $row->nombre ?></td>
-                            <td><?= $row->descripcion ?></td>
+                            <td><?= $row->idcomprobante ?></td>
+                            <td><?= $row->nombre?></td>
+                           
+
                             <td>
-                                <a href="<?= URL . "categoria/detail/{$row->idcateg}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "categoria/eliminar/{$row->idcateg}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= URL . "comprobante/detail/{$row->idcomprobante}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "comprobante/eliminar/{$row->idcomprobante}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
