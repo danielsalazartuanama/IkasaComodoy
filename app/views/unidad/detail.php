@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout',['title'=>'HTGVentas| Marcas|Detalle ']);?>
+$this->layout('../layouts/layout',['title'=>'HTGVentas| Unidad|Detalle ']);?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles')?>
@@ -13,9 +13,9 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Marcas|Detalle ']);?>
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Marca-<small>Detalle</small></h1>
-            <form action="<?= URL .'marca/save' ?>" method="post">
-            <input type="text" name="idmarca" value="<?= $data->idmarca ?>">
+            <h1>Unidad-<small>Detalle</small></h1>
+            <form action="<?= URL .'unidad/save' ?>" method="post">
+            <input type="text" name="idunidad" value="<?= $data->idunidad ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
@@ -62,15 +62,3 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Marcas|Detalle ']);?>
 <?php $this->push('scripts')?>
 <?php $this->end()?>
 <!----------------------------------------------------------------------------------->
-
-
-
-
-
-
-
-
-
-
-
-
