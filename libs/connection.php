@@ -24,11 +24,13 @@ private function __construct()
     $this->db=env('DB_DATABASE');
 
     $this->connect();
+
+   
 }
     public static function getInstance(){
         
         if (self::$_instance==null) {
-            self::$_instance==new Connection();
+            self::$_instance=new Connection();
         }
         return self::$_instance;
     }
@@ -45,10 +47,9 @@ private function __construct()
 
             );
 
-            $dsn = 'mysql:host='. $this->host . ',dbname=' . $this->db;
+            $dsn = 'mysql:host='. $this->host . ';dbname=' . $this->db;
 
             $this->pdo = new \PDO(
-
              $dsn,
              $this->user,
              $this->pass,
