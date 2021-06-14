@@ -2,72 +2,57 @@
 
 namespace App\Daos;
 
+use App\Models\MarcaModel;
 use Libs\Connection;
 use Libs\Dao;
 use stdClass;
 
-class MarcaDao extends Dao
+class MarcaDAO extends Dao
 {
     public function __construct()
     {
-        $this->loadConnection();
+        $this->loadEloquet();
     }
     public function getAll(bool $estado)
     {
-        $sql = "SELECT idmarca,nombre,descripcion,estado FROM marcas where estado=?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $estado, \PDO::PARAM_BOOL);
-        $stmt->execute();
-        $result = $stmt->fetchAll(\PDO::FETCH_OBJ);
+        $result = MarcaModel::where('Estado', $estado)
+            ->orderBy('IdMarca', 'DESC')
+            ->get();
         return $result;
     }
     public function get(int $id)
     {
-        if ($id > 0) {
-            $sql = "SELECT idmarca,nombre, descripcion,estado FROM marcas WHERE idmarca=?";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-            //$stmt->bindParam(2, $id, \PDO::PARAM_STR);
-            $stmt->execute();
-            //si es fetch retorna objeto nulo
-            $result = $stmt->fetch(\PDO::FETCH_OBJ);
-        } else {
-            $result = new stdClass();
-            $result->idmarca = 0;
-            $result->nombre = '';
-            $result->descripcion = '';
-            $result->estado = false;
+        $model = MarcaModel::find($id);
+        if (is_null($model)) {
+            $model = new StdClass();
+            $model->IdMarca = 0;
+            $model->Nombre = '';
+            $model->Descripcion = '';
+            $model->Estado = 0;
         }
-        return $result;
+        return $model;
     }
     public function create($obj)
     {
-        $sql = "INSERT INTO marcas(nombre, descripcion,estado)values(?,?,?)";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $obj->nombre, \PDO::PARAM_STR);
-        $stmt->bindParam(2, $obj->descripcion, \PDO::PARAM_STR);
-        $stmt->bindParam(3, $obj->estado, \PDO::PARAM_BOOL);
-
-        return $stmt->execute();
-        // $data = $stmt->fetch(\PDO::FETCH_OBJ);
-        //return $data;
+        $model = new MarcaModel();
+        $model->IdMarca = $obj->IdMarca;
+        $model->Nombre = $obj->Nombre;
+        $model->Descripcion = $obj->Descripcion;
+        $model->Estado = $obj->Estado;
+        return $model->save();
     }
     public function update($obj)
     {
-        $sql = "UPDATE  marcas SET nombre=:nombre,descripcion=:descrip,estado=:estado where idmarca=:idmarca";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':nombre', $obj->nombre, \PDO::PARAM_STR);
-        $stmt->bindParam(':descrip', $obj->descripcion, \PDO::PARAM_STR);
-        $stmt->bindParam(':estado', $obj->estado, \PDO::PARAM_BOOL);
-        $stmt->bindParam(':idmarca', $obj->idmarca, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = MarcaModel::find($obj->IdMarca);
+        $model->Nombre = $obj->Nombre;
+        $model->Descripcion = $obj->Descripcion;
+        $model->Estado = $obj->Estado;
+        return $model->save();
     }
     public function delete(int $id)
     {
-        $sql = "DELETE FROM  marcas where idmarca=?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = MarcaModel::find($id);
+        return $model->delete();
     }
     public function baja(int $id)
     {

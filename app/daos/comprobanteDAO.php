@@ -2,6 +2,7 @@
 
 namespace App\Daos;
 
+use App\Models\ComprobanteModel;
 use Libs\Connection;
 use Libs\Dao;
 use stdClass;
@@ -10,57 +11,41 @@ class ComprobanteDAO extends Dao
 {
     public function __construct()
     {
-        $this->loadConnection();
+        $this->loadEloquet();
     }
     public function getAll()
     {
-        $sql = "SELECT idcomprobante,nombre FROM comprobante ";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll(\PDO::FETCH_OBJ);
+        $result = ComprobanteModel::orderBy('IdComprobante', 'DESC')->get();
         return $result;
     }
     public function get(int $id)
     {
-        if ($id > 0) {
-            $sql = "SELECT idcomprobante,nombre FROM comprobante WHERE idcomprobante=?";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-            //$stmt->bindParam(2, $id, \PDO::PARAM_STR);
-            $stmt->execute();
-            //si es fetch retorna objeto nulo
-            $result = $stmt->fetch(\PDO::FETCH_OBJ);
-        } else {
-            $result = new stdClass();
-            $result->idcomprobante = 0;
-            $result->nombre = '';
+        $model = comprobanteModel::find($id);
+        if (is_null($model)) {
+            $model = new StdClass();
+            $model->IdComprobante = 0;
+            $model->Nombre = '';
         }
-        return $result;
+        return $model;
     }
+
     public function create($obj)
     {
-        $sql = "INSERT INTO comprobante(nombre)values(?)";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $obj->nombre, \PDO::PARAM_STR);
-
-        return $stmt->execute();
-        // $data = $stmt->fetch(\PDO::FETCH_OBJ);
-        //return $data;
+        $model = new comprobanteModel();
+        $model->IdComprobante = $obj->IdComprobante;
+        $model->Nombre = $obj->Nombre;
+        return $model->save();
     }
     public function update($obj)
     {
-        $sql = "UPDATE  comprobante SET nombre=:nombre where idcomprobante=:idcomprobante";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':nombre', $obj->nombre, \PDO::PARAM_STR);
-        $stmt->bindParam(':idcomprobante', $obj->idcomprobante, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = comprobanteModel::find($obj->IdComprobante);
+        $model->Nombre = $obj->Nombre;
+        return $model->save();
     }
     public function delete(int $id)
     {
-        $sql = "DELETE FROM  comprobante where idcomprobante=?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = comprobanteModel::find($id);
+        return $model->delete();
     }
     public function baja(int $id)
     {

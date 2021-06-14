@@ -37,17 +37,17 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->idcliente ?></td>
-                            <td><?= $row->nombres ?></td>
-                            <td><?= $row->apellidos ?></td>
-                            <td><?= $row->direccion ?></td>
-                            <td><?= $row->telf ?></td>
-                            <td><?= $row->creditolimite ?></td>
-                            <td><?= $row->ruc ?></td>
+                            <td><?= $row->IdCliente ?></td>
+                            <td><?= $row->Nombres ?></td>
+                            <td><?= $row->Apellidos ?></td>
+                            <td><?= $row->Direccion ?></td>
+                            <td><?= $row->Telf ?></td>
+                            <td><?= $row->CreditoLimite ?></td>
+                            <td><?= $row->Ruc ?></td>
 
                             <td>
-                                <a href="<?= URL . "cliente/detail/{$row->idcliente}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "cliente/eliminar/{$row->idcliente}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= URL . "cliente/detail/{$row->IdCliente}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "cliente/eliminar/{$row->IdCliente}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

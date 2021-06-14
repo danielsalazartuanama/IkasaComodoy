@@ -2,6 +2,7 @@
 
 namespace App\Daos;
 
+use App\Models\UnidadModel;
 use Libs\Connection;
 use Libs\Dao;
 use stdClass;
@@ -10,61 +11,52 @@ class UnidadDAO extends Dao
 {
     public function __construct()
     {
-        $this->loadConnection();
+        $this->loadEloquet();
     }
     public function getAll(bool $estado)
     {
-        $sql = "SELECT idunidad,nombre,estado FROM unidades where estado=?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $estado, \PDO::PARAM_BOOL);
-        $stmt->execute();
-        $result = $stmt->fetchAll(\PDO::FETCH_OBJ);
+        $result = UnidadModel::where('Estado', $estado)
+            ->orderBy('IdUnidad', 'DESC')
+            ->get();
         return $result;
     }
     public function get(int $id)
     {
-        if ($id > 0) {
-            $sql = "SELECT idunidad,nombre,estado FROM unidades WHERE idunidad=?";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-            //$stmt->bindParam(2, $id, \PDO::PARAM_STR);
-            $stmt->execute();
-            //si es fetch retorna objeto nulo
-            $result = $stmt->fetch(\PDO::FETCH_OBJ);
-        } else {
-            $result = new stdClass();
-            $result->idunidad = 0;
-            $result->nombre = '';            
-            $result->estado = false;
+        $model = UnidadModel::find($id);
+        if (is_null($model)) {
+            $model = new StdClass();
+            $model->IdUnidad = 0;
+            $model->Nombre = '';
+            $model->Estado = 0;
         }
-        return $result;
+        return $model;
+    }
+
+    public function getAllSimple(int $id)
+    {
+        $model = UnidadModel::get();
+        return $model;
     }
     public function create($obj)
     {
-        $sql = "INSERT INTO unidades(nombre,estado)values(?,?)";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $obj->nombre, \PDO::PARAM_STR);       
-        $stmt->bindParam(2, $obj->estado, \PDO::PARAM_BOOL);
-
-        return $stmt->execute();
-        // $data = $stmt->fetch(\PDO::FETCH_OBJ);
-        //return $data;
+        //$model = UnidadModel::get();
+        $model = new UnidadModel();
+        $model->IdUnidad = $obj->IdUnidad;
+        $model->Nombre = $obj->Nombre;
+        $model->Estado = $obj->Estado;
+        return $model->save();
     }
     public function update($obj)
     {
-        $sql = "UPDATE  unidades SET nombre=:nombre,estado=:estado where idunidad=:idunidad";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':nombre', $obj->nombre, \PDO::PARAM_STR);
-        $stmt->bindParam(':estado', $obj->estado, \PDO::PARAM_BOOL);
-        $stmt->bindParam(':idunidad', $obj->idunidad, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = UnidadModel::find($obj->IdUnidad);
+        $model->Nombre = $obj->Nombre;
+        $model->Estado = $obj->Estado;
+        return $model->save();
     }
     public function delete(int $id)
     {
-        $sql = "DELETE FROM  unidades where idunidad=?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = UnidadModel::find($id);
+        return $model->delete();
     }
     public function baja(int $id)
     {

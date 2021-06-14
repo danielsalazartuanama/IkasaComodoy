@@ -16,7 +16,7 @@ class FormapagoController extends Controller
     }
     public function index()
     {
-        $data = $this->dao->getAll(true);
+        $data = $this->dao->getAll();
         echo $this->template->render('index', ['data' => $data]);
     }
     public function detail($param = null)
@@ -29,11 +29,11 @@ class FormapagoController extends Controller
     public function save()
     {
         $obj = new stdClass();
-        $obj->idformapago = isset($_POST['idformapago']) ? $_POST['idformapago'] : 0;
-        $obj->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->IdFormaPago = isset($_POST['idformapago']) ? $_POST['idformapago'] : 0;
+        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
 
 
-        if ($obj->idformapago > 0) {
+        if ($obj->IdFormaPago > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);

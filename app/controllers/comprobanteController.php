@@ -16,7 +16,7 @@ class ComprobanteController extends Controller
     }
     public function index()
     {
-        $data = $this->dao->getAll(true);
+        $data = $this->dao->getAll();
         echo $this->template->render('index', ['data' => $data]);
     }
     public function detail($param = null)
@@ -29,11 +29,11 @@ class ComprobanteController extends Controller
     public function save()
     {
         $obj = new stdClass();
-        $obj->idcomprobante = isset($_POST['idcomprobante']) ? $_POST['idcomprobante'] : 0;
-        $obj->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->IdComprobante = isset($_POST['idcomprobante']) ? $_POST['idcomprobante'] : 0;
+        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
 
 
-        if ($obj->idcomprobante > 0) {
+        if ($obj->IdComprobante > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);

@@ -8,7 +8,7 @@ use Libs\Controller;
 use stdClass;
 
 class UnidadController extends Controller
-{  
+{
     public function __construct()
     {
         $this->loadDirectoryTemplate('unidad');
@@ -29,20 +29,20 @@ class UnidadController extends Controller
     public function save()
     {
         $obj = new stdClass();
-        $obj->idunidad = isset($_POST['idunidad']) ? $_POST['idunidad'] : 0;        
-        $obj->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';        
-        
+        $obj->IdUnidad = isset($_POST['idunidad']) ? $_POST['idunidad'] : 0;
+        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+
         if (isset($_POST['estado'])) {
             if ($_POST['estado'] == 'on') {
-                $obj->estado = true;
+                $obj->Estado = true;
             } else {
-                $obj->estado = false;
+                $obj->Estado = false;
             }
         } else {
-            $obj->estado = false;
+            $obj->Estado = false;
         }
 
-        if ($obj->idunidad > 0) {
+        if ($obj->IdUnidad > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);

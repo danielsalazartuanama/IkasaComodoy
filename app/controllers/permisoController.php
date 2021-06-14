@@ -2,17 +2,18 @@
 
 namespace App\Controllers;
 
-use App\Daos\Usuarios_tipoDAO;
-
+use App\Daos\PermisoDAO;
+use App\Models\PermisoModel;
+use App\Models\Usuarios_tipoModel;
 use Libs\Controller;
 use stdClass;
 
-class Usuarios_tipoController extends Controller
+class PermisoController extends Controller
 {
     public function __construct()
     {
-        $this->loadDirectoryTemplate('usuarios_tipo');
-        $this->loadDAO('usuarios_tipo');
+        $this->loadDirectoryTemplate('permiso');
+        $this->loadDAO('permiso');
     }
     public function index()
     {
@@ -23,25 +24,31 @@ class Usuarios_tipoController extends Controller
     {
         $id = isset($param[0]) ? $param[0] : 0;
         $data = $this->dao->get($id);
-        echo $this->template->render('detail', ['data' => $data]);
+        $usuarios_tipo = Usuarios_tipoModel::get();
+        echo $this->template->render('detail', [
+            'data' => $data,
+            'usuarios_tipo' => $usuarios_tipo,
+        ]);
+        //myEcho($data);
     }
     public function save()
     {
         $obj = new stdClass();
+        $obj->IdPermiso = isset($_POST['idpermiso']) ? $_POST['idpermiso'] : 0;
         $obj->IdTipo = isset($_POST['idtipo']) ? $_POST['idtipo'] : 0;
-        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->Tablas = isset($_POST['tablas']) ? $_POST['tablas'] : '';
 
-        if ($obj->IdTipo > 0) {
+        if ($obj->IdPermiso > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);
         }
-        header('Location:' . URL . 'usuarios_tipo/index');
+        header('Location:' . URL . 'permiso/index');
     }
     public function eliminar($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
         $this->dao->delete($id);
-        header('Location:' . URL . 'usuarios_tipo/index');
+        header('Location:' . URL . 'permiso/index');
     }
 }

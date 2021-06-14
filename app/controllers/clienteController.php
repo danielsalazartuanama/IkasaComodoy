@@ -8,7 +8,7 @@ use Libs\Controller;
 use stdClass;
 
 class ClienteController extends Controller
-{    
+{
     public function __construct()
     {
         $this->loadDirectoryTemplate('cliente');
@@ -16,7 +16,7 @@ class ClienteController extends Controller
     }
     public function index()
     {
-        $data = $this->dao->getAll(true);
+        $data = $this->dao->getAll();
         echo $this->template->render('index', ['data' => $data]);
     }
     public function detail($param = null)
@@ -29,15 +29,15 @@ class ClienteController extends Controller
     public function save()
     {
         $obj = new stdClass();
-        $obj->idcliente = isset($_POST['idcliente']) ? $_POST['idcliente'] : 0;        
-        $obj->nombres = isset($_POST['nombres']) ? $_POST['nombres'] : '';
-        $obj->apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : '';
-        $obj->direccion = isset($_POST['direccion']) ? $_POST['direccion'] : '';
-        $obj->telf = isset($_POST['telf']) ? $_POST['telf'] : '';
-        $obj->creditolimite = isset($_POST['creditolimite']) ? $_POST['creditolimite'] : '';
-        $obj->ruc = isset($_POST['ruc']) ? $_POST['ruc'] : '';       
+        $obj->IdCliente = isset($_POST['idcliente']) ? $_POST['idcliente'] : 0;
+        $obj->Nombres = isset($_POST['nombres']) ? $_POST['nombres'] : '';
+        $obj->Apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : '';
+        $obj->Direccion = isset($_POST['direccion']) ? $_POST['direccion'] : '';
+        $obj->Telf = isset($_POST['telf']) ? $_POST['telf'] : '';
+        $obj->CreditoLimite = isset($_POST['creditolimite']) ? $_POST['creditolimite'] : '';
+        $obj->Ruc = isset($_POST['ruc']) ? $_POST['ruc'] : '';
 
-        if ($obj->idcliente > 0) {
+        if ($obj->IdCliente > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);

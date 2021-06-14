@@ -15,25 +15,25 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| Marcas|Detalle ']);?>
         <div class="col-sm-12">
             <h1>Marca-<small>Detalle</small></h1>
             <form action="<?= URL .'marca/save' ?>" method="post">
-            <input type="text" name="idmarca" value="<?= $data->idmarca ?>">
+            <input type="text" name="idmarca" value="<?= $data->IdMarca ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_nombre">Nombre</label>
-                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->nombre ?>" class=" form-control">
+                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control">
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_descripcion">Descripcion</label>
-                            <input type="text" name="descripcion" id="id_descripcion" value="<?= $data->descripcion ?>" class=" form-control">
+                            <input type="text" name="descripcion" id="id_descripcion" value="<?= $data->Descripcion ?>" class=" form-control">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group form-check">
-                            <input type="checkbox" name="estado" id="id_estado" class="form-check-input" <?= ($data->estado == 1) ? 'checked' : '' ?>>
+                            <input type="checkbox" name="estado" id="id_estado" class="form-check-input" <?= ($data->Estado == 1) ? 'checked' : '' ?>>
                             <label class="form-check-label" for="id_estado">Estado</label>
                         </div>
                     </div>

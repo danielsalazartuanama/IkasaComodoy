@@ -15,19 +15,19 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Unidad|Detalle ']); ?
         <div class="col-sm-12">
             <h1>Unidad-<small>Detalle</small></h1>
             <form action="<?= URL . 'unidad/save' ?>" method="post">
-                <input type="text" name="idunidad" value="<?= $data->idunidad ?>">
+                <input type="text" name="idunidad" value="<?= $data->IdUnidad ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_nombre">Nombre</label>
-                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->nombre ?>" class=" form-control">
+                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group form-check">
-                            <input type="checkbox" name="estado" id="id_estado" class="form-check-input" <?= ($data->estado == 1) ? 'checked' : '' ?>>
+                            <input type="checkbox" name="estado" id="id_estado" class="form-check-input" <?= ($data->Estado == 1) ? 'checked' : '' ?>>
                             <label class="form-check-label" for="id_estado">Estado</label>
                         </div>
                     </div>

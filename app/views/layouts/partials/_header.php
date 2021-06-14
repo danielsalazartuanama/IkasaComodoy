@@ -357,7 +357,10 @@
                                         <li><a href="../../cliente/index">Cliente</a></li>
                                         <li><a href="../../producto/index">Producto</a></li>
                                         <li><a href="../../formapago/index">Forma Pago</a></li>
-
+                                        <li><a href="../../usuarios_tipo/index">Usuarios Tipo</a></li>
+                                        <li><a href="../../usuario/index">Usuario</a></li>
+                                        <li><a href="../../comprobante/index">Comprobante</a></li>
+                                        <li><a href="../../permiso/index">Permisos</a></li>
                                     </ul>
                                 </li>
                             </ul>

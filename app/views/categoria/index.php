@@ -33,12 +33,12 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->idcateg ?></td>
-                            <td><?= $row->nombre ?></td>
-                            <td><?= $row->descripcion ?></td>
+                            <td><?= $row->IdCateg ?></td>
+                            <td><?= $row->Nombre ?></td>
+                            <td><?= $row->Descripcion ?></td>
                             <td>
-                                <a href="<?= URL . "categoria/detail/{$row->idcateg}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "categoria/eliminar/{$row->idcateg}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= URL . "categoria/detail/{$row->IdCateg}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "categoria/eliminar/{$row->IdCateg}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
