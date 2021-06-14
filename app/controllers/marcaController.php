@@ -30,22 +30,22 @@ class marcaController extends Controller
     {
         $obj = new stdClass();
 
-        $obj->idmarca = isset($_POST['idmarca']) ? $_POST['idmarca'] : 0;
-        $obj->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
-        $obj->descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
+        $obj->IdMarca = isset($_POST['idmarca']) ? $_POST['idmarca'] : 0;
+        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->Descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
         //$obj->estado = isset($_POST['estado']) ? $_POST['estado'] : '';
 
         if (isset($_POST['estado'])) {
             if ($_POST['estado'] == 'on') {
-                $obj->estado = true;
+                $obj->Estado = true;
             } else {
-                $obj->estado = false;
+                $obj->Estado = false;
             }
         } else {
-            $obj->estado = false;
+            $obj->Estado = false;
         }
 
-        if ($obj->idmarca > 0) {
+        if ($obj->IdMarca > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);

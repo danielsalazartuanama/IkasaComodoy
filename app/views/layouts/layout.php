@@ -101,7 +101,7 @@
     <!-- Scroll to Top End -->
 
 
-
+  
 
     <!--All jQuery, Third Party Plugins & Activation (main.js) Files-->
     <script src="<?= URL . 'assets/js/vendor/modernizr-3.6.0.min.js' ?>"></script>
@@ -120,8 +120,9 @@
     <!-- Switcher JS [Please Remove this when Choose your Final Projct] -->
     <script src="<?= URL . 'assets/js/switcher.js' ?>"></script>
 
+    <?=$this->section('myModal')?>
     <?= $this->section('scripts') ?>
-
+ 
 </body>
 
 
