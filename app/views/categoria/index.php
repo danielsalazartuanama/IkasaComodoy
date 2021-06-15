@@ -88,7 +88,7 @@ include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 <?php $this->stop() ?>
 <!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
-<script src="<?= URL . 'js/scripts/modal_crud.js' ?>"></script>
+<script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
 <?php $this->end() ?>
 
 

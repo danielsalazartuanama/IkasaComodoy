@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Daos\ProveedorDAO;
-use App\Models\proveedorModel;
+
 use Libs\Controller;
 use stdClass;
 
@@ -14,6 +14,7 @@ class ProveedorController extends Controller
         $this->loadDirectoryTemplate('proveedor');
         $this->loadDAO('proveedor');
     }
+
     public function index()
     {
         $data = $this->dao->getAll(true);

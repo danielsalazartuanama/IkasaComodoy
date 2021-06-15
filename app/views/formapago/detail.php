@@ -1,15 +1,4 @@
-<?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Formapago|Detalle ']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
-<?php $this->push('styles') ?>
-<?php $this->end() ?>
 
-<!----------------------------------------------------------------------------------->
-
-<!--contenido de la pagina-->
-<?php $this->start('contents') ?>
-<!-- <?php myEcho($data) ?> -->
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -36,8 +25,3 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Formapago|Detalle '])
 
         </div>
     </div>
-    <?php $this->stop() ?>
-
-    <!-----scripts personalizados-->
-    <?php $this->push('scripts') ?>
-    <?php $this->end() ?>

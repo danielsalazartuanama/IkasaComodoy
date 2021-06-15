@@ -15,7 +15,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Usuario']); ?>
     <h1 class="text-center">Tabla Usuarios</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'usuario/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a is-modal="true" href="<?= URL . 'usuario/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -52,7 +52,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Usuario']); ?>
                             <td><?= $row->updated_at ?></td> -->
 
                             <td>
-                                <a href="<?= URL . "usuario/detail/{$row->IdUsuario}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a is-modal="true" href="<?= URL . "usuario/detail/{$row->IdUsuario}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
                                 <a href="<?= URL . "usuario/eliminar/{$row->IdUsuario}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
@@ -66,26 +66,14 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Usuario']); ?>
 <?php $this->stop() ?>
 
 <!-----scripts personalizados-->
-<?php $this->push('scripts') ?>
-<?php $this->end() ?>
-
-
-
-
-
-
-
-
-
-
-
-
+<?php $this->start('myModal') ?>
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categoria-Detalle']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
-<?php $this->push('styles') ?>
+$title = 'Usuario-Dealle Insertar';
+$size = NORMAL;
+include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 
+<?php $this->stop() ?>
+<!-----scripts personalizados-->
+<?php $this->push('scripts') ?>
+<script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
 <?php $this->end() ?>
-
-<!----------------------------------------------------------------------------------->

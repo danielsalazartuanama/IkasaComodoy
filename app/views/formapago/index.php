@@ -13,7 +13,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| FORMAPAGO']); ?>
     <h1 class="text-center">Tabla de pagos</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'formapago/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a is-modal="true" href=" <?= URL . 'formapago/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -34,7 +34,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| FORMAPAGO']); ?>
                             <td><?= $row->IdFormaPago ?></td>
                             <td><?= $row->Nombre ?></td>
                             <td>
-                                <a href="<?= URL . "formapago/detail/{$row->IdFormaPago}" ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
+                                <a is-modal="true" href="<?= URL . "formapago/detail/{$row->IdFormaPago}" ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
                                 <a href="<?= URL . "formapago/eliminar/{$row->IdFormaPago}" ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
@@ -47,11 +47,19 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| FORMAPAGO']); ?>
 </div>
 
 
-<!-- <?php myEcho($data) ?> -->
 <?php $this->stop() ?>
 
 
 <!-----scripts personalizados-->
+<?php $this->start('myModal') ?>
+<?php
+$title = 'categoria-Dealle Insertar';
+$size = NORMAL;
+include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
+
+<?php $this->stop() ?>
+<!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
+<script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
 <?php $this->end() ?>
 <!----------------------------------------------------------------------------------->

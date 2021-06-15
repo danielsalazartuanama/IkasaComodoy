@@ -12,10 +12,10 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| proveedores']); ?>
 <?php $this->start('contents') ?>
 <!-- <?php myEcho($data) ?> -->
 <div class="container">
-    <h1 class="text-center">Tabla Categorias</h1>
+    <h1 class="text-center">Tabla preveedor</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a is-modal="true" href="<?= URL . 'proveedor/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a href="<?= URL . 'proveedor/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
 
         </div>
     </div>
@@ -25,11 +25,12 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| proveedores']); ?>
                 <thead>
                     <tr>
                         <th style="width: 10%;">ID</th>
-                        <th style="width: 30%;">NOMBRE</th>
-                        <th style="width: 50%;">DIRECCION</th>
-                        <th style="width: 50%;">TELEFONO</th>
-                        <th style="width: 50%;">RUC</th>
-                        <th style="width: 50%;">DNI</th>
+                        <th style="width: 15%;">NOMBRE</th>
+                        <th style="width: 20%;">DIRECCION</th>
+                        <th style="width: 15%;">EMAIL</th>
+                        <th style="width: 10%;">TELEFONO</th>
+                        <th style="width: 10%;">RUC</th>
+                        <th style="width: 10%;">DNI</th>
                         <th style="width: 10%;">ACCION</th>
                     </tr>
 
@@ -39,12 +40,13 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| proveedores']); ?>
                         <tr>
                             <td><?= $row->IdProve ?></td>
                             <td><?= $row->Nombre ?></td>
+                            <td><?= $row->Email ?></td>
                             <td><?= $row->Direccion ?></td>
                             <td><?= $row->Telefono ?></td>
                             <td><?= $row->Ruc ?></td>
                             <td><?= $row->Dni ?></td>
                             <td>
-                                <a is-modal="true" href="<?= URL . "proveedor/detail/{$row->IdProve}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "proveedor/detail/{$row->IdProve}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
                                 <!-- <a href="<?= URL . "proveedor/eliminar/{$row->IdProve}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a> -->
                                 <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                                     <i class="fa fa-trash"></i>
@@ -85,16 +87,9 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| proveedores']); ?>
 
 
 
-<?php $this->start('myModal') ?>
-<?php
-$title = 'categoria-Dealle Insertar';
-$size = GRANDE;
-include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
-
-<?php $this->stop() ?>
 <!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
-<script src="<?= URL . 'js/scripts/modal_crud.js' ?>"></script>
+
 <?php $this->end() ?>
 
 

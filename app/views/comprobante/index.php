@@ -15,7 +15,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobantes']); ?>
     <h1 class="text-center">Tabla Comprobantes</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'comprobante/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a is-modal=" true" href=" <?= URL . 'comprobante/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -37,7 +37,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobantes']); ?>
 
 
                             <td>
-                                <a href="<?= URL . "comprobante/detail/{$row->IdComprobante}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a is-modal="true" href=" <?= URL . "comprobante/detail/{$row->IdComprobante}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
                                 <a href="<?= URL . "comprobante/eliminar/{$row->IdComprobante}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
@@ -51,26 +51,14 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobantes']); ?>
 <?php $this->stop() ?>
 
 <!-----scripts personalizados-->
-<?php $this->push('scripts') ?>
-<?php $this->end() ?>
-
-
-
-
-
-
-
-
-
-
-
-
+<?php $this->start('myModal') ?>
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categoria-Detalle']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
-<?php $this->push('styles') ?>
+$title = 'Comprobante-Dealle Insertar';
+$size = PEQUEÑO;
+include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 
+<?php $this->stop() ?>
+<!-----scripts personalizados-->
+<?php $this->push('scripts') ?>
+<script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
 <?php $this->end() ?>
-
-<!----------------------------------------------------------------------------------->
