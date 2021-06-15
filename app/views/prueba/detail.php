@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h1>Categorias-<small>Detalle</small></h1>
-            <form action="<?= URL . 'categoria/save' ?>" method="post">
+            <form action="<?= URL . 'prueba/save' ?>" method="post">
                 <input type="text" name="idcateg" value="<?= $data->IdCateg ?>">
                 <div class="row">
                     <div class="col-sm-4">

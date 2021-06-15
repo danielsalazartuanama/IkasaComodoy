@@ -1,15 +1,3 @@
-<?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Producto|Detalle ']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
-<?php $this->push('styles') ?>
-<?php $this->end() ?>
-
-<!----------------------------------------------------------------------------------->
-
-<!--contenido de la pagina-->
-<?php $this->start('contents') ?>
-<!-- <?php myEcho($data) ?> -->
 <div class="container">
 
     <div class="row">
@@ -115,17 +103,3 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Producto|Detalle ']);
 
         </div>
     </div>
-    <?php $this->stop() ?>
-
-    <!-----scripts personalizados-->
-    <?php $this->push('scripts') ?>
-    <script>
-        // In your Javascript (external .js resource or <script> tag)
-        $(document).ready(function() {
-            $('#idcategoria').select1();
-            $('#idmarca').select1();
-            $('#idunidad').select1();
-
-        });
-    </script>
-    <?php $this->end() ?>

@@ -1,19 +1,22 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| UNIDADES']); ?>
+$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles') ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l">
 <?php $this->end() ?>
 
 <!----------------------------------------------------------------------------------->
 
 <!--contenido de la pagina-->
 <?php $this->start('contents') ?>
+<!-- <?php myEcho($data) ?> -->
 <div class="container">
-    <h1 class="text-center">Tabla unidades</h1>
+    <h1 class="text-center">Tabla prueba</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'unidad/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a is-modal="true" href="<?= URL . 'prueba/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+
         </div>
     </div>
     <div class="row">
@@ -23,19 +26,20 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| UNIDADES']); ?>
                     <tr>
                         <th style="width: 10%;">ID</th>
                         <th style="width: 30%;">NOMBRE</th>
+                        <th style="width: 50%;">DESCRIPCION</th>
                         <th style="width: 10%;">ACCION</th>
                     </tr>
 
                 </thead>
                 <tbody>
-
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->IdUnidad ?></td>
+                            <td><?= $row->IdCateg ?></td>
                             <td><?= $row->Nombre ?></td>
+                            <td><?= $row->Descripcion ?></td>
                             <td>
-                                <a href="<?= URL . "unidad/detail/{$row->IdUnidad}" ?>" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
-                                <!-- <a href="<?= URL . "unidad/eliminar/{$row->IdUnidad}" ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a> -->
+                                <a is-modal="true" href="<?= URL . "prueba/detail/{$row->IdCateg}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <!-- <a href="<?= URL . "categoria/eliminar/{$row->IdCateg}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a> -->
                                 <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                                     <i class="fa fa-trash"></i>
                                 </a>
@@ -48,6 +52,10 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| UNIDADES']); ?>
         </div>
     </div>
 </div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -59,17 +67,27 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| UNIDADES']); ?>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">cancelar</button>
-                <a href="<?= URL . "categoria/eliminar/{$row->IdUnidad}" ?>" class=" btn btn-primay">Aceptar</a>
+                <a href="<?= URL . "prueba/eliminar/{$row->IdCateg}" ?>" class=" btn btn-primay">Aceptar</a>
             </div>
         </div>
     </div>
 </div>
-
-<!-- <?php myEcho($data) ?> -->
 <?php $this->stop() ?>
 
+<?php $this->start('myModal') ?>
+<?php
+$title = 'categoria-Dealle Insertar';
+$size = NORMAL;
+include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 
+<?php $this->stop() ?>
 <!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
+<script src="<?= URL . 'js/scripts/modal_crud.js' ?>"></script>
 <?php $this->end() ?>
+
+
+
+
+
 <!----------------------------------------------------------------------------------->
