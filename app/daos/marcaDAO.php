@@ -5,6 +5,7 @@ namespace App\Daos;
 use App\Models\MarcaModel;
 use Libs\Connection;
 use Libs\Dao;
+
 use stdClass;
 
 class MarcaDAO extends Dao
@@ -41,6 +42,7 @@ class MarcaDAO extends Dao
         $model->Estado = $obj->Estado;
         return $model->save();
     }
+
     public function update($obj)
     {
         $model = MarcaModel::find($obj->IdMarca);
@@ -49,6 +51,7 @@ class MarcaDAO extends Dao
         $model->Estado = $obj->Estado;
         return $model->save();
     }
+
     public function delete(int $id)
     {
         $model = MarcaModel::find($id);
@@ -56,9 +59,14 @@ class MarcaDAO extends Dao
     }
     public function baja(int $id)
     {
-        $sql = "UPDATE marcas SET estado=0 where idmarca?";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(1, $id, \PDO::PARAM_INT);
         return $stmt->execute();
     }
+
+    //     $sql = "UPDATE marcas SET estado=0 where idmarca?";
+    //     $stmt = $this->pdo->prepare($sql);
+    //     $stmt->bindParam(1, $id, \PDO::PARAM_INT);
+    //     return $stmt->execute();
+    // }
 }

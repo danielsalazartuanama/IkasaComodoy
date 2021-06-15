@@ -8,5 +8,4 @@ class MarcaModel extends Model
 {
     protected $table = "marcas";
     protected $primaryKey = 'IdMarca';
-    
 }
