@@ -3,13 +3,12 @@
 namespace App\Controllers;
 
 use App\Daos\CategoriaDAO;
-
+use App\Models\CategoriaModel;
 use Libs\Controller;
 use stdClass;
 
 class CategoriaController extends Controller
 {
-    public    int  $param;
     public function __construct()
     {
         $this->loadDirectoryTemplate('categoria');
@@ -23,30 +22,31 @@ class CategoriaController extends Controller
     public function detail($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
+        //$categorias = $this->dao->getAllSimple(1);
         $data = $this->dao->get($id);
-        echo $this->template->render('detail', ['data' => $data]);
+        $categorias = CategoriaModel::get();
+        echo $this->template->render('detail', ['data' => $data, 'categorias' => $categorias]);
         //myEcho($data);
     }
     public function save()
     {
         $obj = new stdClass();
-        $obj->idcateg = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
-        $this->param = $obj->idcateg;
-        $obj->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
-        $obj->descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
+        $obj->IdCateg = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
+        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->Descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
         //$obj->estado = isset($_POST['estado']) ? $_POST['estado'] : '';
 
         if (isset($_POST['estado'])) {
             if ($_POST['estado'] == 'on') {
-                $obj->estado = true;
+                $obj->Estado = true;
             } else {
-                $obj->estado = false;
+                $obj->Estado = false;
             }
         } else {
-            $obj->estado = false;
+            $obj->Estado = false;
         }
 
-        if ($obj->idcateg > 0) {
+        if ($obj->IdCateg > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);
@@ -56,7 +56,9 @@ class CategoriaController extends Controller
     public function eliminar($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
-        $this->dao->delete($id);
+        if ($id > 0) {
+            $this->dao->delete($id);
+        }
         header('Location:' . URL . 'categoria/index');
     }
 }

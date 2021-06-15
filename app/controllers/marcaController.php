@@ -23,6 +23,7 @@ class marcaController extends Controller
     {
         $id = isset($param[0]) ? $param[0] : 0;
         $data = $this->dao->get($id);
+        //$marca=MarcaDAO()->get();
         echo $this->template->render('detail', ['data' => $data]);
         //myEcho($data);
     }
@@ -30,33 +31,32 @@ class marcaController extends Controller
     {
         $obj = new stdClass();
 
-        $obj->idmarca = isset($_POST['idmarca']) ? $_POST['idmarca'] : 0;
-        $obj->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
-        $obj->descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
+        $obj->IdMarca = isset($_POST['idmarca']) ? $_POST['idmarca'] : 0;
+        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->Descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
         //$obj->estado = isset($_POST['estado']) ? $_POST['estado'] : '';
 
         if (isset($_POST['estado'])) {
             if ($_POST['estado'] == 'on') {
-                $obj->estado = true;
+                $obj->Estado = true;
             } else {
-                $obj->estado = false;
+                $obj->Estado = false;
             }
         } else {
-            $obj->estado = false;
+            $obj->Estado = false;
         }
 
-        if ($obj->idmarca > 0) {
+        if ($obj->IdMarca > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);
         }
         header('Location:' . URL . 'marca/index');
     }
-    public function eliminar( $param = null)
+    public function eliminar($param = null)
     {
-      $id=isset($param[0])? $param[0]:0;
-      $this->dao->delete($id);
-      header('Location:' . URL . 'marca/index');
-
+        $id = isset($param[0]) ? $param[0] : 0;
+        $this->dao->delete($id);
+        header('Location:' . URL . 'marca/index');
     }
 }

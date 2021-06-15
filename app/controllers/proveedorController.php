@@ -2,17 +2,17 @@
 
 namespace App\Controllers;
 
-use App\Daos\UsuarioDAO;
-use App\Models\Usuarios_tipoModel;
+use App\Daos\ProveedorDAO;
+use App\Models\proveedorModel;
 use Libs\Controller;
 use stdClass;
 
-class UsuarioController extends Controller
+class ProveedorController extends Controller
 {
     public function __construct()
     {
-        $this->loadDirectoryTemplate('usuario');
-        $this->loadDAO('usuario');
+        $this->loadDirectoryTemplate('proveedor');
+        $this->loadDAO('proveedor');
     }
     public function index()
     {
@@ -23,25 +23,21 @@ class UsuarioController extends Controller
     {
         $id = isset($param[0]) ? $param[0] : 0;
         $data = $this->dao->get($id);
-        $tipos = Usuarios_tipoModel::get();
         echo $this->template->render('detail', [
             'data' => $data,
-            'tipos' => $tipos,
         ]);
-        //myEcho($data);
     }
     public function save()
     {
         $obj = new stdClass();
-        $obj->IdUsuario = isset($_POST['idusuario']) ? $_POST['idusuario'] : 0;
-        $obj->IdTipo = isset($_POST['idtipo']) ? $_POST['idtipo'] : 0;
-        $obj->Apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : '';
-        $obj->Nombres = isset($_POST['nombres']) ? $_POST['nombres'] : '';
+        $obj->IdCateg = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
+        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->Email = isset($_POST['email']) ? $_POST['email'] : '';
         $obj->Direccion = isset($_POST['direccion']) ? $_POST['direccion'] : '';
-        $obj->Telf = isset($_POST['telf']) ? $_POST['telf'] : '';
-        $obj->Usuario = isset($_POST['usuario']) ? $_POST['usuario'] : '';
-        $obj->Clave = isset($_POST['clave']) ? $_POST['clave'] : '';
-        $obj->Correo = isset($_POST['correo']) ? $_POST['correo'] : '';
+        $obj->Telefono = isset($_POST['telefono']) ? $_POST['telefono'] : '';
+        $obj->Ruc = isset($_POST['ruc']) ? $_POST['ruc'] : '';
+        $obj->Dni = isset($_POST['dni']) ? $_POST['dni'] : '';
+
         if (isset($_POST['estado'])) {
             if ($_POST['estado'] == 'on') {
                 $obj->Estado = true;
@@ -52,17 +48,19 @@ class UsuarioController extends Controller
             $obj->Estado = false;
         }
 
-        if ($obj->IdUsuario > 0) {
+        if ($obj->IdCateg > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);
         }
-        header('Location:' . URL . 'usuario/index');
+        header('Location:' . URL . 'proveedor/index');
     }
     public function eliminar($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
-        $this->dao->delete($id);
-        header('Location:' . URL . 'usuario/index');
+        if ($id > 0) {
+            $this->dao->delete($id);
+        }
+        header('Location:' . URL . 'proveedor/index');
     }
 }

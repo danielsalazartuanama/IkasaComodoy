@@ -2,8 +2,12 @@
 
 namespace App\Controllers;
 
-use App\Daos\productoDAO;
-
+use App\Daos\ProductoDAO;
+use App\Daos\CategoriaDAO;
+use App\Models\CategoriaModel;
+use App\Models\MarcaModel;
+use App\Models\ProductoModel;
+use App\Models\UnidadModel;
 use Libs\Controller;
 use stdClass;
 
@@ -13,7 +17,7 @@ class ProductoController extends Controller
     {
         $this->loadDirectoryTemplate('producto');
         $this->loadDAO('producto');
-        $this->loadDAOcateg('categoria');
+        //$this->loadDAOcategoria('categoria');
     }
     public function index()
     {
@@ -24,36 +28,42 @@ class ProductoController extends Controller
     {
         $id = isset($param[0]) ? $param[0] : 0;
         $data = $this->dao->get($id);
-        $categorias = $this->categ->getAllSimple($id);
-
-        echo $this->template->render('detail', ['data' => $data, 'categorias' => $categorias]);
-        //myEcho($data);
-
+        $categorias = CategoriaModel::get();
+        $marcas = MarcaModel::get();
+        $unidades = UnidadModel::get();
+        $productos = ProductoModel::get();
+        echo $this->template->render('detail', [
+            'data' => $data,
+            'categorias' => $categorias,
+            'marcas' => $marcas,
+            'unidades' => $unidades,
+            'productos' => $productos
+        ]);
     }
     public function save()
     {
         $obj = new stdClass();
-        $obj->idproduct = isset($_POST['idproduct']) ? $_POST['idproduct'] : 0;
-        $obj->idmarca = isset($_POST['idmarca']) ? $_POST['idmarca'] : 0;
-        $obj->idcateg = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
-        $obj->idunidad = isset($_POST['idunidad']) ? $_POST['idunidad'] : 0;
-        $obj->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
-        $obj->precio = isset($_POST['precio']) ? $_POST['precio'] : '';
-        $obj->precioventa = isset($_POST['precioventa']) ? $_POST['precioventa'] : '';
-        $obj->stock = isset($_POST['stock']) ? $_POST['stock'] : '';
-        $obj->stockminimo = isset($_POST['stockminimo']) ? $_POST['stockminimo'] : '';
+        $obj->IdProduct = isset($_POST['idproduct']) ? $_POST['idproduct'] : 0;
+        $obj->IdMarca = isset($_POST['idmarca']) ? $_POST['idmarca'] : 0;
+        $obj->IdCateg = isset($_POST['idcategoria']) ? $_POST['idcategoria'] : 0;
+        $obj->IdUnidad = isset($_POST['idunidad']) ? $_POST['idunidad'] : 0;
+        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->Precio = isset($_POST['precio']) ? $_POST['precio'] : '';
+        $obj->PrecioVenta = isset($_POST['precioventa']) ? $_POST['precioventa'] : '';
+        $obj->Stock = isset($_POST['stock']) ? $_POST['stock'] : '';
+        $obj->StockMinimo = isset($_POST['stockminimo']) ? $_POST['stockminimo'] : '';
 
         if (isset($_POST['estado'])) {
             if ($_POST['estado'] == 'on') {
-                $obj->estado = true;
+                $obj->Estado = true;
             } else {
-                $obj->estado = false;
+                $obj->Estado = false;
             }
         } else {
-            $obj->estado = false;
+            $obj->Estado = false;
         }
 
-        if ($obj->idproduct > 0) {
+        if ($obj->IdProduct > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);

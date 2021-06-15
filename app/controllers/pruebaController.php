@@ -2,17 +2,17 @@
 
 namespace App\Controllers;
 
-use App\Daos\UnidadDAO;
-
+use App\Daos\pruebaDAO;
+use App\Models\PruebaModel;
 use Libs\Controller;
 use stdClass;
 
-class UnidadController extends Controller
-{  
+class pruebaController extends Controller
+{
     public function __construct()
     {
-        $this->loadDirectoryTemplate('unidad');
-        $this->loadDAO('unidad');
+        $this->loadDirectoryTemplate('prueba');
+        $this->loadDAO('prueba');
     }
     public function index()
     {
@@ -22,6 +22,7 @@ class UnidadController extends Controller
     public function detail($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
+        //$pruebas = $this->dao->getAllSimple(1);
         $data = $this->dao->get($id);
         echo $this->template->render('detail', ['data' => $data]);
         //myEcho($data);
@@ -29,30 +30,34 @@ class UnidadController extends Controller
     public function save()
     {
         $obj = new stdClass();
-        $obj->idunidad = isset($_POST['idunidad']) ? $_POST['idunidad'] : 0;        
-        $obj->nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';        
-        
+        $obj->IdCateg = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
+        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+        $obj->Descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
+        //$obj->estado = isset($_POST['estado']) ? $_POST['estado'] : '';
+
         if (isset($_POST['estado'])) {
             if ($_POST['estado'] == 'on') {
-                $obj->estado = true;
+                $obj->Estado = true;
             } else {
-                $obj->estado = false;
+                $obj->Estado = false;
             }
         } else {
-            $obj->estado = false;
+            $obj->Estado = false;
         }
 
-        if ($obj->idunidad > 0) {
+        if ($obj->IdCateg > 0) {
             $this->dao->update($obj);
         } else {
             $this->dao->create($obj);
         }
-        header('Location:' . URL . 'unidad/index');
+        header('Location:' . URL . 'prueba/index');
     }
     public function eliminar($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
-        $this->dao->delete($id);
-        header('Location:' . URL . 'unidad/index');
+        if ($id > 0) {
+            $this->dao->delete($id);
+        }
+        header('Location:' . URL . 'prueba/index');
     }
 }
