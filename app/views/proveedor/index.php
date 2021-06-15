@@ -15,7 +15,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| proveedores']); ?>
     <h1 class="text-center">Tabla preveedor</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'proveedor/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a is-modal=" true" href=" <?= URL . 'proveedor/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
 
         </div>
     </div>
@@ -46,11 +46,9 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| proveedores']); ?>
                             <td><?= $row->Ruc ?></td>
                             <td><?= $row->Dni ?></td>
                             <td>
-                                <a href="<?= URL . "proveedor/detail/{$row->IdProve}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <!-- <a href="<?= URL . "proveedor/eliminar/{$row->IdProve}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a> -->
-                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                                    <i class="fa fa-trash"></i>
-                                </a>
+                                <a is-modal=" true" href=" <?= URL . "proveedor/detail/{$row->IdProve}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "proveedor/eliminar/{$row->IdProve}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -61,39 +59,23 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| proveedores']); ?>
     </div>
 </div>
 <!-- Button trigger modal -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <b class="modal-title" id="exampleModalLabel">eliminar</b>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Esta seguro de eliminar Categoria</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">cancelar</button>
-                <a href="<?= URL . "categoria/eliminar/{$row->IdCateg}" ?>" class=" btn btn-primay">Aceptar</a>
-            </div>
-        </div>
-    </div>
-</div>
 <?php $this->stop() ?>
 
 
 
 <!-----scripts personalizados-->
+<?php $this->start('myModal') ?>
+<?php
+$title = 'Proveedor-Detalle Insertar';
+$size = NORMAL;
+include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
+
+<?php $this->stop() ?>
+
+
+<!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
-
+<script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
 <?php $this->end() ?>
-
-
-
-
 
 <!----------------------------------------------------------------------------------->

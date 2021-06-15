@@ -15,7 +15,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Permisos']); ?>
     <h1 class="text-center">Tabla Permisos</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'permiso/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a is-modal="true" href="<?= URL . 'permiso/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -28,7 +28,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Permisos']); ?>
                         <th style="width: 50%;">Tablas</th>
                         <th style="width: 20%;">ACCION</th>
                     </tr>
- 
+
                 </thead>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
@@ -39,7 +39,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Permisos']); ?>
 
 
                             <td>
-                                <a href="<?= URL . "comprobante/detail/{$row->IdPermiso}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a is-modal="true" href="<?= URL . "comprobante/detail/{$row->IdPermiso}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
                                 <a href="<?= URL . "comprobante/eliminar/{$row->IdPermiso}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
@@ -53,8 +53,21 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Permisos']); ?>
 <?php $this->stop() ?>
 
 <!-----scripts personalizados-->
+
+<?php $this->start('myModal') ?>
+<?php
+$title = 'Permiso-Dealle Insertar';
+$size = PEQUEÑO;
+include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
+
+<?php $this->stop() ?>
+
+
+<!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
+<script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
 <?php $this->end() ?>
+
 
 
 

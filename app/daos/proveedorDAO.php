@@ -8,7 +8,7 @@ use Libs\Dao;
 
 use stdClass;
 
-class ProvedorDAO extends Dao
+class ProveedorDAO extends Dao
 {
     public function __construct()
     {
@@ -30,17 +30,11 @@ class ProvedorDAO extends Dao
             $model->Nombre = '';
             $model->Email = '';
             $model->Direccion = '';
-            $model->telefono = '';
-            $model->Ruc  = '';
+            $model->Telefono = '';
+            $model->Ruc = '';
             $model->Dni = '';
             $model->Estado = 0;
         }
-        return $model;
-    }
-
-    public function getAllSimple()
-    {
-        $model = ProveedorModel::get();
         return $model;
     }
     public function create($obj)
@@ -51,19 +45,21 @@ class ProvedorDAO extends Dao
         $model->Email = $obj->Email;
         $model->Direccion = $obj->Direccion;
         $model->Telefono = $obj->Telefono;
-        $model->Ruc  = $obj->Ruc;
+        $model->Ruc = $obj->Ruc;
         $model->Dni = $obj->Dni;
         $model->Estado = $obj->Estado;
         return $model->save();
     }
     public function update($obj)
     {
-        $model = ProveedorModel::find($obj->IdProve);        
+        $model = ProveedorModel::find($obj->IdProve);
+        //$model = new ProveedorModel();
+        $model->Nombre = $obj->Nombre;
         $model->Nombre = $obj->Nombre;
         $model->Email = $obj->Email;
         $model->Direccion = $obj->Direccion;
         $model->Telefono = $obj->Telefono;
-        $model->Ruc  = $obj->Ruc;
+        $model->Ruc = $obj->Ruc;
         $model->Dni = $obj->Dni;
         $model->Estado = $obj->Estado;
         return $model->save();

@@ -6,6 +6,7 @@ use App\Daos\VentaDAO;
 use App\Models\ClienteModel;
 use App\Models\ComprobanteModel;
 use App\Models\formapagoModel;
+use App\Models\ProductoModel;
 use App\Models\UsuarioModel;
 use Libs\Controller;
 use stdClass;
@@ -30,14 +31,19 @@ class VentaController extends Controller
         $clientes = ClienteModel::get();
         $formapagos = formapagoModel::get();
         $comprobantes = ComprobanteModel::get();
+        $productos = ProductoModel::get();
+        foreach ($param->IdProduct as $key => $product) {
+            $results[] = array("idpro" => $param->IdProduct[$key], "precio" => $param->PrecioCosto[$key]);
+        }
         echo $this->template->render('detail', [
             'data' => $data,
             'usuarios' => $usuarios,
             'clientes' => $clientes,
             'formapagos' => $formapagos,
             'comprobantes' => $comprobantes,
+            'productos' => $productos,
+
         ]);
-        //myEcho($data);
     }
     public function save()
     {
@@ -45,7 +51,7 @@ class VentaController extends Controller
         $obj->IdVenta = isset($_POST['idventa']) ? $_POST['idventa'] : 0;
         $obj->IdUsuario = isset($_POST['idusuario']) ? $_POST['idusuario'] : 0;
         $obj->IdCliente = isset($_POST['idcliente']) ? $_POST['idcliente'] : 0;
-        $obj->IdFormaPago = isset($_POST['idformapago']) ? $_POST['idformapago'] : 0;
+        $obj->IdFormaPago = isset($_POST['idforma']) ? $_POST['idforma'] : 0;
         $obj->IdComprobante = isset($_POST['idcomprobante']) ? $_POST['idcomprobante'] : 0;
         $obj->Serie = isset($_POST['serie']) ? $_POST['serie'] : '';
         $obj->Numero = isset($_POST['numero']) ? $_POST['numero'] : '';
@@ -56,7 +62,6 @@ class VentaController extends Controller
         $obj->PorcentajeIGV = isset($_POST['procentajeigv']) ? $_POST['procentajeigv'] : '';
         $obj->Pago = isset($_POST['pago']) ? $_POST['pago'] : '';
         $obj->Cambio = isset($_POST['cambio']) ? $_POST['cambio'] : '';
-
 
         if ($obj->IdVenta > 0) {
             $this->dao->update($obj);

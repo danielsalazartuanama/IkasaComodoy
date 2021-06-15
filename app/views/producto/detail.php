@@ -21,19 +21,11 @@
                 </div>
                 <div class="form-group">
                     <label for="idcategoria">Categoria</label>
-                    <?php if ($data->IdProduct > 0) : ?>
-                        <select class="select1" id="idcategoria" name="idcategoria" style="width: 100%; ">
-                            <?php foreach ($productos as $cas) : ?>
-                                <option value="<?= $cas->IdCateg ?>"><?= $cas->Nombre ?> </option>
-                            <?php endforeach; ?>
-                        </select>
-                    <?php else : ?>
-                        <select class="select1" id="idcategoria" name="idcategoria" style="width: 100%; ">
-                            <?php foreach ($categorias as $cas) : ?>
-                                <option value="<?= $cas->IdCateg ?>"><?= $cas->Nombre ?> </option>
-                            <?php endforeach; ?>
-                        </select>
-                    <?php endif  ?>
+                    <select class="select1" id="idcategoria" name="idcategoria" style="width: 100%; ">
+                        <?php foreach ($categorias as $cas) : ?>
+                            <option value="<?= $cas->IdCateg ?>"><?= $cas->Nombre ?> </option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="idmarca">Marca</label>
@@ -44,10 +36,10 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="idunidad">Unidad</label>
-                    <select class="select1" id="idunidad" name="idunidad" style="width: 100%; ">
-                        <?php foreach ($unidades as $uni) : ?>
-                            <option value="<?= $uni->IdUnidad ?>"><?= $uni->Nombre ?> </option>
+                    <label for="idproveedor">Proveedor</label>
+                    <select class="select1" id="idproveedor" name="idproveedor" style="width: 100%; ">
+                        <?php foreach ($proveedores as $pro) : ?>
+                            <option value="<?= $pro->IdProve ?>"><?= $pro->Nombre ?> </option>
                         <?php endforeach; ?>
                     </select>
                 </div>

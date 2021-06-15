@@ -41,7 +41,7 @@ class ProductoDAO extends Dao
         $model->IdProduct = $obj->IdProduct;
         $model->IdMarca = $obj->IdMarca;
         $model->IdCateg = $obj->IdCateg;
-        $model->IdUnidad = $obj->IdUnidad;
+        $model->IdProve = $obj->IdProve;
         $model->Nombre = $obj->Nombre;
         $model->Precio = $obj->Precio;
         $model->PrecioVenta = $obj->PrecioVenta;
@@ -55,7 +55,7 @@ class ProductoDAO extends Dao
         $model = ProductoModel::find($obj->IdProduct);
         $model->Idcateg = $obj->IdCateg;
         $model->IdMarca = $obj->IdMarca;
-        $model->IdUnidad = $obj->IdUnidad;
+        $model->IdProve = $obj->IdProve;
         $model->Nombre = $obj->Nombre;
         $model->Precio = $obj->Precio;
         $model->PrecioVenta = $obj->PrecioVenta;

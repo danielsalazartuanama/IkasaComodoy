@@ -7,6 +7,7 @@ use App\Daos\CategoriaDAO;
 use App\Models\CategoriaModel;
 use App\Models\MarcaModel;
 use App\Models\ProductoModel;
+use App\Models\ProveedorModel;
 use App\Models\UnidadModel;
 use Libs\Controller;
 use stdClass;
@@ -30,14 +31,13 @@ class ProductoController extends Controller
         $data = $this->dao->get($id);
         $categorias = CategoriaModel::get();
         $marcas = MarcaModel::get();
-        $unidades = UnidadModel::get();
+        $proveedores = ProveedorModel::get();
         $productos = ProductoModel::get();
         echo $this->template->render('detail', [
             'data' => $data,
             'categorias' => $categorias,
             'marcas' => $marcas,
-            'unidades' => $unidades,
-            'productos' => $productos
+            'proveedores' => $proveedores,
         ]);
     }
     public function save()
@@ -46,7 +46,7 @@ class ProductoController extends Controller
         $obj->IdProduct = isset($_POST['idproduct']) ? $_POST['idproduct'] : 0;
         $obj->IdMarca = isset($_POST['idmarca']) ? $_POST['idmarca'] : 0;
         $obj->IdCateg = isset($_POST['idcategoria']) ? $_POST['idcategoria'] : 0;
-        $obj->IdUnidad = isset($_POST['idunidad']) ? $_POST['idunidad'] : 0;
+        $obj->IdProve = isset($_POST['idproveedor']) ? $_POST['idproveedor'] : 0;
         $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
         $obj->Precio = isset($_POST['precio']) ? $_POST['precio'] : '';
         $obj->PrecioVenta = isset($_POST['precioventa']) ? $_POST['precioventa'] : '';

@@ -5,7 +5,7 @@
             <form action="<?= URL . 'comprobante/save' ?>" method="post">
                 <input type="text" name="idcomprobante" value="<?= $data->IdComprobante ?>">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_nombre">Nombre</label>
                             <input type="text" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control">

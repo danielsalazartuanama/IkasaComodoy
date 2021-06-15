@@ -26,7 +26,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Producto']); ?>
                         <th style="width: 5%;">ID</th>
                         <th style="width: 5%;">IDMARCA</th>
                         <th style="width: 5%;">IDCATEGORIA</th>
-                        <th style="width: 5%;">IDUNIDAD</th>
+                        <th style="width: 5%;">IDPROVEEDOR</th>
                         <th style="width: 40%;">NOMBRE</th>
                         <th style="width: 20%;">PRECIO</th>
                         <!-- <th style="width: 10%;">PRECIOVENTA</th>
@@ -42,7 +42,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Producto']); ?>
                             <td><?= $row->IdProduct ?></td>
                             <td><?= $row->IdMarca ?></td>
                             <td><?= $row->IdCateg ?></td>
-                            <td><?= $row->IdUnidad ?></td>
+                            <td><?= $row->IdFormaPago ?></td>
                             <td><?= $row->Nombre ?></td>
                             <td><?= $row->Precio ?></td>
                             <!-- <td><?= $row->PrecioVenta ?></td>
@@ -75,7 +75,7 @@ include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 <?php $this->stop() ?>
 <!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
-<script src="<?= URL . 'js/scripts/modal_crud.js' ?>"></script>
+<script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
 <?php $this->end() ?>
 
 

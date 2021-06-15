@@ -41,10 +41,10 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Marcas|Detalle ']); ?
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="idformapago">Forma Pago</label>
-                            <select class="select3" id="idformapago" name="idformapago" style="width: 100%; ">
+                            <label for="idforma">Forma Pago</label>
+                            <select class="select3" id="idforma" name="idforma" style="width: 100%; ">
                                 <?php foreach ($formapagos as $forma) : ?>
-                                    <option value="<?= $forma->IdFormapago ?>"><?= $forma->Nombre ?> </option>
+                                    <option value="<?= $forma->IdFormaPago ?>"><?= $forma->Nombre ?> </option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
@@ -57,6 +57,32 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Marcas|Detalle ']); ?
                                     <option value="<?= $compro->IdComprobante ?>"><?= $compro->Nombre ?> </option>
                                 <?php endforeach; ?>
                             </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="product_id">producto</label>
+                    <select class="select3" id="product_id" name="product_id" style="width: 100%; ">
+                        <?php foreach ($productos as $prod) : ?>
+                            <option value="<?= $prod->IdProduct ?>"><?= $prod->Nombre ?> </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="precio">Precio</label>
+
+                            <input type="text" name="precio" id="precio" value="" class=" form-control">
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="stock">Stock  </label>
+
+                                <input type="text" name="stock" id="stock" value="" class=" form-control">
+
                         </div>
                     </div>
                 </div>
@@ -142,5 +168,14 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Marcas|Detalle ']); ?
 
     <!-----scripts personalizados-->
     <?php $this->push('scripts') ?>
+    <script>
+        $("#product_id").change(mostrarValores);
+
+        function mostrarValores() {
+            datosProducto = document.getElementById('product_id').value.split('_');
+            $("#precio").val(datosProducto[2]);
+            $("#stock").val(datosProducto[1]);
+        }
+    </script>
     <?php $this->end() ?>
     <!----------------------------------------------------------------------------------->
