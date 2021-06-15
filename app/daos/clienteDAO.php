@@ -2,6 +2,7 @@
 
 namespace App\Daos;
 
+use App\Models\ClienteModel;
 use Libs\Connection;
 use Libs\Dao;
 use stdClass;
@@ -10,71 +11,55 @@ class cLienteDAO extends Dao
 {
     public function __construct()
     {
-        $this->loadConnection();
+        $this->loadEloquet();
     }
     public function getAll()
     {
-        $sql = "SELECT idcliente,nombres,apellidos,direccion,telf,creditolimite,ruc FROM clientes ";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll(\PDO::FETCH_OBJ);
+        $result = ClienteModel::orderBy('IdCliente', 'DESC')->get();
         return $result;
     }
     public function get(int $id)
     {
-        if ($id > 0) {
-            $sql = "SELECT idcliente,nombres,apellidos,direccion,telf,creditolimite,ruc FROM clientes WHERE idcliente=?";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-            //$stmt->bindParam(2, $id, \PDO::PARAM_STR);
-            $stmt->execute();
-            //si es fetch retorna objeto nulo
-            $result = $stmt->fetch(\PDO::FETCH_OBJ);
-        } else {
-            $result = new stdClass();
-            $result->idcliente = 0;
-            $result->nombres = '';
-            $result->apellidos = '';
-            $result->direccion = '';
-            $result->telf = '';
-            $result->creditolimite = 0;
-            $result->ruc = '';
+        $model = clienteModel::find($id);
+        if (is_null($model)) {
+            $model = new StdClass();
+            $model->IdCliente = 0;
+            $model->Nombres = '';
+            $model->Apellidos = '';
+            $model->Direccion = '';
+            $model->Telf = '';
+            $model->CreditoLimite = 0;
+            $model->Ruc = '';      
         }
-        return $result;
+        return $model;
     }
     public function create($obj)
     {
-        $sql = "INSERT INTO clientes(nombres,apellidos,direccion,telf,creditolimite,ruc)values(?,?,?,?,?,?)";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $obj->nombres, \PDO::PARAM_STR);
-        $stmt->bindParam(2, $obj->apellidos, \PDO::PARAM_STR);
-        $stmt->bindParam(3, $obj->direccion, \PDO::PARAM_STR);
-        $stmt->bindParam(4, $obj->telf, \PDO::PARAM_STR);
-        $stmt->bindParam(5, $obj->creditolimite, \PDO::PARAM_INT);
-        $stmt->bindParam(6, $obj->ruc, \PDO::PARAM_STR);
-        return $stmt->execute();
-        // $data = $stmt->fetch(\PDO::FETCH_OBJ);
-        //return $data;
+        $model = new clienteModel();
+        $model->IdCliente = $obj->IdCliente;
+        $model->Nombres = $obj->Nombres;
+        $model->Apellidos = $obj->Apellidos;
+        $model->Direccion = $obj->Direccion;
+        $model->Telf = $obj->Telf;
+        $model->CreditoLimite = $obj->CreditoLimite;
+        $model->Ruc = $obj->Ruc;      
+        return $model->save();
     }
     public function update($obj)
     {
-        $sql = "UPDATE  clientes SET nombres=:nombres,apellidos=:apellidos,direccion=:direccion,telf=:telf,creditolimite=:creditolimite,ruc=:ruc where idcliente=:idcliente";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':nombres', $obj->nombres, \PDO::PARAM_STR);
-        $stmt->bindParam(':apellidos', $obj->apellidos, \PDO::PARAM_STR);
-        $stmt->bindParam(':direccion', $obj->direccion, \PDO::PARAM_STR);
-        $stmt->bindParam(':telf', $obj->telf, \PDO::PARAM_STR);
-        $stmt->bindParam(':creditolimite', $obj->creditolimite, \PDO::PARAM_INT);
-        $stmt->bindParam(':ruc', $obj->ruc, \PDO::PARAM_STR);
-        $stmt->bindParam(':idcliente', $obj->idcliente, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = clienteModel::find($obj->IdCliente);
+        $model->Nombres = $obj->Nombres;
+        $model->Apellidos = $obj->Apellidos;
+        $model->Direccion = $obj->Direccion;
+        $model->Telf = $obj->Telf;
+        $model->CreditoLimite = $obj->CreditoLimite;
+        $model->Ruc = $obj->Ruc;        
+        return $model->save();
     }
     public function delete(int $id)
     {
-        $sql = "DELETE FROM  clientes where idcliente=?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = clienteModel::find($id);
+        return $model->delete();
     }
     public function baja(int $id)
     {

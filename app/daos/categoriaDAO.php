@@ -2,84 +2,66 @@
 
 namespace App\Daos;
 
+use App\Models\CategoriaModel;
 use Libs\Connection;
 use Libs\Dao;
+
 use stdClass;
 
 class CategoriaDAO extends Dao
 {
     public function __construct()
     {
-        $this->loadConnection();
+        $this->loadEloquet();
     }
     public function getAll(bool $estado)
     {
-        $sql = "SELECT idcateg,nombre,descripcion,estado FROM categorias where estado=?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $estado, \PDO::PARAM_BOOL);
-        $stmt->execute();
-        $result = $stmt->fetchAll(\PDO::FETCH_OBJ);
+        $result = CategoriaModel::where('Estado', $estado)
+            ->orderBy('IdCateg', 'DESC')
+            ->get();
         return $result;
     }
     public function get(int $id)
     {
-        if ($id > 0) {
-            $sql = "SELECT idcateg,nombre, descripcion,estado FROM categorias WHERE idcateg=?";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-            //$stmt->bindParam(2, $id, \PDO::PARAM_STR);
-            $stmt->execute();
-            //si es fetch retorna objeto nulo
-            $result = $stmt->fetch(\PDO::FETCH_OBJ);
-        } else {
-            $result = new stdClass();
-            $result->idcateg = 0;
-            $result->nombre = '';
-            $result->descripcion = '';
-            $result->estado = false;
+        $model = CategoriaModel::find($id);
+        if (is_null($model)) {
+            $model = new StdClass();
+            $model->IdCateg = 0;
+            $model->Nombre = '';
+            $model->Descripcion = '';
+            $model->Estado = 0;
         }
-        return $result;
+        return $model;
     }
+
     public function getAllSimple(int $id)
     {
-
-        $sql = "SELECT idcateg,nombre FROM categorias WHERE idcateg=?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        //$stmt->bindParam(2, $id, \PDO::PARAM_STR);
-        $stmt->execute();
-        //si es fetch retorna objeto nulo
-        $result = $stmt->fetch(\PDO::FETCH_OBJ);
-        return $result;
+        $model = CategoriaModel::get();
+        return $model;
     }
     public function create($obj)
     {
-        $sql = "INSERT INTO categorias(nombre, descripcion,estado)values(?,?,?)";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $obj->nombre, \PDO::PARAM_STR);
-        $stmt->bindParam(2, $obj->descripcion, \PDO::PARAM_STR);
-        $stmt->bindParam(3, $obj->estado, \PDO::PARAM_BOOL);
-
-        return $stmt->execute();
-        // $data = $stmt->fetch(\PDO::FETCH_OBJ);
-        //return $data;
+        //$model = CategoriaModel::get();
+        $model = new CategoriaModel();
+        $model->IdCateg = $obj->IdCateg;
+        $model->Nombre = $obj->Nombre;
+        $model->Descripcion = $obj->Descripcion;
+        $model->Estado = $obj->Estado;
+        return $model->save();
     }
     public function update($obj)
     {
-        $sql = "UPDATE  categorias SET nombre=:nombre,descripcion=:descrip,estado=:estado where idcateg=:idcateg";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':nombre', $obj->nombre, \PDO::PARAM_STR);
-        $stmt->bindParam(':descrip', $obj->descripcion, \PDO::PARAM_STR);
-        $stmt->bindParam(':estado', $obj->estado, \PDO::PARAM_BOOL);
-        $stmt->bindParam(':idcateg', $obj->idcateg, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = CategoriaModel::find($obj->IdCateg);
+        //$model = new CategoriaModel();
+        $model->Nombre = $obj->Nombre;
+        $model->Descripcion = $obj->Descripcion;
+        $model->Estado = $obj->Estado;
+        return $model->save();
     }
     public function delete(int $id)
     {
-        $sql = "DELETE FROM  categorias where idcateg=?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
+        $model = CategoriaModel::find($id);
+        return $model->delete();
     }
     public function baja(int $id)
     {

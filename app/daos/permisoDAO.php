@@ -2,13 +2,12 @@
 
 namespace App\Daos;
 
-use App\Models\Usuarios_tipoModel;
-use App\Models\Usuarios_tipoModelModel;
+use App\Models\PermisoModel;
 use Libs\Connection;
 use Libs\Dao;
 use stdClass;
 
-class Usuarios_tipoDAO extends Dao
+class PermisoDAO extends Dao
 {
     public function __construct()
     {
@@ -16,41 +15,43 @@ class Usuarios_tipoDAO extends Dao
     }
     public function getAll()
     {
-        $result = Usuarios_tipoModel::orderBy('IdTipo', 'DESC')->get();
+        $result = PermisoModel::orderBy('IdPermiso', 'DESC')->get();
         return $result;
     }
     public function get(int $id)
     {
-        $model = Usuarios_tipoModel::find($id);
+        $model = PermisoModel::find($id);
         if (is_null($model)) {
             $model = new StdClass();
-            $model->IdTipo = 0;
-            $model->Nombre = '';
+            $model->IdPermiso = 0;
+            $model->Tablas = '';
         }
         return $model;
     }
 
     public function create($obj)
     {
-        $model = new Usuarios_tipoModel();
-        $model->IdTipo = $obj->IdTipo;
-        $model->Nombre = $obj->Nombre;
+        $model = new PermisoModel();
+        $model->IdPermiso = $obj->IdPermiso;
+        $model->Idtipo = $obj->IdTipo;
+        $model->Tablas = $obj->Tablas;
         return $model->save();
     }
     public function update($obj)
     {
-        $model = Usuarios_tipoModel::find($obj->IdTipo);
-        $model->Nombre = $obj->Nombre;
+        $model = PermisoModel::find($obj->IdPermiso);
+        $model->Idtipo = $obj->IdTipo;
+        $model->Tablas = $obj->Tablas;
         return $model->save();
     }
     public function delete(int $id)
     {
-        $model = Usuarios_tipoModel::find($id);
+        $model = PermisoModel::find($id);
         return $model->delete();
     }
     public function baja(int $id)
     {
-        $sql = "UPDATE Usuarios_tipoModel SET estado=0 where idtipo?";
+        $sql = "UPDATE formapago SET estado=0 where IdPermiso?";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(1, $id, \PDO::PARAM_INT);
         return $stmt->execute();

@@ -13,7 +13,8 @@
         "psr-4": {
             "Libs\\":"libs/",
             "App\\Controllers\\":"app/controllers/",
-            "App\\Daos\\":"app/daos/"
+            "App\\Daos\\":"app/daos/",
+            "App\\Models\\": "app/models/"
 
         },
         "files": [
