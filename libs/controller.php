@@ -12,7 +12,7 @@ class Controller
     public function loadDirectoryTemplate(string $directory)
     {
 
-        $this->template = new \League\Plates\Engine(MAINPATH . 'app/views/' . $directory);
+        $this->template = new \League\Plates\Engine(MAINPATH . 'app/views/admin/' . $directory);
         $this->template->setFileExtension('php');
     }
     public function loadDAO(string $daoName)
