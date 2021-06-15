@@ -32,13 +32,13 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobantes']); ?>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->idcomprobante ?></td>
-                            <td><?= $row->nombre?></td>
-                           
+                            <td><?= $row->IdComprobante ?></td>
+                            <td><?= $row->Nombre ?></td>
+
 
                             <td>
-                                <a href="<?= URL . "comprobante/detail/{$row->idcomprobante}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "comprobante/eliminar/{$row->idcomprobante}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= URL . "comprobante/detail/{$row->IdComprobante}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "comprobante/eliminar/{$row->IdComprobante}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
+$this->layout('../layouts/layout', ['title' => 'HTGVentas| Permisos']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles') ?>
@@ -12,10 +12,10 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
 <?php $this->start('contents') ?>
 <!-- <?php myEcho($data) ?> -->
 <div class="container">
-    <h1 class="text-center">Tabla Clientes</h1>
+    <h1 class="text-center">Tabla Permisos</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'cliente/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a href="<?= URL . 'permiso/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -23,31 +23,24 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="width: 10%;">ID</th>
-                        <th style="width: 20%;">NOMBRE</th>
-                        <th style="width: 20%;">APELLIDO</th>
-                        <th style="width: 10%;">DIRECCION</th>
-                        <th style="width: 10%;">TELEFONO</th>
-                        <th style="width: 10%;">CRÉDITOLIMITE</th>
-                        <th style="width: 10%;">RUC</th>
-                        <th style="width: 10%;">ACCION</th>
+                        <th style="width: 15%;">ID</th>
+                        <th style="width: 15%;">IdTipo</th>
+                        <th style="width: 50%;">Tablas</th>
+                        <th style="width: 20%;">ACCION</th>
                     </tr>
-
+ 
                 </thead>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->IdCliente ?></td>
-                            <td><?= $row->Nombres ?></td>
-                            <td><?= $row->Apellidos ?></td>
-                            <td><?= $row->Direccion ?></td>
-                            <td><?= $row->Telf ?></td>
-                            <td><?= $row->CreditoLimite ?></td>
-                            <td><?= $row->Ruc ?></td>
+                            <td><?= $row->IdPermiso ?></td>
+                            <td><?= $row->IdTipo ?></td>
+                            <td><?= $row->Tablas ?></td>
+
 
                             <td>
-                                <a href="<?= URL . "cliente/detail/{$row->IdCliente}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "cliente/eliminar/{$row->IdCliente}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= URL . "comprobante/detail/{$row->IdPermiso}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "comprobante/eliminar/{$row->IdPermiso}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

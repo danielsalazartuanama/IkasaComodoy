@@ -1,9 +1,9 @@
 <?php
-$this->layout('../layouts/layout',['title'=>'HTGVentas| UsuarioTipo|Detalle ']);?>
+$this->layout('../layouts/layout', ['title' => 'HTGVentas| UsuarioTipo|Detalle ']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
-<?php $this->push('styles')?>
-<?php $this->end()?>
+<?php $this->push('styles') ?>
+<?php $this->end() ?>
 
 <!----------------------------------------------------------------------------------->
 
@@ -14,16 +14,16 @@ $this->layout('../layouts/layout',['title'=>'HTGVentas| UsuarioTipo|Detalle ']);
     <div class="row">
         <div class="col-sm-12">
             <h1>Tipo de Usuario-<small>Detalle</small></h1>
-            <form action="<?= URL . 'usuario_tipo/save' ?>" method="post">
-            <input type="text" name="idtipo" value="<?= $data->idtipo ?>">
-               
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label for="id_nombre">Nombre</label>
-                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->nombre ?>" class=" form-control">
-                        </div>
+            <form action="<?= URL . 'usuarios_tipo/save' ?>" method="post">
+                <input type="text" name="idtipo" value="<?= $data->IdTipo ?>">
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="id_nombre">Nombre</label>
+                        <input type="text" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control">
                     </div>
-                   
+                </div>
+
                 <br>
                 <div class="row">
                     <div class="col-sm-4">

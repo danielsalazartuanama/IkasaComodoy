@@ -15,7 +15,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Producto']); ?>
     <h1 class="text-center">Tabla Producto</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'producto/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a is-modal="true" href="<?= URL . 'producto/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -26,34 +26,34 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Producto']); ?>
                         <th style="width: 5%;">ID</th>
                         <th style="width: 5%;">IDMARCA</th>
                         <th style="width: 5%;">IDCATEGORIA</th>
-                        <th style="width: 10%;">IDUNIDAD</th>
-                        <th style="width: 10%;">NOMBRE</th>
-                        <th style="width: 10%;">PRECIO</th>
-                        <th style="width: 10%;">PRECIOVENTA</th>
+                        <th style="width: 5%;">IDUNIDAD</th>
+                        <th style="width: 40%;">NOMBRE</th>
+                        <th style="width: 20%;">PRECIO</th>
+                        <!-- <th style="width: 10%;">PRECIOVENTA</th>
                         <th style="width: 10%;">STOCK</th>
-                        <th style="width: 10%;">STOCKMINIMO</th>
-                        <th style="width: 10%;">ACCION</th>
+                        <th style="width: 10%;">STOCKMINIMO</th> -->
+                        <th style="width: 20%;">ACCION</th>
                     </tr>
 
                 </thead>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->idproduct ?></td>
-                            <td><?= $row->idmarca ?></td>
-                            <td><?= $row->idcateg ?></td>
-                            <td><?= $row->idunidad ?></td>
-                            <td><?= $row->nombre ?></td>
-                            <td><?= $row->precio ?></td>
-                            <td><?= $row->precioventa ?></td>
-                            <td><?= $row->stock ?></td>
-                            <td><?= $row->stockminimo ?></td>
+                            <td><?= $row->IdProduct ?></td>
+                            <td><?= $row->IdMarca ?></td>
+                            <td><?= $row->IdCateg ?></td>
+                            <td><?= $row->IdUnidad ?></td>
+                            <td><?= $row->Nombre ?></td>
+                            <td><?= $row->Precio ?></td>
+                            <!-- <td><?= $row->PrecioVenta ?></td>
+                            <td><?= $row->Stock ?></td>
+                            <td><?= $row->StockMinimo ?></td> -->
 
 
 
                             <td>
-                                <a href="<?= URL . "producto/detail/{$row->idproduct}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "producto/eliminar/{$row->idproduct}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a is-modal=" true" href="<?= URL . "producto/detail/{$row->IdProduct}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "producto/eliminar/{$row->IdProduct}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -66,26 +66,29 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Producto']); ?>
 <?php $this->stop() ?>
 
 <!-----scripts personalizados-->
-<?php $this->push('scripts') ?>
-<?php $this->end() ?>
-
-
-
-
-
-
-
-
-
-
-
-
+<?php $this->start('myModal') ?>
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categoria-Detalle']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
-<?php $this->push('styles') ?>
+$title = 'Producto-Detalle Insertar';
+$size = NORMAL;
+include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 
+<?php $this->stop() ?>
+<!-----scripts personalizados-->
+<?php $this->push('scripts') ?>
+<script src="<?= URL . 'js/scripts/modal_crud.js' ?>"></script>
 <?php $this->end() ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!----------------------------------------------------------------------------------->

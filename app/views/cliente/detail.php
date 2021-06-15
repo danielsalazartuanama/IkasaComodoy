@@ -15,18 +15,18 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Cliente|Detalle ']); 
         <div class="col-sm-12">
             <h1>Clientes-<small>Detalle</small></h1>
             <form action="<?= URL . 'cliente/save' ?>" method="post">
-                <input type="text" name="idcliente" value="<?= $data->idcliente ?>">
+                <input type="text" name="idcliente" value="<?= $data->IdCliente ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_nombre">Nombre</label>
-                            <input type="text" name="nombres" id="id_nombres" value="<?= $data->nombres ?>" class=" form-control">
+                            <input type="text" name="nombres" id="id_nombres" value="<?= $data->Nombres ?>" class=" form-control">
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_apellidos">Apellidos</label>
-                            <input type="text" name="apellidos" id="id_apellidos" value="<?= $data->apellidos ?>" class=" form-control">
+                            <input type="text" name="apellidos" id="id_apellidos" value="<?= $data->Apellidos ?>" class=" form-control">
                         </div>
                     </div>
                 </div>
@@ -34,13 +34,13 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Cliente|Detalle ']); 
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_direccion">Direccion</label>
-                            <input type="text" name="direccion" id="id_direccion" value="<?= $data->direccion ?>" class=" form-control">
+                            <input type="text" name="direccion" id="id_direccion" value="<?= $data->Direccion ?>" class=" form-control">
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_telef">Telefono</label>
-                            <input type="text" name="telf" id="id_telf" value="<?= $data->telf ?>" class=" form-control">
+                            <input type="text" name="telf" id="id_telf" value="<?= $data->Telf ?>" class=" form-control">
                         </div>
                     </div>
                 </div>
@@ -48,13 +48,13 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Cliente|Detalle ']); 
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_creditolimite">crédito</label>
-                            <input type="number" step="0.01" name="creditolimite" id="id_creditolimite" value="<?= $data->creditolimite ?>" class=" form-control">
+                            <input type="number" step="0.01" name="creditolimite" id="id_creditolimite" value="<?= $data->CreditoLimite ?>" class=" form-control">
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_ruc">Ruc</label>
-                            <input type="text" name="ruc" id="id_ruc" value="<?= $data->ruc ?>" class=" form-control">
+                            <input type="text" name="ruc" id="id_ruc" value="<?= $data->Ruc ?>" class=" form-control">
                         </div>
                     </div>
                 </div>

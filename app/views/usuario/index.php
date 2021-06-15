@@ -25,14 +25,14 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Usuario']); ?>
                     <tr>
                         <th style="width: 5%;">ID</th>
                         <th style="width: 5%;">IDTIPO</th>
-                        <th style="width: 5%;">NOMBRES</th>
-                        <th style="width: 10%;">APELLIDOS</th>
+                        <th style="width: 5%;">AAPELLIDOS</th>
+                        <th style="width: 10%;">NOMBRES</th>
                         <th style="width: 10%;">TELEFONO</th>
                         <th style="width: 5%;">USUARIO</th>
-                        <th style="width: 10%;">CLAVE</th>
+                        <!-- <th style="width: 10%;">CLAVE</th>
                         <th style="width: 10%;">CORREO</th>
                         <th style="width: 10%;">FCREACION</th>
-                        <th style="width: 20%;">FELIMINACION</th>
+                        <th style="width: 20%;">FELIMINACION</th> -->
                         <th style="width: 10%;">ACCION</th>
                     </tr>
 
@@ -40,22 +40,20 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Usuario']); ?>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->idusuario ?></td>
-                            <td><?= $row->idtipo ?></td>
-                            <td><?= $row->nombres ?></td>
-                            <td><?= $row->apellidos ?></td>
-                            <td><?= $row->telf ?></td>
-                            <td><?= $row->usuario ?></td>
-                            <td><?= $row->clave ?></td>
-                            <td><?= $row->correo ?></td>
-                            <td><?= $row->fcreacion ?></td>
-                            <td><?= $row->feliminacion ?></td>
-
-
+                            <td><?= $row->IdUsuario ?></td>
+                            <td><?= $row->IdTipo ?></td>
+                            <td><?= $row->Apellidos ?></td>
+                            <td><?= $row->Nombres ?></td>
+                            <td><?= $row->Telf ?></td>
+                            <td><?= $row->Usuario ?></td>
+                            <!-- <td><?= $row->Clave ?></td>
+                            <td><?= $row->Correo ?></td>
+                            <td><?= $row->created_at ?></td>
+                            <td><?= $row->updated_at ?></td> -->
 
                             <td>
-                                <a href="<?= URL . "usuario/detail/{$row->idusuario}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "usuario/eliminar/{$row->idusuario}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= URL . "usuario/detail/{$row->IdUsuario}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a href="<?= URL . "usuario/eliminar/{$row->IdUsuario}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

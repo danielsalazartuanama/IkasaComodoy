@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
+$this->layout('../layouts/layout', ['title' => 'HTGVentas| proveedores']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles') ?>
@@ -15,7 +15,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
     <h1 class="text-center">Tabla Categorias</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a is-modal="true" href="<?= URL . 'categoria/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a is-modal="true" href="<?= URL . 'proveedor/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
 
         </div>
     </div>
@@ -26,7 +26,10 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
                     <tr>
                         <th style="width: 10%;">ID</th>
                         <th style="width: 30%;">NOMBRE</th>
-                        <th style="width: 50%;">DESCRIPCION</th>
+                        <th style="width: 50%;">DIRECCION</th>
+                        <th style="width: 50%;">TELEFONO</th>
+                        <th style="width: 50%;">RUC</th>
+                        <th style="width: 50%;">DNI</th>
                         <th style="width: 10%;">ACCION</th>
                     </tr>
 
@@ -34,12 +37,15 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
                 <tbody>
                     <?php foreach ($data as $row) : ?>
                         <tr>
-                            <td><?= $row->IdCateg ?></td>
+                            <td><?= $row->IdProve ?></td>
                             <td><?= $row->Nombre ?></td>
-                            <td><?= $row->Descripcion ?></td>
+                            <td><?= $row->Direccion ?></td>
+                            <td><?= $row->Telefono ?></td>
+                            <td><?= $row->Ruc ?></td>
+                            <td><?= $row->Dni ?></td>
                             <td>
-                                <a is-modal="true" href="<?= URL . "categoria/detail/{$row->IdCateg}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <!-- <a href="<?= URL . "categoria/eliminar/{$row->IdCateg}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a> -->
+                                <a is-modal="true" href="<?= URL . "proveedor/detail/{$row->IdProve}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <!-- <a href="<?= URL . "proveedor/eliminar/{$row->IdProve}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a> -->
                                 <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                                     <i class="fa fa-trash"></i>
                                 </a>
@@ -82,7 +88,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
 <?php $this->start('myModal') ?>
 <?php
 $title = 'categoria-Dealle Insertar';
-$size = NORMAL;
+$size = GRANDE;
 include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 
 <?php $this->stop() ?>
