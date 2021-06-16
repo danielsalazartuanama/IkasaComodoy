@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
+$this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Clientes']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles') ?>
@@ -11,65 +11,97 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
 <!--contenido de la pagina-->
 <?php $this->start('contents') ?>
 <!-- <?php myEcho($data) ?> -->
-<div class="container">
-    <h1 class="text-center">Tabla Clientes</h1>
-    <div class="row">
-        <div class="col-sm-4">
-            <a is-modal="true" href="<?= URL . 'cliente/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
-        </div>
+
+<div class="content-wrapper">
+<div class="page-header">
+        <h3 class="page-title">
+        Tabla Clientes
+        </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Panel administrador</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Clientes</li>
+            </ol>
+        </nav>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th style="width: 10%;">ID</th>
-                        <th style="width: 20%;">NOMBRE</th>
-                        <th style="width: 20%;">APELLIDO</th>
-                        <th style="width: 10%;">DIRECCION</th>
-                        <th style="width: 10%;">TELEFONO</th>
-                        <th style="width: 10%;">CRÉDITOLIMITE</th>
-                        <th style="width: 10%;">RUC</th>
-                        <th style="width: 10%;">ACCION</th>
-                    </tr>
 
-                </thead>
-                <tbody>
-                    <?php foreach ($data as $row) : ?>
-                        <tr>
-                            <td><?= $row->IdCliente ?></td>
-                            <td><?= $row->Nombres ?></td>
-                            <td><?= $row->Apellidos ?></td>
-                            <td><?= $row->Direccion ?></td>
-                            <td><?= $row->Telf ?></td>
-                            <td><?= $row->CreditoLimite ?></td>
-                            <td><?= $row->Ruc ?></td>
 
-                            <td>
-                                <a is-modal="true" href="<?= URL . "cliente/detail/{$row->IdCliente}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
-                                <a href="<?= URL . "cliente/eliminar/{$row->IdCliente}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
+ <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    
+                    <div class="d-flex justify-content-between">
+                        <h4 class="card-title">Categorías</h4>
+                       
+                            <div class="btn-group">
+                            <a is-modal="true" href="<?= URL . 'cliente/detail' ?>" type="button" class="btn btn-primary btn-icon-text mb-4" >Agregar<i class="btn-icon-append fas fa-plus"></i></a>
+                            </div>
 
-            </table>
+                    </div>
+
+                    <div class="table-responsive">
+                    
+                        <table id="order-listing" class="table">
+                            <thead>
+                                    <tr>
+                                    <th>ID</th>
+                                    <th>NOMBRE</th>
+                                    <th>APELLIDO</th>
+                                    <th>DIRECCION</th>
+                                    <th>TELEFONO</th>
+                                    <th>CRÉDITOLIMITE</th>
+                                    <th>RUC</th>
+                                    <th>ACCION</th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                    <?php foreach ($data as $row) : ?>
+                                <tr>
+                                    <td><?= $row->IdCliente ?></td>
+                                    <td><?= $row->Nombres ?></td>
+                                    <td><?= $row->Apellidos ?></td>
+                                    <td><?= $row->Direccion ?></td>
+                                    <td><?= $row->Telf ?></td>
+                                    <td><?= $row->CreditoLimite ?></td>
+                                    <td><?= $row->Ruc ?></td>
+
+                                    <td>
+                                    <form action="<?= URL . "cliente/eliminar/{$row->IdCliente}" ?>" class="formulario-eliminar" method="POST">
+                                    <a is-modal="true" href="<?= URL . "cliente/detail/{$row->IdCliente}" ?>" class="btn btn-primary"> <i style="height: 25px;" class="far fa-edit"></i></a>
+                                     <button  type="submit" class="btn btn-warning" style="margin-left: 4px;"><i style="height: 25px;" class="fa fa-trash"></i></button>
+                                    </form>
+
+                                    
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+               
+            </div>
         </div>
     </div>
 </div>
+
+
 <?php $this->stop() ?>
 
 <!-----scripts personalizados-->
 <?php $this->start('myModal') ?>
 <?php
-$title = 'categoria-Dealle Insertar';
-$size = NORMAL;
+$title = 'Cliente-Dealle Insertar';
+$size = PEQUEÑO;
 include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 
 <?php $this->stop() ?>
 <!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
+<script src="<?= URL . 'assets/js/scripts/alert.js' ?>"></script>
 <script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
+<script src="<?= URL . 'melody/js/data-table.js' ?>"></script>
 <?php $this->end() ?>
 
 

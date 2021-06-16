@@ -1,14 +1,4 @@
-<?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Marcas|Detalle ']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
-<?php $this->push('styles') ?>
-<?php $this->end() ?>
 
-<!----------------------------------------------------------------------------------->
-
-<!--contenido de la pagina-->
-<?php $this->start('contents') ?>
 
 <div class="container">
     <div class="row">
@@ -162,20 +152,4 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Marcas|Detalle ']); ?
         </div>
     </div>
 
-    <!-- <?php myEcho($data) ?> -->
-    <?php $this->stop() ?>
-
-
-    <!-----scripts personalizados-->
-    <?php $this->push('scripts') ?>
-    <script>
-        $("#product_id").change(mostrarValores);
-
-        function mostrarValores() {
-            datosProducto = document.getElementById('product_id').value.split('_');
-            $("#precio").val(datosProducto[2]);
-            $("#stock").val(datosProducto[1]);
-        }
-    </script>
-    <?php $this->end() ?>
-    <!----------------------------------------------------------------------------------->
+  

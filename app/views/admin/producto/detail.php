@@ -3,8 +3,8 @@
     <div class="row">
         <div class="col-sm-12">
             <h1>Producto-<small>Detalle</small></h1>
-            <form action="<?= URL . 'producto/save' ?>" method="post">
-                <input type="text" name="idproduct" value="<?= $data->IdProduct ?>">
+            <form action="<?= URL . 'producto/save' ?>" method="post"><br><br>
+                <input disabled type="text" name="idproduct" value="<?= $data->IdProduct ?>"><br>
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
@@ -72,25 +72,23 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-4">
-                        <div class="form-group form-check">
-                            <input type="checkbox" name="estado" id="id_estado" class="form-check-input" <?= ($data->Estado == 1) ? 'checked' : '' ?>>
-                            <label class="form-check-label" for="id_estado">Estado</label>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-
-                    </div>
-                </div>
+                            <div class="col-sm-4">
+                               <div class="form group">
+                               <input type="checkbox"  style="width: 50px;height: 50px;position: relative;left: 25px; "; name="estado"  id="id_estado" class="form-check-input" <?= ($data->Estado == 1) ? 'checked' : '' ?>>
+                               <label class="form-check-label" style="left: 45px;position: relative;" for="id_estado"><strong>Estado</strong></label>
+                             </div>
+                             <div class="col-sm-2">
+                               <div class="form group">
+                             </div>
+                         </div>
+                     </div>
+                     </div>
 
                 <br>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="form group">
-                            <button type="submit" class="btn btn-primary btn-block"> Guardar</button>
-                        </div>
-                    </div>
-                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Registrar</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+            </div> 
             </form>
 
         </div>
