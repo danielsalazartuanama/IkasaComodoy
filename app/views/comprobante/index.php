@@ -1,16 +1,13 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobantes']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
+
+$this->layout('../layouts/layout', ['title' => 'Sistema-Vestuarios| Comprobante']); ?>
+
+
 <?php $this->push('styles') ?>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l">
 <?php $this->end() ?>
 
-<!----------------------------------------------------------------------------------->
 
-<!--contenido de la pagina-->
 <?php $this->start('contents') ?>
-<!-- <?php myEcho($data) ?> -->
 <div class="container">
     <h1 class="text-center">Tabla Comprobantes</h1>
     <div class="row">
@@ -23,13 +20,13 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobantes']); ?>
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="width: 40%;">ID</th>
-                        <th style="width: 40%;">NOMBRE</th>
-                        <th style="width: 20%;">ACCION</th>
+                        <th style="width: 40%;">idcomprobante</th>
+                        <th style="width: 40%;">nombre</th>
+                        <th style="width: 20%;">acciion</th>
                     </tr>
-
                 </thead>
                 <tbody>
+
                     <?php foreach ($data as $row) : ?>
                         <tr>
                             <td><?= $row->IdComprobante ?></td>
@@ -42,6 +39,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobantes']); ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
+
                 </tbody>
 
             </table>
@@ -50,18 +48,5 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobantes']); ?>
 </div>
 <?php $this->stop() ?>
 
-<!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
 <?php $this->end() ?>
-
-
-
-
-
-
-
-
-
-
-
-

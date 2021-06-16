@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Daos\UsuarioDAO;
-use App\Models\Usuarios_tipoModel;
 use Libs\Controller;
 use stdClass;
 
@@ -22,11 +21,9 @@ class UsuarioController extends Controller
     public function detail($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
-        $data = $this->dao->get($id);
-        $tipos = Usuarios_tipoModel::get();
+        $data = $this->dao->get($id);        
         echo $this->template->render('detail', [
-            'data' => $data,
-            'tipos' => $tipos,
+            'data' => $data,            
         ]);
         //myEcho($data);
     }

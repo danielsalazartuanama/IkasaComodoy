@@ -1,16 +1,12 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
-<?php $this->push('styles') ?>
+$this->layout('../layouts/layout', ['title' => 'Sistema-Vestuarios| Categoria']); ?>
 
+
+<?php $this->push('styles') ?>
 <?php $this->end() ?>
 
-<!----------------------------------------------------------------------------------->
 
-<!--contenido de la pagina-->
 <?php $this->start('contents') ?>
-<!-- <?php myEcho($data) ?> -->
 <div class="container">
     <h1 class="text-center">Tabla Categorias</h1>
     <div class="row">
@@ -50,8 +46,6 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
         </div>
     </div>
 </div>
-<!-- Button trigger modal -->
-
 <?php $this->stop() ?>
 
 
@@ -61,16 +55,9 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Categorias']); ?>
 $title = 'categoria-Dealle Insertar';
 $size = NORMAL;
 include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
-
 <?php $this->stop() ?>
-<!-----scripts personalizados-->
+
+
 <?php $this->push('scripts') ?>
 <script src="<?= URL . 'js/scripts/modal_crud.js' ?>"></script>
-
 <?php $this->end() ?>
-
-
-
-
-
-<!----------------------------------------------------------------------------------->

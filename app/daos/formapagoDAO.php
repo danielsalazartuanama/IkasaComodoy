@@ -47,11 +47,5 @@ class FormapagoDAO extends Dao
         $model = formapagoModel::find($id);
         return $model->delete();
     }
-    public function baja(int $id)
-    {
-        $sql = "UPDATE formapago SET estado=0 where idformapago?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
-    }
+  
 }

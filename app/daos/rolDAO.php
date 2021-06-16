@@ -63,11 +63,5 @@ class RolDAO extends Dao
         $model = RolModel::find($id);
         return $model->delete();
     }
-    public function baja(int $id)
-    {
-        $sql = "UPDATE roles SET estado=0 where IdRol?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
-    }
+   
 }

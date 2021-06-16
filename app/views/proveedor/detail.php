@@ -1,10 +1,9 @@
 <div class="container">
-
     <div class="row">
         <div class="col-sm-12">
-            <h1>Producto-<small>Detalle</small></h1>
-            <form action="<?= URL . 'articulo/save' ?>" method="post">
-                <input type="text" name="idproduct" value="<?= $data->IdArticulo ?>">
+            <h1>Detalle-Provedor</h1>
+            <form action="<?= URL . 'proveedor/save' ?>" method="post">
+                <input type="text" name="idprove" value="<?= $data->IdProveedor ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
@@ -14,47 +13,39 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="form-group">
-                            <label for="id_precio">Precio</label>
-                            <input type="text" name="precio" id="id_precio" value="<?= $data->Precio ?>" class=" form-control">
+                            <label for="id_email">Email</label>
+                            <input type="text" name="email" id="id_email" value="<?= $data->Email ?>" class=" form-control">
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="idcategoria">Categoria</label>
-                    <select class="select1" id="idcategoria" name="idcategoria" style="width: 100%; ">
-                        <?php foreach ($categorias as $cas) : ?>
-                            <option value="<?= $cas->IdCategoria ?>"><?= $cas->Nombre ?> </option>
-                        <?php endforeach; ?>
-                    </select>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <div class="form-group">
-                            <label for="id_precioventa">PrecioVenta</label>
-                            <input type="text" name="precioventa" id="id_precioventa" value="<?= $data->PrecioVenta ?>" class=" form-control">
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="form-group">
-                            <label for="id_stock">stock</label>
-                            <input type="text" name="stock" id="id_stock" value="<?= $data->Stock ?>" class=" form-control">
+                            <label for="id_direccion">Direccion</label>
+                            <input type="text" name="direccion" id="id_direccion" value="<?= $data->Direccion ?>" class=" form-control">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label for="id_stockminimo">StockMinimo</label>
-                            <input type="text" name="stockminimo" id="id_stockminimo" value="<?= $data->StockMinimo ?>" class=" form-control">
+                            <label for="id_telefono">telefono</label>
+                            <input type="text" name="telefono" id="id_telefono" value="<?= $data->Telefono ?>" class=" form-control">
                         </div>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-4">
                         <div class="form-group">
-
+                            <label for="id_ruc">Ruc</label>
+                            <input type="text" name="ruc" id="id_ruc" value="<?= $data->Ruc ?>" class=" form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="id_dni">DNI</label>
+                            <input type="text" name="dni" id="id_dni" value="<?= $data->Dni ?>" class=" form-control">
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group form-check">
@@ -66,7 +57,6 @@
 
                     </div>
                 </div>
-
                 <br>
                 <div class="row">
                     <div class="col-sm-4">

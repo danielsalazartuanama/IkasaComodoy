@@ -3,8 +3,7 @@
 namespace App\Controllers;
 
 use GUMP;
-use App\Daos\CategoriaDAO;
-use App\Models\CategoriaModel;
+
 use Libs\Controller;
 use stdClass;
 
@@ -22,11 +21,10 @@ class CategoriaController extends Controller
     }
     public function detail($param = null)
     {
-        $id = isset($param[0]) ? $param[0] : 0;
-        //$categorias = $this->dao->getAllSimple(1);
+        $id = isset($param[0]) ? $param[0] : 0;        
         $data = $this->dao->get($id);       
         echo $this->template->render('detail', ['data' => $data]);
-        //myEcho($data);
+
     }
     public function save()
     {
@@ -35,11 +33,10 @@ class CategoriaController extends Controller
         $data = $valid_data['data'];
         if ($status == true) {
             $obj = new stdClass();
-            //el POST se uedreemplazar por $data
+
             $obj->IdCategoria = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
             $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
             $obj->Descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
-            //$obj->estado = isset($_POST['estado']) ? $_POST['estado'] : '';
 
             if (isset($_POST['estado'])) {
                 if ($_POST['estado'] == 'on') {
@@ -77,7 +74,7 @@ class CategoriaController extends Controller
             ];
         }
         echo json_encode($response);
-        //return $response;
+       
     }
     public function eliminar($param = null)
     {
@@ -92,7 +89,7 @@ class CategoriaController extends Controller
         $gump = new GUMP('es');
         $gump->validation_rules([
             'nombre' => 'required|max_len,10',
-            'descrpcion' => 'min_len,5|max_len,100',
+            'descripcion' => 'min_len,5|max_len,100',
         ]);
         $valid_data = $gump->run($datos);
         if ($gump->errors()) {

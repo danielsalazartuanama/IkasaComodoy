@@ -1,19 +1,18 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Formapago|Detalle ']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
+
+$this->layout('../layouts/layout', ['title' => 'Sistema-Vestuarios| Forma-Pago']); ?>
+
+
+
 <?php $this->push('styles') ?>
 <?php $this->end() ?>
 
-<!----------------------------------------------------------------------------------->
 
-<!--contenido de la pagina-->
 <?php $this->start('contents') ?>
-<!-- <?php myEcho($data) ?> -->
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Forma Pago-<small>Detalle</small></h1>
+            <h1>Detalle Forma Pago</h1>
             <form action="<?= URL . 'formapago/save' ?>" method="post">
                 <input type="text" name="idtipo" value="<?= $data->IdFormaPago ?>">
 
@@ -38,6 +37,6 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Formapago|Detalle '])
     </div>
     <?php $this->stop() ?>
 
-    <!-----scripts personalizados-->
+ 
     <?php $this->push('scripts') ?>
     <?php $this->end() ?>

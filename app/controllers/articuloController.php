@@ -1,13 +1,6 @@
 <?php
 
 namespace App\Controllers;
-
-
-use App\Daos\CategoriaDAO;
-use App\Models\CategoriaModel;
-
-use App\Models\articuloModel;
-use App\Models\UnidadModel;
 use Libs\Controller;
 use stdClass;
 
@@ -26,13 +19,10 @@ class ArticuloController extends Controller
     public function detail($param = null)
     {
         $id = isset($param[0]) ? $param[0] : 0;
-        $data = $this->dao->get($id);
-        $categorias = CategoriaModel::get();
+        $data = $this->dao->get($id); 
 
         echo $this->template->render('detail', [
-            'data' => $data,
-            'categorias' => $categorias,
-        ]);
+            'data' => $data]);
     }
     public function save()
     {

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Daos\ClienteDAO;
+
 use GUMP;
 use Libs\Controller;
 use stdClass;
@@ -24,7 +24,7 @@ class ClienteController extends Controller
         $id = isset($param[0]) ? $param[0] : 0;
         $data = $this->dao->get($id);
         echo $this->template->render('detail', ['data' => $data]);
-        //myEcho($data);
+       
     }
     public function save()
     {

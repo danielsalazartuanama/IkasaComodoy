@@ -47,11 +47,5 @@ class ComprobanteDAO extends Dao
         $model = comprobanteModel::find($id);
         return $model->delete();
     }
-    public function baja(int $id)
-    {
-        $sql = "UPDATE comprobante SET estado=0 where idcomprobante?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
-    }
+   
 }

@@ -15,76 +15,34 @@
              <div class="collapse navbar-collapse" id="navbar-menu">
                  <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                      <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                     <li class="dropdown megamenu-fw">
-                         <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Product</a>
-                         <ul class="dropdown-menu megamenu-content" role="menu">
-                             <li>
-                                 <div class="row">
-                                     <div class="col-menu col-md-3">
-                                         <h6 class="title">Top</h6>
-                                         <div class="content">
-                                             <ul class="menu-col">
-                                                 <li><a href="shop.html">Jackets</a></li>
-                                                 <li><a href="shop.html">Shirts</a></li>
-                                                 <li><a href="shop.html">Sweaters & Cardigans</a></li>
-                                                 <li><a href="shop.html">T-shirts</a></li>
-                                             </ul>
-                                         </div>
-                                     </div>
-                                     <!-- end col-3 -->
-                                     <div class="col-menu col-md-3">
-                                         <h6 class="title">Bottom</h6>
-                                         <div class="content">
-                                             <ul class="menu-col">
-                                                 <li><a href="shop.html">Swimwear</a></li>
-                                                 <li><a href="shop.html">Skirts</a></li>
-                                                 <li><a href="shop.html">Jeans</a></li>
-                                                 <li><a href="shop.html">Trousers</a></li>
-                                             </ul>
-                                         </div>
-                                     </div>
-                                     <!-- end col-3 -->
-                                     <div class="col-menu col-md-3">
-                                         <h6 class="title">Clothing</h6>
-                                         <div class="content">
-                                             <ul class="menu-col">
-                                                 <li><a href="shop.html">Top Wear</a></li>
-                                                 <li><a href="shop.html">Party wear</a></li>
-                                                 <li><a href="shop.html">Bottom Wear</a></li>
-                                                 <li><a href="shop.html">Indian Wear</a></li>
-                                             </ul>
-                                         </div>
-                                     </div>
-                                     <div class="col-menu col-md-3">
-                                         <h6 class="title">Accessories</h6>
-                                         <div class="content">
-                                             <ul class="menu-col">
-                                                 <li><a href="shop.html">Bags</a></li>
-                                                 <li><a href="shop.html">Sunglasses</a></li>
-                                                 <li><a href="shop.html">Fragrances</a></li>
-                                                 <li><a href="shop.html">Wallets</a></li>
-                                             </ul>
-                                         </div>
-                                     </div>
-                                     <!-- end col-3 -->
-                                 </div>
-                                 <!-- end row -->
-                             </li>
+
+                     <li class="dropdown">
+                         <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Paginas </a>
+                         <ul class="dropdown-menu">
+                             <li><a href="../../home/cart">Cart</a></li>
+                             <li><a href="../home/contact">contact</a></li>
+                             <li><a href="../home/service">service </a></li>
+                             <li><a href="../home/checkout">Checkout</a></li>
+                             <li><a href="../home/myaccount">My Account</a></li>
+                             <li><a href="../home/wichlist">Wishlist</a></li>
+                             <li><a href="../home/shop">Shop </a></li>
+                             <li><a href="../home/shopdetails">Shop Detail</a></li>
                          </ul>
                      </li>
                      <li class="dropdown">
-                         <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                         <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Tablas </a>
                          <ul class="dropdown-menu">
-                             <li><a href="cart.html">Cart</a></li>
-                             <li><a href="checkout.html">Checkout</a></li>
-                             <li><a href="my-account.html">My Account</a></li>
-                             <li><a href="wishlist.html">Wishlist</a></li>
-                             <li><a href="shop-detail.html">Shop Detail</a></li>
+                             <li><a href="../categoria/index">Categoria</a></li>
+                             <li><a href="../proveedor/index">Proveedor</a></li>
+                             <li><a href="../articulo/index">Articulo</a></li>
+                             <li><a href="../formapago/index">Foma de pago</a></li>
+                             <li><a href="../comprobante/index">Comprobante</a></li>
+                             <li><a href="../cliente/index">Cliente</a></li>
                          </ul>
                      </li>
-                     <li class="nav-item"><a class="nav-link" href="service.html">Our Service</a></li>
-                     <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                     <li><a style="color: white;" href="shop-detail.html">_________________________</a></li>
+                     <li><a style="color: white;" href="shop-detail.html">_______________________</a></li>
+
                  </ul>
              </div>
              <!-- /.navbar-collapse -->

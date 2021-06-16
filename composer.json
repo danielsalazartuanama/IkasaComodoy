@@ -1,12 +1,12 @@
 {
-    "name": "htg/htgventasikasa",
+    "name": "sistema/vestuarios",
     "description": "Software de ventas online",
     "type": "project",
     "license": "proprietary",
     "authors": [
         {
-            "name": "HTG",
-            "email": "jhonydanielsalazar53@gmail.com"
+            "name": "vestuarios",
+            "email": "betzamendozataipe@gmail.com"
         }
     ],
     "autoload": {

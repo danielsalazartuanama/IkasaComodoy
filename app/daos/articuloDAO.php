@@ -3,7 +3,7 @@
 namespace App\Daos;
 
 use App\Models\ArticuloModel;
-use Libs\Connection;
+
 use Libs\Dao;
 use stdClass;
 
@@ -35,6 +35,7 @@ class ArticuloDAO extends Dao
         }
         return $model;
     }
+
     public function create($obj)
     {
         $model = new ArticuloModel();
@@ -48,6 +49,7 @@ class ArticuloDAO extends Dao
         $model->Estado = $obj->Estado;
         return $model->save();
     }
+
     public function update($obj)
     {
         $model = ArticuloModel::find($obj->IdArticulo);
@@ -60,16 +62,11 @@ class ArticuloDAO extends Dao
         $model->Estado = $obj->Estado;
         return $model->save();
     }
+    
     public function delete(int $id)
     {
         $model = ArticuloModel::find($id);
         return $model->delete();
     }
-    public function baja(int $id)
-    {
-        $sql = "UPDATE articulos SET estado=0 where IdArticulo?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
-    }
+   
 }

@@ -35,8 +35,7 @@ class CategoriaDAO extends Dao
     }
 
     public function create($obj)
-    {
-        //$model = CategoriaModel::get();
+    {  
         $model = new CategoriaModel();
         $model->IdCategoria = $obj->IdCategoria;
         $model->Nombre = $obj->Nombre;
@@ -46,8 +45,7 @@ class CategoriaDAO extends Dao
     }
     public function update($obj)
     {
-        $model = CategoriaModel::find($obj->IdCategoria);
-        //$model = new CategoriaModel();
+        $model = CategoriaModel::find($obj->IdCategoria);        
         $model->Nombre = $obj->Nombre;
         $model->Descripcion = $obj->Descripcion;
         $model->Estado = $obj->Estado;
@@ -58,11 +56,5 @@ class CategoriaDAO extends Dao
         $model = CategoriaModel::find($id);
         return $model->delete();
     }
-    public function baja(int $id)
-    {
-        $sql = "UPDATE categorias SET estado=0 where IdCategoria?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
-    }
+   
 }

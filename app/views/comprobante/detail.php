@@ -1,19 +1,15 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobante|Detalle ']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
+$this->layout('../layouts/layout', ['title' => 'Sistema-Vestuarios| Comprobante']); ?>
+
 <?php $this->push('styles') ?>
 <?php $this->end() ?>
 
-<!----------------------------------------------------------------------------------->
-
-<!--contenido de la pagina-->
 <?php $this->start('contents') ?>
-<!-- <?php myEcho($data) ?> -->
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Comprobante-<small>Detalle</small></h1>
+            <h1>Detalle Comprobante</h1>
             <form action="<?= URL . 'comprobante/save' ?>" method="post">
                 <input type="text" name="idcomprobante" value="<?= $data->IdComprobante ?>">
                 <div class="row">
@@ -45,6 +41,5 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Comprobante|Detalle '
     </div>
     <?php $this->stop() ?>
 
-    <!-----scripts personalizados-->
     <?php $this->push('scripts') ?>
     <?php $this->end() ?>

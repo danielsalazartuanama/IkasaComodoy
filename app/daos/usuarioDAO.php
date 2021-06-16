@@ -23,8 +23,7 @@ class UsuarioDAO extends Dao
         $model = UsuarioModel::find($id);
         if (is_null($model)) {
             $model = new StdClass();
-            $model->IdUsuario = 0;
-            //$model->IdTipo = 0;
+            $model->IdUsuario = 0;            
             $model->Apellidos = '';
             $model->Nombres = '';
             $model->Direccion = '';
@@ -32,8 +31,7 @@ class UsuarioDAO extends Dao
             $model->Usuario = '';
             $model->Clave = '';
             $model->Correo = '';
-            //$model->FCreacion = '';
-            //$model->FEliminacion = '';
+           
             $model->Estado = 0;
         }
         return $model;
@@ -72,11 +70,5 @@ class UsuarioDAO extends Dao
         $model = UsuarioModel::find($id);
         return $model->delete();
     }
-    public function baja(int $id)
-    {
-        $sql = "UPDATE usuario SET estado=0 where idusuario?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
-    }
+   
 }

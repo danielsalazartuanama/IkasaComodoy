@@ -61,11 +61,5 @@ class cLienteDAO extends Dao
         $model = clienteModel::find($id);
         return $model->delete();
     }
-    public function baja(int $id)
-    {
-        $sql = "UPDATE clientes SET estado=0 where idcliente?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(1, $id, \PDO::PARAM_INT);
-        return $stmt->execute();
-    }
+  
 }
