@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Cliente|Detalle ']); ?>
+$this->layout('../../layouts/layout', ['title' => 'HTGVentas| Cliente|Detalle ']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles') ?>

@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'b7d3251735f69de6a00540b0fb0aabade7028f70',
+    'reference' => '574b3a0497797b13ee30fa7def5030e369f8594c',
     'name' => 'htg/htgventasikasa',
   ),
   'versions' => 
@@ -71,7 +71,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'b7d3251735f69de6a00540b0fb0aabade7028f70',
+      'reference' => '574b3a0497797b13ee30fa7def5030e369f8594c',
     ),
     'illuminate/collections' => 
     array (
@@ -610,6 +610,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
+    ),
+    'wixel/gump' => 
+    array (
+      'pretty_version' => 'v1.12.1',
+      'version' => '1.12.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e8416a3942f8e868c930e3577e12ba23ef02e8fe',
     ),
   ),
 );

@@ -78,14 +78,3 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Usuario']); ?>
 
 
 
-
-
-<?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Categoria-Detalle']); ?>
-<!----------------------------------------------------------------------------------->
-<!--Colocar los links a los archivos css-->
-<?php $this->push('styles') ?>
-
-<?php $this->end() ?>
-
-<!----------------------------------------------------------------------------------->

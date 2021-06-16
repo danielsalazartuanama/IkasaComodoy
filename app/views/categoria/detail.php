@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Categorias-<small>Detalle</small></h1>
-            <form action="<?= URL . 'categoria/save' ?>" method="post">
+            <!-- <h1><?= ($data->IdCateg > 0) ? 'Modificar' : 'Insertar' ?></h1> -->
+            <form id="myForm" action="<?= URL . 'categoria/save' ?>" method="post">
                 <input type="text" name="idcateg" value="<?= $data->IdCateg ?>">
                 <div class="row">
                     <div class="col-sm-4">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="col-sm-8">
-
+                        <div id="mis_errores"></div>
                     </div>
                 </div>
                 <br>
