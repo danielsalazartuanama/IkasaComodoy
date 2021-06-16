@@ -2,12 +2,12 @@
 
 namespace App\Daos;
 
-use App\Models\ProductoModel;
+use App\Models\ArticuloModel;
 use Libs\Connection;
 use Libs\Dao;
 use stdClass;
 
-class ProductoDAO extends Dao
+class ArticuloDAO extends Dao
 {
     public function __construct()
     {
@@ -15,17 +15,17 @@ class ProductoDAO extends Dao
     }
     public function getAll(bool $estado)
     {
-        $result = ProductoModel::where('Estado', $estado)
-            ->orderBy('IdProduct', 'DESC')
+        $result = ArticuloModel::where('Estado', $estado)
+            ->orderBy('IdArticulo', 'DESC')
             ->get();
         return $result;
     }
     public function get(int $id)
     {
-        $model = ProductoModel::find($id);
+        $model = ArticuloModel::find($id);
         if (is_null($model)) {
             $model = new StdClass();
-            $model->IdProduct = 0;
+            $model->IdArticulo = 0;
             $model->Nombre = '';
             $model->Precio = 0;
             $model->PrecioVenta = 0;
@@ -34,14 +34,12 @@ class ProductoDAO extends Dao
             $model->Estado = 0;
         }
         return $model;
-    }    
+    }
     public function create($obj)
     {
-        $model = new ProductoModel();
-        $model->IdProduct = $obj->IdProduct;
-        $model->IdMarca = $obj->IdMarca;
-        $model->IdCateg = $obj->IdCateg;
-        $model->IdUnidad = $obj->IdUnidad;
+        $model = new ArticuloModel();
+        $model->IdArticulo = $obj->IdArticulo;        
+        $model->IdCategoria = $obj->IdCategoria;        
         $model->Nombre = $obj->Nombre;
         $model->Precio = $obj->Precio;
         $model->PrecioVenta = $obj->PrecioVenta;
@@ -52,10 +50,8 @@ class ProductoDAO extends Dao
     }
     public function update($obj)
     {
-        $model = ProductoModel::find($obj->IdProduct);
-        $model->Idcateg = $obj->IdCateg;
-        $model->IdMarca = $obj->IdMarca;
-        $model->IdUnidad = $obj->IdUnidad;
+        $model = ArticuloModel::find($obj->IdArticulo);
+        $model->IdCategoria = $obj->IdCategoria;        
         $model->Nombre = $obj->Nombre;
         $model->Precio = $obj->Precio;
         $model->PrecioVenta = $obj->PrecioVenta;
@@ -66,12 +62,12 @@ class ProductoDAO extends Dao
     }
     public function delete(int $id)
     {
-        $model = ProductoModel::find($id);
+        $model = ArticuloModel::find($id);
         return $model->delete();
     }
     public function baja(int $id)
     {
-        $sql = "UPDATE productos SET estado=0 where idproduct?";
+        $sql = "UPDATE articulos SET estado=0 where IdArticulo?";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(1, $id, \PDO::PARAM_INT);
         return $stmt->execute();
