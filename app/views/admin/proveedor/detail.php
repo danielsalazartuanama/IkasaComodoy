@@ -14,7 +14,7 @@
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_email">Email</label>
-                            <input type="text" name="email" id="id_email" value="<?= $data->Email ?>" class=" form-control">
+                            <input type="text" name="email" id="id_email" value="<?= $data->Email ?>" class=" form-control" required>
                         </div>
                     </div>
                 </div>
@@ -27,25 +27,28 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label for="id_telefono">telefono</label>
-                            <input type="text" name="telefono" id="id_telefono" value="<?= $data->Telefono ?>" class=" form-control">
+                            <input type="number" max="999999999" min="1" name="telefono" id="id_telefono" value="<?= $data->Telefono ?>" class=" form-control" required>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <div class="form-group">
                             <label for="id_ruc">Ruc</label>
-                            <input type="text" name="ruc" id="id_ruc" value="<?= $data->Ruc ?>" class=" form-control">
+                            <input type="number" max="99999999999" name="ruc" id="id_ruc" value="<?= $data->Ruc ?>" class=" form-control" required>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                   
+                </div>
+
+              
                         <div class="form-group">
                             <label for="id_dni">DNI</label>
-                            <input type="text" name="dni" id="id_dni" value="<?= $data->Dni ?>" class=" form-control">
+                            <input  max="99999999"  type="number" name="dni" id="id_dni" value="<?= $data->Dni ?>" class=" form-control" required>
                         </div>
-                    </div>
-                </div>
+                   
+
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form group">

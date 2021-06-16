@@ -3,12 +3,12 @@
         <div class="col-sm-12">
             <h1>Comprobante-<small>Detalle</small></h1>
             <form action="<?= URL . 'comprobante/save' ?>" method="post">
-                <input type="text" name="idcomprobante" value="<?= $data->IdComprobante ?>">
+                <input  type="text" name="idcomprobante" value="<?= $data->IdComprobante ?>">
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_nombre">Nombre</label>
-                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control">
+                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control" required>
                         </div>
                     </div>
                     <div class="col-sm-8">

@@ -8,7 +8,7 @@
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_tablas">Tablas</label>
-                            <input type="text" name="tablas" id="id_tablas" value="<?= $data->Tablas ?>" class=" form-control">
+                            <input type="text" name="tablas" id="id_tablas" value="<?= $data->Tablas ?>" class=" form-control" required>
                         </div>
                     </div>
                     <div class="col-sm-4">

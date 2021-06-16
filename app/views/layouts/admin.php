@@ -160,6 +160,7 @@
     <script src=<?= URL . 'melody/js/settings.js' ?>></script>
     <script src=<?= URL . 'melody/js/todolist.js' ?>></script>
     <script src=<?= URL . 'melody/js/dashboard.j' ?>></script>
+    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <?= $this->section('myModal') ?>
     <?= $this->section('scripts') ?>

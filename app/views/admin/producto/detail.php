@@ -9,13 +9,13 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_nombre">Nombre</label>
-                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control">
+                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control" required>
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_precio">Precio</label>
-                            <input type="text" name="precio" id="id_precio" value="<?= $data->Precio ?>" class=" form-control">
+                            <input type="text" name="precio" id="id_precio" value="<?= $data->Precio ?>" class=" form-control" required>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_stockminimo">StockMinimo</label>
-                            <input type="text" name="stockminimo" id="id_stockminimo" value="<?= $data->StockMinimo ?>" class=" form-control">
+                            <input type="text" name="stockminimo" id="id_stockminimo" value="<?= $data->StockMinimo ?>" class=" form-control" required>
                         </div>
                     </div>
                     <div class="col-sm-8">
