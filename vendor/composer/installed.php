@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'e6cc33345d32367350214f4ffe1b34d5c8440f07',
+    'reference' => '765c83e151b566fd78bea59c817e1fc3df6573f2',
     'name' => 'htg/htgventasikasa',
   ),
   'versions' => 
@@ -45,12 +45,12 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'e6cc33345d32367350214f4ffe1b34d5c8440f07',
+      'reference' => '765c83e151b566fd78bea59c817e1fc3df6573f2',
     ),
     'illuminate/collections' => 
     array (
-      'pretty_version' => 'v8.46.0',
-      'version' => '8.46.0.0',
+      'pretty_version' => 'v8.47.0',
+      'version' => '8.47.0.0',
       'aliases' => 
       array (
       ),
@@ -58,17 +58,17 @@
     ),
     'illuminate/container' => 
     array (
-      'pretty_version' => 'v8.46.0',
-      'version' => '8.46.0.0',
+      'pretty_version' => 'v8.47.0',
+      'version' => '8.47.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '07342efca88cf9fff4f2fa0e3c378ea6ee86e5e2',
+      'reference' => '382959676d85583f0e8fdd248bceb4b8762dc1ed',
     ),
     'illuminate/contracts' => 
     array (
-      'pretty_version' => 'v8.46.0',
-      'version' => '8.46.0.0',
+      'pretty_version' => 'v8.47.0',
+      'version' => '8.47.0.0',
       'aliases' => 
       array (
       ),
@@ -76,17 +76,17 @@
     ),
     'illuminate/database' => 
     array (
-      'pretty_version' => 'v8.46.0',
-      'version' => '8.46.0.0',
+      'pretty_version' => 'v8.47.0',
+      'version' => '8.47.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a86efc94475ca00e1a11cfe7ee212699af9ddd61',
+      'reference' => '2250ab2a23bf6865467e4ace187f0ff5da318777',
     ),
     'illuminate/macroable' => 
     array (
-      'pretty_version' => 'v8.46.0',
-      'version' => '8.46.0.0',
+      'pretty_version' => 'v8.47.0',
+      'version' => '8.47.0.0',
       'aliases' => 
       array (
       ),
@@ -94,12 +94,12 @@
     ),
     'illuminate/support' => 
     array (
-      'pretty_version' => 'v8.46.0',
-      'version' => '8.46.0.0',
+      'pretty_version' => 'v8.47.0',
+      'version' => '8.47.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '79e1ec26d58426e4f06e5b548712a8a6dc1ffdca',
+      'reference' => 'a8f90b73ccfd4b37aceafc2e17bcca9ed96cb4e4',
     ),
     'league/plates' => 
     array (
@@ -251,12 +251,12 @@
     ),
     'phpunit/phpunit' => 
     array (
-      'pretty_version' => '9.5.4',
-      'version' => '9.5.4.0',
+      'pretty_version' => '9.5.5',
+      'version' => '9.5.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c73c6737305e779771147af66c96ca6a7ed8a741',
+      'reference' => '89ff45ea9d70e35522fb6654a2ebc221158de276',
     ),
     'psr/container' => 
     array (
@@ -364,12 +364,12 @@
     ),
     'sebastian/global-state' => 
     array (
-      'pretty_version' => '5.0.2',
-      'version' => '5.0.2.0',
+      'pretty_version' => '5.0.3',
+      'version' => '5.0.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a90ccbddffa067b51f574dea6eb25d5680839455',
+      'reference' => '23bd5951f7ff26f12d4e3242864df3e08dec4e49',
     ),
     'sebastian/lines-of-code' => 
     array (
@@ -418,12 +418,12 @@
     ),
     'sebastian/type' => 
     array (
-      'pretty_version' => '2.3.1',
-      'version' => '2.3.1.0',
+      'pretty_version' => '2.3.4',
+      'version' => '2.3.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '81cd61ab7bbf2de744aba0ea61fae32f721df3d2',
+      'reference' => 'b8cd8a1c753c90bc1a0f5372170e3e489136f914',
     ),
     'sebastian/version' => 
     array (

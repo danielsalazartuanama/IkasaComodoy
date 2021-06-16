@@ -358,6 +358,7 @@
                                     </li>
 
                                     <li><a href="../../web/Contact">Contactenos</a></li>
+                                    <a type="button" href="../../inicio/index">ADMIN</a></li>
                                 </ul>
                             </nav>
                         </div>

@@ -241,8 +241,8 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.46.0",
-            "version_normalized": "8.46.0.0",
+            "version": "v8.47.0",
+            "version_normalized": "8.47.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -298,17 +298,17 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v8.46.0",
-            "version_normalized": "8.46.0.0",
+            "version": "v8.47.0",
+            "version_normalized": "8.47.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "07342efca88cf9fff4f2fa0e3c378ea6ee86e5e2"
+                "reference": "382959676d85583f0e8fdd248bceb4b8762dc1ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/07342efca88cf9fff4f2fa0e3c378ea6ee86e5e2",
-                "reference": "07342efca88cf9fff4f2fa0e3c378ea6ee86e5e2",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/382959676d85583f0e8fdd248bceb4b8762dc1ed",
+                "reference": "382959676d85583f0e8fdd248bceb4b8762dc1ed",
                 "shasum": ""
             },
             "require": {
@@ -319,7 +319,7 @@
             "provide": {
                 "psr/container-implementation": "1.0"
             },
-            "time": "2021-05-18T12:49:19+00:00",
+            "time": "2021-06-08T14:08:11+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -352,8 +352,8 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.46.0",
-            "version_normalized": "8.46.0.0",
+            "version": "v8.47.0",
+            "version_normalized": "8.47.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -403,17 +403,17 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v8.46.0",
-            "version_normalized": "8.46.0.0",
+            "version": "v8.47.0",
+            "version_normalized": "8.47.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "a86efc94475ca00e1a11cfe7ee212699af9ddd61"
+                "reference": "2250ab2a23bf6865467e4ace187f0ff5da318777"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/a86efc94475ca00e1a11cfe7ee212699af9ddd61",
-                "reference": "a86efc94475ca00e1a11cfe7ee212699af9ddd61",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/2250ab2a23bf6865467e4ace187f0ff5da318777",
+                "reference": "2250ab2a23bf6865467e4ace187f0ff5da318777",
                 "shasum": ""
             },
             "require": {
@@ -435,7 +435,7 @@
                 "illuminate/pagination": "Required to paginate the result set (^8.0).",
                 "symfony/finder": "Required to use Eloquent model factories (^5.1.4)."
             },
-            "time": "2021-06-08T13:23:07+00:00",
+            "time": "2021-06-14T14:50:36+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -474,8 +474,8 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.46.0",
-            "version_normalized": "8.46.0.0",
+            "version": "v8.47.0",
+            "version_normalized": "8.47.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -523,17 +523,17 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v8.46.0",
-            "version_normalized": "8.46.0.0",
+            "version": "v8.47.0",
+            "version_normalized": "8.47.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "79e1ec26d58426e4f06e5b548712a8a6dc1ffdca"
+                "reference": "a8f90b73ccfd4b37aceafc2e17bcca9ed96cb4e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/79e1ec26d58426e4f06e5b548712a8a6dc1ffdca",
-                "reference": "79e1ec26d58426e4f06e5b548712a8a6dc1ffdca",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/a8f90b73ccfd4b37aceafc2e17bcca9ed96cb4e4",
+                "reference": "a8f90b73ccfd4b37aceafc2e17bcca9ed96cb4e4",
                 "shasum": ""
             },
             "require": {
@@ -558,7 +558,7 @@
                 "symfony/var-dumper": "Required to use the dd function (^5.1.4).",
                 "vlucas/phpdotenv": "Required to use the Env class and env helper (^5.2)."
             },
-            "time": "2021-06-08T13:14:36+00:00",
+            "time": "2021-06-10T13:13:44+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1636,17 +1636,17 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.4",
-            "version_normalized": "9.5.4.0",
+            "version": "9.5.5",
+            "version_normalized": "9.5.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c73c6737305e779771147af66c96ca6a7ed8a741"
+                "reference": "89ff45ea9d70e35522fb6654a2ebc221158de276"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c73c6737305e779771147af66c96ca6a7ed8a741",
-                "reference": "c73c6737305e779771147af66c96ca6a7ed8a741",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/89ff45ea9d70e35522fb6654a2ebc221158de276",
+                "reference": "89ff45ea9d70e35522fb6654a2ebc221158de276",
                 "shasum": ""
             },
             "require": {
@@ -1676,7 +1676,7 @@
                 "sebastian/global-state": "^5.0.1",
                 "sebastian/object-enumerator": "^4.0.3",
                 "sebastian/resource-operations": "^3.0.3",
-                "sebastian/type": "^2.3",
+                "sebastian/type": "^2.3.2",
                 "sebastian/version": "^3.0.2"
             },
             "require-dev": {
@@ -1687,7 +1687,7 @@
                 "ext-soap": "*",
                 "ext-xdebug": "*"
             },
-            "time": "2021-03-23T07:16:29+00:00",
+            "time": "2021-06-05T04:49:07+00:00",
             "bin": [
                 "phpunit"
             ],
@@ -1726,7 +1726,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.4"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.5"
             },
             "funding": [
                 {
@@ -2375,17 +2375,17 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "5.0.2",
-            "version_normalized": "5.0.2.0",
+            "version": "5.0.3",
+            "version_normalized": "5.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "a90ccbddffa067b51f574dea6eb25d5680839455"
+                "reference": "23bd5951f7ff26f12d4e3242864df3e08dec4e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/a90ccbddffa067b51f574dea6eb25d5680839455",
-                "reference": "a90ccbddffa067b51f574dea6eb25d5680839455",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/23bd5951f7ff26f12d4e3242864df3e08dec4e49",
+                "reference": "23bd5951f7ff26f12d4e3242864df3e08dec4e49",
                 "shasum": ""
             },
             "require": {
@@ -2400,7 +2400,7 @@
             "suggest": {
                 "ext-uopz": "*"
             },
-            "time": "2020-10-26T15:55:19+00:00",
+            "time": "2021-06-11T13:31:12+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2430,7 +2430,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/global-state/issues",
-                "source": "https://github.com/sebastianbergmann/global-state/tree/5.0.2"
+                "source": "https://github.com/sebastianbergmann/global-state/tree/5.0.3"
             },
             "funding": [
                 {
@@ -2744,17 +2744,17 @@
         },
         {
             "name": "sebastian/type",
-            "version": "2.3.1",
-            "version_normalized": "2.3.1.0",
+            "version": "2.3.4",
+            "version_normalized": "2.3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "81cd61ab7bbf2de744aba0ea61fae32f721df3d2"
+                "reference": "b8cd8a1c753c90bc1a0f5372170e3e489136f914"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/81cd61ab7bbf2de744aba0ea61fae32f721df3d2",
-                "reference": "81cd61ab7bbf2de744aba0ea61fae32f721df3d2",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/b8cd8a1c753c90bc1a0f5372170e3e489136f914",
+                "reference": "b8cd8a1c753c90bc1a0f5372170e3e489136f914",
                 "shasum": ""
             },
             "require": {
@@ -2763,7 +2763,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^9.3"
             },
-            "time": "2020-10-26T13:18:59+00:00",
+            "time": "2021-06-15T12:49:02+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2791,7 +2791,7 @@
             "homepage": "https://github.com/sebastianbergmann/type",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/type/issues",
-                "source": "https://github.com/sebastianbergmann/type/tree/2.3.1"
+                "source": "https://github.com/sebastianbergmann/type/tree/2.3.4"
             },
             "funding": [
                 {
