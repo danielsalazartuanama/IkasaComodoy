@@ -1,10 +1,9 @@
-
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
             <h1>Permiso-<small>Detalle</small></h1>
-            <form action="<?= URL . 'permiso/save' ?>" method="post"><br>
-                <input disabled type="text" name="idcomprobante" value="<?= $data->IdPermiso ?>"><br><br>
+            <form action="<?= URL . 'permiso/save' ?>" method="post">
+                <input type="text" name="idcomprobante" value="<?= $data->IdPermiso ?>">
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="form-group">
@@ -27,10 +26,13 @@
                     </select>
                 </div>
                 <br>
-                <div class="modal-footer">
-                <button type="submit" class="btn btn-success">Registrar</button>
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-            </div> 
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form group">
+                            <button type="submit" class="btn btn-primary btn-block"> Guardar</button>
+                        </div>
+                    </div>
+                </div>
             </form>
 
         </div>

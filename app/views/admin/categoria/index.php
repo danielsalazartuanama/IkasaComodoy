@@ -60,9 +60,10 @@ $this->layout('../../layouts/admin', ['title' => 'HTGVentas| Categorias']); ?>
                                     <td><?= $row->Descripcion ?></td>
                                     <td>
                                    
-                                    <a is-modal="true" href="<?= URL . "categoria/detail/{$row->IdCateg}" ?>" class="btn btn-primary"> <i style="height: 25px;" class="far fa-edit"></i></a>
 
                                     <form action="<?= URL . "categoria/eliminar/{$row->IdCateg}" ?>" class="formulario-eliminar" method="POST">
+                                    <a is-modal="true" href="<?= URL . "categoria/detail/{$row->IdCateg}" ?>" class="btn btn-primary"> <i style="height: 25px;" class="far fa-edit"></i></a>
+
                                      <button  type="submit" class="btn btn-warning" style="margin-left: 4px;"><i style="height: 25px;" class="fa fa-trash"></i></button>
                                     </form>
                                     

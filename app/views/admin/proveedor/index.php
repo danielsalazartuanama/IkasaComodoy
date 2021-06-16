@@ -23,8 +23,7 @@ $this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Clientes']); ?>
                 <li class="breadcrumb-item active" aria-current="page">Proveedor</li>
             </ol>
         </nav>
-    </div>
-
+</div>
 
  <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
@@ -47,12 +46,12 @@ $this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Clientes']); ?>
                                     <tr>
                                     <th style="width: 10%;">ID</th>
                                     <th style="width: 15%;">NOMBRE</th>
-                                    <th style="width: 20%;">DIRECCION</th>
                                     <th style="width: 15%;">EMAIL</th>
-                                    <th style="width: 10%;">TELEFONO</th>
+                                    <th style="width: 20%;">DIRECCION</th>
+                                    <th style="width: 5%;">TELEFONO</th>
                                     <th style="width: 10%;">RUC</th>
-                                    <th style="width: 10%;">DNI</th>
-                                    <th style="width: 10%;">ACCION</th>
+                                    <!-- <th style="width: 10%;">DNI</th> -->
+                                    <th style="width: 30%;">ACCION</th>
                                     </tr>
                             </thead>
                             <tbody>
@@ -64,7 +63,7 @@ $this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Clientes']); ?>
                                     <td><?= $row->Direccion ?></td>
                                     <td><?= $row->Telefono ?></td>
                                     <td><?= $row->Ruc ?></td>
-                                    <td><?= $row->Dni ?></td>
+                                    <!-- <td><?= $row->Dni ?></td> -->
 
                                     <td>
                                     <form action="<?= URL . "proveedor/eliminar/{$row->IdProve}" ?>" class="formulario-eliminar" method="POST">

@@ -3,7 +3,7 @@
         <div class="col-sm-12">
             <h1>Usuario-<small>Detalle</small></h1>
             <form action="<?= URL . 'usuario/save' ?>" method="post">
-                <input type="text" name="idusuario" value="<?= $data->IdUsuario ?>"><br>
+                <input type="text" name="idusuario" value="<?= $data->IdUsuario ?>">
                 <div class="form-group">
                     <label for="idtipo">Tipo de usuario</label>
                     <select class="select1" id="idtipo" name="idtipo" style="width: 100%; ">
@@ -61,26 +61,22 @@
                             <input type="text" name="correo" id="id_correo" value="<?= $data->Correo ?>" class=" form-control">
                         </div>
                     </div>
-                    <div class="row">
-                            <div class="col-sm-4">
-                               <div class="form group">
-                               <input type="checkbox"  style="width: 50px;height: 50px;position: relative;left: 25px;top: 15px; "; name="estado"  id="id_estado" class="form-check-input" <?= ($data->Estado == 1) ? 'checked' : '' ?>>
-                               <label class="form-check-label" style="left: 65px;position: relative;" for="id_estado"><strong>Estado</strong></label>
-                             </div>
-                             <div class="col-sm-2">
-                               <div class="form group">
-                             </div>
-                         </div>
-                     </div>
-                     </div>
+                    <div class="col-sm-4">
+                    <div class="form group">
+                            <input type="checkbox" style="width: 50px;height: 50px;position: relative;left: 25px; " ; name="estado" id="id_estado" class="form-check-input" <?= ($data->Estado == 1) ? 'checked' : '' ?>>
+                            <label class="form-check-label" style="left: 45px;position: relative;" for="id_estado"><strong>Estado</strong></label>
+                        </div>
+                    </div>
                 </div>
                 <br>
-                <div class="modal-footer">
-                <button type="submit" class="btn btn-success">Registrar</button>
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
-            </div> 
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form group">
+                            <button type="submit" class="btn btn-primary btn-block"> Guardar</button>
+                        </div>
+                    </div>
+                </div>
             </form>
 
         </div>
     </div>
-   

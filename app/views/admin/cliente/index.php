@@ -48,7 +48,7 @@ $this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Clientes']); ?>
                                     <th>ID</th>
                                     <th>NOMBRE</th>
                                     <th>APELLIDO</th>
-                                    <th>DIRECCION</th>
+                                    <!-- <th>DIRECCION</th> -->
                                     <th>TELEFONO</th>
                                     <th>CRÉDITOLIMITE</th>
                                     <th>RUC</th>
@@ -61,7 +61,7 @@ $this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Clientes']); ?>
                                     <td><?= $row->IdCliente ?></td>
                                     <td><?= $row->Nombres ?></td>
                                     <td><?= $row->Apellidos ?></td>
-                                    <td><?= $row->Direccion ?></td>
+                                    <!-- <td><?= $row->Direccion ?></td> -->
                                     <td><?= $row->Telf ?></td>
                                     <td><?= $row->CreditoLimite ?></td>
                                     <td><?= $row->Ruc ?></td>
