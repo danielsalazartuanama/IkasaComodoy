@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use GUMP;
 use App\Daos\CategoriaDAO;
 use App\Models\CategoriaModel;
 use Libs\Controller;
@@ -24,34 +25,59 @@ class CategoriaController extends Controller
         $id = isset($param[0]) ? $param[0] : 0;
         //$categorias = $this->dao->getAllSimple(1);
         $data = $this->dao->get($id);
-        $categorias = CategoriaModel::get();
-        echo $this->template->render('detail', ['data' => $data, 'categorias' => $categorias]);
+        echo $this->template->render('detail', ['data' => $data]);
         //myEcho($data);
     }
     public function save()
     {
-        $obj = new stdClass();
-        $obj->IdCateg = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
-        $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
-        $obj->Descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
-        //$obj->estado = isset($_POST['estado']) ? $_POST['estado'] : '';
+        $valid_data = $this->valida($_POST);
+        $status = $valid_data['status'];
+        $data = $valid_data['data'];
+        if ($status == true) {
+            $obj = new stdClass();
+            //el POST se uedreemplazar por $data
+            $obj->IdCateg = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
+            $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
+            $obj->Descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
+            //$obj->estado = isset($_POST['estado']) ? $_POST['estado'] : '';
 
-        if (isset($_POST['estado'])) {
-            if ($_POST['estado'] == 'on') {
-                $obj->Estado = true;
+            if (isset($_POST['estado'])) {
+                if ($_POST['estado'] == 'on') {
+                    $obj->Estado = true;
+                } else {
+                    $obj->Estado = false;
+                }
             } else {
                 $obj->Estado = false;
             }
-        } else {
-            $obj->Estado = false;
-        }
 
-        if ($obj->IdCateg > 0) {
-            $this->dao->update($obj);
+            if ($obj->IdCateg > 0) {
+                $rpta = $this->dao->update($obj);
+            } else {
+                $rpta = $this->dao->create($obj);
+            }
+            if ($rpta) {
+                $response = [
+                    'success' => 1,
+                    'message' => 'Categoria guardada correctamente',
+                    'redirection' => URL . 'categoria/index'
+                ];
+            } else {
+                $response = [
+                    'success' => 1,
+                    'message' => 'Error al guardar los datos',
+                    'redirection' => ''
+                ];
+            }
         } else {
-            $this->dao->create($obj);
+            $response = [
+                'success' => -1,
+                'message' => $data,
+                'redirection' => ''
+            ];
         }
-        header('Location:' . URL . 'categoria/index');
+        echo json_encode($response);
+        //return $response;
     }
     public function eliminar($param = null)
     {
@@ -60,5 +86,26 @@ class CategoriaController extends Controller
             $this->dao->delete($id);
         }
         header('Location:' . URL . 'categoria/index');
+    }
+    public function valida($datos)
+    {
+        $gump = new GUMP('es');
+        $gump->validation_rules([
+            'nombre' => 'required|max_len,10',
+            'descripcion' => 'min_len,5|max_len,100',
+        ]);
+        $valid_data = $gump->run($datos);
+        if ($gump->errors()) {
+            $response = [
+                'status' => false,
+                'data' => $gump->get_errors_array()
+            ];
+        } else {
+            $response = [
+                'status' => true,
+                'data' => $valid_data
+            ];
+        }
+        return $response;
     }
 }

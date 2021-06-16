@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h1>Proveedor-<small>Detalle</small></h1>
-            <form action="<?= URL . 'proveedor/save' ?>" method="post">
+            <form id="myForm" action="<?= URL . 'proveedor/save' ?>" method="post">
                 <input type="text" name="idprove" value="<?= $data->IdProve ?>">
                 <div class="row">
                     <div class="col-sm-4">
@@ -48,13 +48,13 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                    <div class="form group">
+                        <div class="form group">
                             <input type="checkbox" style="width: 50px;height: 50px;position: relative;left: 25px; " ; name="estado" id="id_estado" class="form-check-input" <?= ($data->Estado == 1) ? 'checked' : '' ?>>
                             <label class="form-check-label" style="left: 45px;position: relative;" for="id_estado"><strong>Estado</strong></label>
                         </div>
                     </div>
                     <div class="col-sm-8">
-
+                        <div id="mis_errores"></div>
                     </div>
                 </div>
                 <br>

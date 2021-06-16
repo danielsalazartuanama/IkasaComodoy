@@ -19,6 +19,7 @@ return array(
     'a1105708a18b76903365ca1c4aa61b02' => $vendorDir . '/symfony/translation/Resources/functions.php',
     '72579e7bd17821bb1321b87411366eae' => $vendorDir . '/illuminate/support/helpers.php',
     '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+    'da253f61703e9c22a5a34f228526f05a' => $vendorDir . '/wixel/gump/gump.class.php',
     '64c13faef6e81444c0defc26fc3a4241' => $baseDir . '/app/helpers/helper.php',
     '470a7b80e68886ba9587f69c5e33baaf' => $baseDir . '/config/config.php',
 );

@@ -124,7 +124,7 @@
             <!-- partial -->
             <div class="main-panel">
 
-              
+
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->
                 <main role="main"><?= $this->section('contents') ?></main>
@@ -161,11 +161,11 @@
     <script src=<?= URL . 'melody/js/todolist.js' ?>></script>
     <script src=<?= URL . 'melody/js/dashboard.j' ?>></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   
-    <?= $this->section('modal') ?>
     <?= $this->section('myModal') ?>
-    <?= $this->section('alert') ?>
     <?= $this->section('scripts') ?>
+    <?= $this->section('modal') ?>
+    <?= $this->section('alert') ?>
+
     <!-- End custom js for this page-->
 </body>
 

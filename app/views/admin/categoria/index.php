@@ -14,7 +14,7 @@ $this->layout('../../layouts/admin', ['title' => 'HTGVentas| Categorias']); ?>
 
 
 <div class="content-wrapper">
-<div class="page-header">
+    <div class="page-header">
         <h3 class="page-title">
             Categorías
         </h3>
@@ -27,22 +27,22 @@ $this->layout('../../layouts/admin', ['title' => 'HTGVentas| Categorias']); ?>
     </div>
 
 
- <div class="row">
+    <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    
+
                     <div class="d-flex justify-content-between">
                         <h4 class="card-title">Categorías</h4>
-                       
-                            <div class="btn-group">
-                            <a is-modal="true" href="<?= URL . 'categoria/detail' ?>" type="button" class="btn btn-primary btn-icon-text mb-4" >Agregar<i class="btn-icon-append fas fa-plus"></i></a>
-                            </div>
+
+                        <div class="btn-group">
+                            <a is-modal="true" href="<?= URL . 'categoria/detail' ?>" type="button" class="btn btn-primary btn-icon-text mb-4">Agregar<i class="btn-icon-append fas fa-plus"></i></a>
+                        </div>
 
                     </div>
 
                     <div class="table-responsive">
-                    
+
                         <table id="order-listing" class="table">
                             <thead>
                                 <tr>
@@ -53,31 +53,31 @@ $this->layout('../../layouts/admin', ['title' => 'HTGVentas| Categorias']); ?>
                                 </tr>
                             </thead>
                             <tbody>
-                                 <?php foreach ($data as $row) : ?>
-                               <tr>
-                                    <td><?= $row->IdCateg ?></td>
-                                    <td><?= $row->Nombre ?></td>
-                                    <td><?= $row->Descripcion ?></td>
-                                    <td>
-                                   
+                                <?php foreach ($data as $row) : ?>
+                                    <tr>
+                                        <td><?= $row->IdCateg ?></td>
+                                        <td><?= $row->Nombre ?></td>
+                                        <td><?= $row->Descripcion ?></td>
+                                        <td>
 
-                                    <form action="<?= URL . "categoria/eliminar/{$row->IdCateg}" ?>" class="formulario-eliminar" method="POST">
-                                    <a is-modal="true" href="<?= URL . "categoria/detail/{$row->IdCateg}" ?>" class="btn btn-primary"> <i style="height: 25px;" class="far fa-edit"></i></a>
 
-                                     <button  type="submit" class="btn btn-warning" style="margin-left: 4px;"><i style="height: 25px;" class="fa fa-trash"></i></button>
-                                    </form>
-                                    
-                                    <!-- <a style="height: 30px;" href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                            <form action="<?= URL . "categoria/eliminar/{$row->IdCateg}" ?>" class="formulario-eliminar" method="POST">
+                                                <a is-modal="true" href="<?= URL . "categoria/detail/{$row->IdCateg}" ?>" class="btn btn-primary"> <i style="height: 25px;" class="far fa-edit"></i></a>
+
+                                                <button type="submit" class="btn btn-warning" style="margin-left: 4px;"><i style="height: 25px;" class="fa fa-trash"></i></button>
+                                            </form>
+
+                                            <!-- <a style="height: 30px;" href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                                         <i class="fa fa-trash"></i>
                                     </a> -->
-                                    </td>
-                              </tr>
-                           <?php endforeach; ?>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
@@ -110,17 +110,9 @@ include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 
 <?php $this->push('scripts') ?>
 
-
-
-
-
-    
-
-
-
-
-<script src="<?= URL . 'assets/js/scripts/alert.js' ?>"></script>
 <script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
+<script src="<?= URL . 'assets/js/scripts/alert.js' ?>"></script>
+
 <script src="<?= URL . 'melody/js/data-table.js' ?>"></script>
 <?php $this->end() ?>
 

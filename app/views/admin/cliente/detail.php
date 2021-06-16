@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h1>Clientes-<small>Detalle</small></h1>
-            <form action="<?= URL . 'cliente/save' ?>" method="post">
+            <form id="myForm" action="<?= URL . 'cliente/save' ?>" method="post">
                 <input type="text" name="idcliente" value="<?= $data->IdCliente ?>">
                 <div class="row">
                     <div class="col-sm-4">
@@ -44,6 +44,14 @@
                             <label for="id_ruc">Ruc</label>
                             <input type="text" name="ruc" id="id_ruc" value="<?= $data->Ruc ?>" class=" form-control">
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div id="mis_errores"></div>
                     </div>
                 </div>
 

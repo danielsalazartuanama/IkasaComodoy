@@ -20,6 +20,7 @@ class ComposerStaticInit5d0dda7ff78a27ad1c038d39982bd061
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'da253f61703e9c22a5a34f228526f05a' => __DIR__ . '/..' . '/wixel/gump/gump.class.php',
         '64c13faef6e81444c0defc26fc3a4241' => __DIR__ . '/../..' . '/app/helpers/helper.php',
         '470a7b80e68886ba9587f69c5e33baaf' => __DIR__ . '/../..' . '/config/config.php',
     );
@@ -74,6 +75,7 @@ class ComposerStaticInit5d0dda7ff78a27ad1c038d39982bd061
         'G' => 
         array (
             'GrahamCampbell\\ResultType\\' => 26,
+            'GUMP\\' => 5,
         ),
         'D' => 
         array (
@@ -202,6 +204,10 @@ class ComposerStaticInit5d0dda7ff78a27ad1c038d39982bd061
         'GrahamCampbell\\ResultType\\' => 
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
+        ),
+        'GUMP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wixel/gump/src',
         ),
         'Dotenv\\' => 
         array (

@@ -24,7 +24,8 @@
     "require": {
         "league/plates": "^3.4",
         "vlucas/phpdotenv": "^5.3",
-        "illuminate/database": "^8.46"
+        "illuminate/database": "^8.46",
+        "wixel/gump": "^1.12"
     },
     "require-dev": {
         "phpunit/phpunit": "^9"
