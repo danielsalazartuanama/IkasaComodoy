@@ -3,12 +3,12 @@
         <div class="col-sm-12">
             <h1>Clientes-<small>Detalle</small></h1>
             <form action="<?= URL . 'cliente/save' ?>" method="post">
-                <input type="text" name="idcliente" value="<?= $data->IdCliente ?>">
+                <input  type="text" name="idcliente" value="<?= $data->IdCliente ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_nombre">Nombre</label>
-                            <input type="text" name="nombres" id="id_nombres" value="<?= $data->Nombres ?>" class=" form-control">
+                            <input type="text" name="nombres" id="id_nombres" value="<?= $data->Nombres ?>" class=" form-control" required>
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -22,13 +22,13 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_direccion">Direccion</label>
-                            <input type="text" name="direccion" id="id_direccion" value="<?= $data->Direccion ?>" class=" form-control">
+                            <input type="text" name="direccion" id="id_direccion" value="<?= $data->Direccion ?>" class=" form-control" required>
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_telef">Telefono</label>
-                            <input type="text" name="telf" id="id_telf" value="<?= $data->Telf ?>" class=" form-control">
+                            <input type="number"  max="999999999"  min="1" name="telf" id="id_telf" value="<?= $data->Telf ?>" class=" form-control" required>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_ruc">Ruc</label>
-                            <input type="text" name="ruc" id="id_ruc" value="<?= $data->Ruc ?>" class=" form-control">
+                            <input type="number"   max="12345678912"  name="ruc" id="id_ruc" value="<?= $data->Ruc ?>" class=" form-control">
                         </div>
                     </div>
                 </div>
@@ -52,8 +52,10 @@
                     <div class="col-sm-4">
                         <div class="form group">
                             <button type="submit" class="btn btn-primary btn-block"> Guardar</button>
+                           
                         </div>
                     </div>
+                    
                 </div>
             </form>
 

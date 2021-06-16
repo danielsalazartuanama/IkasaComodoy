@@ -16,13 +16,13 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_nombres">Nombre</label>
-                            <input type="text" name="nombres" id="id_nombres" value="<?= $data->Nombres ?>" class=" form-control">
+                            <input type="text" name="nombres" id="id_nombres" value="<?= $data->Nombres ?>" class=" form-control" required>
                         </div>
                     </div>
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="id_apellidos">Apellidos</label>
-                            <input type="text" name="apellidos" id="id_apellidos" value="<?= $data->Apellidos ?>" class=" form-control">
+                            <input type="text" name="apellidos" id="id_apellidos" value="<?= $data->Apellidos ?>" class=" form-control" required>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_telf">Telefono</label>
-                            <input type="text" name="telf" id="id_telf" value="<?= $data->Telf ?>" class=" form-control">
+                            <input type="text" name="telf" id="id_telf" value="<?= $data->Telf ?>" class=" form-control" required>
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -58,7 +58,7 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="id_correo">Correo</label>
-                            <input type="text" name="correo" id="id_correo" value="<?= $data->Correo ?>" class=" form-control">
+                            <input type="text" name="correo" id="id_correo" value="<?= $data->Correo ?>" class=" form-control" required>
                         </div>
                     </div>
                     <div class="col-sm-4">

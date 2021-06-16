@@ -4,20 +4,20 @@
             <h1>Categorias-<small>Detalle</small></h1>
             <form action="<?= URL . 'categoria/save' ?>" method="post">
                 <input type="text" name="idcateg" value="<?= $data->IdCateg ?>">
-                <div class="row">
-                    <div class="col-sm-4">
+              
+                   
                         <div class="form-group">
                             <label for="id_nombre">Nombre</label>
-                            <input type="text" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control">
+                            <input type="text" placeholder="Nombre Completo" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control" required>
                         </div>
-                    </div>
-                    <div class="col-sm-8">
+                   
+                    
                         <div class="form-group">
                             <label for="id_descripcion">Descripcion</label>
-                            <input type="text" name="descripcion" id="id_descripcion" value="<?= $data->Descripcion ?>" class=" form-control">
+                            <input type="text" placeholder="Agregar descripcion" name="descripcion" id="id_descripcion" value="<?= $data->Descripcion ?>" class=" form-control" >
                         </div>
-                    </div>
-                </div>
+                    
+               
                 <div class="row">
                     <div class="col-sm-4">
                        

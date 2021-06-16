@@ -46,14 +46,12 @@ $this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Producto']); ?>
                             <thead>
 
                                 <th style="width: 5%;">ID</th>
-                            <th style="width: 5%;">IDMARCA</th>
-                            <th style="width: 5%;">IDCATEGORIA</th>
-                            <th style="width: 5%;">IDPROVEEDOR</th>
-                            <th style="width: 40%;">NOMBRE</th>
+        
+                            <th style="width: 10%;">NOMBRE</th>
                             <th style="width: 20%;">PRECIO</th>
-                            <!-- <th style="width: 10%;">PRECIOVENTA</th>
+                            <th style="width: 10%;">PRECIOVENTA</th>
                             <th style="width: 10%;">STOCK</th>
-                            <th style="width: 10%;">STOCKMINIMO</th> -->
+                            <th style="width: 10%;">STOCKMINIMO</th>
                             <th style="width: 20%;">ACCION</th>
 
                             </thead>
@@ -62,14 +60,14 @@ $this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Producto']); ?>
                                 <tr>
 
                                 <td><?= $row->IdProduct ?></td>
-                                <td><?= $row->IdMarca ?></td>
-                                <td><?= $row->IdCateg ?></td>
-                                <td><?= $row->IdFormaPago ?></td>
+                   
                                 <td><?= $row->Nombre ?></td>
                                 <td><?= $row->Precio ?></td>
-                                <!-- <td><?= $row->PrecioVenta ?></td>
+                                <td> <?= $row->PrecioVenta ?></td>
                                 <td><?= $row->Stock ?></td>
-                                <td><?= $row->StockMinimo ?></td> -->
+                                <td><?= $row->StockMinimo ?></td>
+                              
+                               
                                 
                                    
                                    
