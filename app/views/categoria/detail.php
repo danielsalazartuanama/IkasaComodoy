@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <!-- <h1><?= ($data->IdCateg > 0) ? 'Modificar' : 'Insertar' ?></h1> -->
+           
             <form id="myForm" action="<?= URL . 'categoria/save' ?>" method="post">
-                <input type="text" name="idcateg" value="<?= $data->IdCateg ?>">
+                <input type="text" name="idcateg" value="<?= $data->IdCategoria ?>">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">

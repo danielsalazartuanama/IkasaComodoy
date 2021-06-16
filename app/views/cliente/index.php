@@ -15,7 +15,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
     <h1 class="text-center">Tabla Clientes</h1>
     <div class="row">
         <div class="col-sm-4">
-            <a href="<?= URL . 'cliente/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
+            <a is-modal="true" href="<?= URL . 'cliente/detail' ?>" class="btn btn-primary btn-block">Nuevo</a>
         </div>
     </div>
     <div class="row">
@@ -46,7 +46,7 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
                             <td><?= $row->Ruc ?></td>
 
                             <td>
-                                <a href="<?= URL . "cliente/detail/{$row->IdCliente}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
+                                <a is-modal="true" href="<?= URL . "cliente/detail/{$row->IdCliente}" ?>" class="btn btn-primary"> <i class="fa fa-pencil"></i></a>
                                 <a href="<?= URL . "cliente/eliminar/{$row->IdCliente}" ?>" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
@@ -60,16 +60,15 @@ $this->layout('../layouts/layout', ['title' => 'HTGVentas| Clientes']); ?>
 <?php $this->stop() ?>
 
 <!-----scripts personalizados-->
+<?php $this->start('myModal') ?>
+<?php
+$title = 'Cliente-Dealle Insertar';
+$size = NORMAL;
+include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
+
+<?php $this->stop() ?>
+<!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
+<script src="<?= URL . 'js/scripts/modal_crud.js' ?>"></script>
+
 <?php $this->end() ?>
-
-
-
-
-
-
-
-
-
-
-

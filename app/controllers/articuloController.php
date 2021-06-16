@@ -11,13 +11,12 @@ use App\Models\UnidadModel;
 use Libs\Controller;
 use stdClass;
 
-class ArtticuloController extends Controller
+class ArticuloController extends Controller
 {
     public function __construct()
     {
         $this->loadDirectoryTemplate('articulo');
         $this->loadDAO('articulo');
-        //$this->loadDAOcategoria('categoria');
     }
     public function index()
     {
@@ -28,18 +27,18 @@ class ArtticuloController extends Controller
     {
         $id = isset($param[0]) ? $param[0] : 0;
         $data = $this->dao->get($id);
-        $categorias = CategoriaModel::get();        
-        
+        $categorias = CategoriaModel::get();
+
         echo $this->template->render('detail', [
             'data' => $data,
-            'categorias' => $categorias,            
+            'categorias' => $categorias,
         ]);
     }
     public function save()
     {
         $obj = new stdClass();
-        $obj->IdProduct = isset($_POST['idproduct']) ? $_POST['idproduct'] : 0;        
-        $obj->IdCateg = isset($_POST['idcategoria']) ? $_POST['idcategoria'] : 0;
+        $obj->IdArticulo = isset($_POST['idarticulo']) ? $_POST['idarticulo'] : 0;
+        $obj->IdCategoria = isset($_POST['idcategoria']) ? $_POST['idcategoria'] : 0;
         $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
         $obj->Precio = isset($_POST['precio']) ? $_POST['precio'] : '';
         $obj->PrecioVenta = isset($_POST['precioventa']) ? $_POST['precioventa'] : '';

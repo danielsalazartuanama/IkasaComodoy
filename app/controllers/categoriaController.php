@@ -24,9 +24,8 @@ class CategoriaController extends Controller
     {
         $id = isset($param[0]) ? $param[0] : 0;
         //$categorias = $this->dao->getAllSimple(1);
-        $data = $this->dao->get($id);
-        $categorias = CategoriaModel::get();
-        echo $this->template->render('detail', ['data' => $data, 'categorias' => $categorias]);
+        $data = $this->dao->get($id);       
+        echo $this->template->render('detail', ['data' => $data]);
         //myEcho($data);
     }
     public function save()
@@ -37,7 +36,7 @@ class CategoriaController extends Controller
         if ($status == true) {
             $obj = new stdClass();
             //el POST se uedreemplazar por $data
-            $obj->IdCateg = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
+            $obj->IdCategoria = isset($_POST['idcateg']) ? $_POST['idcateg'] : 0;
             $obj->Nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
             $obj->Descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
             //$obj->estado = isset($_POST['estado']) ? $_POST['estado'] : '';
@@ -52,7 +51,7 @@ class CategoriaController extends Controller
                 $obj->Estado = false;
             }
 
-            if ($obj->IdCateg > 0) {
+            if ($obj->IdCategoria > 0) {
                 $rpta = $this->dao->update($obj);
             } else {
                 $rpta = $this->dao->create($obj);

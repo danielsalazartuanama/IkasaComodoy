@@ -49,7 +49,7 @@ class ClienteController extends Controller
             if ($rpta) {
                 $response = [
                     'success' => 1,
-                    'message' => 'Categoria guardada correctamente',
+                    'message' => 'cliente guardado correctamente',
                     'redirection' => URL . 'cliente/index'
                 ];
             } else {
@@ -82,7 +82,7 @@ class ClienteController extends Controller
             'nombres' => 'required|max_len,10',
             'direccion' => 'min_len,5|max_len,100',
             'telf' => 'min_len,5|max_len,100',
-            'creditolimite' => 'min_len,5|max_len,100',
+            'creditolimite' => 'min_len,1|max_len,100',
             'ruc' => 'min_len,11|max_len,11'
         ]);
         $valid_data = $gump->run($datos);

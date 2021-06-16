@@ -1,158 +1,149 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
-<!-- index-431:41-->
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><?= $this->e($title) ?></title>
-    <!--llamamos a la funcion e y lo asignamos una variable-->
-    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?= URL . 'images/favicon.png' ?>">
-    <!-- Material Design Iconic Font-V2.2.0 -->
-    <link rel="stylesheet" href="<?= URL . 'css/material-design-iconic-font.min.css' ?>">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?= URL . 'css/font-awesome.min.css' ?>">
-    <!-- Font Awesome Stars-->
-    <link rel="stylesheet" href="<?= URL . 'css/fontawesome-stars.css' ?>">
-    <!-- Meanmenu CSS -->
-    <link rel="stylesheet" href="<?= URL . 'css/meanmenu.css' ?>">
-    <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="<?= URL . 'css/owl.carousel.min.css' ?>">
-    <!-- Slick Carousel CSS -->
-    <link rel="stylesheet" href="<?= URL . 'css/slick.css' ?>">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="<?= URL . 'css/animate.css' ?>">
-    <!-- Jquery-ui CSS -->
-    <link rel="stylesheet" href="<?= URL . 'css/jquery-ui.min.css' ?>">
-    <!-- Venobox CSS -->
-    <link rel="stylesheet" href="<?= URL . 'css/venobox.css' ?>">
-    <!-- Nice Select CSS -->
-    <link rel="stylesheet" href="<?= URL . 'css/nice-select.css' ?>">
-    <!-- Magnific Popup CSS -->
-    <link rel="stylesheet" href="<?= URL . 'css/magnific-popup.css' ?>">
-    <!-- Bootstrap V4.1.3 Fremwork CSS -->
+
+    <!-- Site Metas -->
+    <title><?= $this->e($title); ?></title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+
+    <link rel="shortcut icon" href="<?= URL . 'images/favicon.ico' ?>" type="image/x-icon">
+    <link rel="apple-touch-icon" href="<?= URL . 'images/apple-touch-icon.png' ?>' ?>">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= URL . 'css/bootstrap.min.css' ?>">
-    <!-- Helper CSS -->
-    <link rel="stylesheet" href="<?= URL . 'css/helper.css' ?>">
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="<?= URL . 'style.css' ?>">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="<?= URL . 'css/style.css' ?>">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="<?= URL . 'css/responsive.css' ?>">
-    <!-- Modernizr js -->
-    <script src="<?= URL . 'js/vendor/modernizr-2.8.3.min.js' ?>"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<?= URL . 'css/custom.css' ?>">
 
-    <?= $this->section('styles') ?>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body>
 
-    <div class="body-wrapper">
-
-        <!-- TRAEMOS DEL PARTIAL EL HEADER CON INCLUDE_ONE Y LA RUTA -->
-        <?php include_once MAINPATH . 'app/views/layouts/partials/_header.php' ?>
-
-
-        <!-- Static Top Area End Here -->
-
-        <!-- Content -->
-        <?= $this->section('contents') ?>
-
-
-
-        <!-- product-area start -->
-
-        <!-- product-area end -->
-
-
-        <!-- Begin Li's Static Banner Area -->
-
-        <!-- Li's Static Banner Area End Here -->
-
-
-        <!-- Begin Li's Laptop Product Area -->
-
-        <!-- Li's Laptop Product Area End Here -->
-
-
-
-        <!-- Begin Li's TV & Audio Product Area -->
-
-        <!-- Li's TV & Audio Product Area End Here -->
-
-
-        <!-- Begin Li's Static Home Area -->
-
-        <!-- Li's Static Home Area End Here -->
-
-
-        <!-- Begin Group Featured Product Area -->
-
-        <!-- Group Featured Product Area End Here -->
-
-
-        <!-- Begin Footer Area -->
-        <?php include_once MAINPATH . 'app/views/layouts/partials/_footer.php' ?>
-
-        <!-- Footer Area End Here -->
-
-
-        <!-- Begin Quick View | Modal Area -->
-
-        <!-- Quick View | Modal Area End Here -->
-
+    <!-- Start Main Top -->
+    <div class="main-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="text-slid-box">
+                        <div id="offer-box" class="carouselTicker">
+                            <ul class="offer-box">
+                                <li>
+                                    <i class="fab fa-opencart"></i> Off 10%! Shop Now Man
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> 50% - 80% off on Fashion
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT20
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Off 10%! Shop Now Man
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> 50% - 80% off on Fashion
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT20
+                                </li>
+                                <li>
+                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="custom-select-box">
+                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+                            <option>¥ JPY</option>
+                            <option>$ USD</option>
+                            <option>€ EUR</option>
+                        </select>
+                    </div>
+                    <div class="right-phone-box">
+                        <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                    </div>
+                    <div class="our-link">
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Our location</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <?= $this->section('myModal'); ?>
-    <!-- Body Wrapper End Here -->
-    <!-- jQuery-V1.12.4 -->
-    <script src="<?= URL . 'js/vendor/jquery-1.12.4.min.js' ?>"></script>
-    <!-- Popper js -->
-    <script src="<?= URL . 'js/vendor/popper.min.js' ?>"></script>
-    <!-- Bootstrap V4.1.3 Fremwork js -->
+    <!-- End Main Top -->
+
+    <!-- Start Main Top -->
+    <?php include_once MAINPATH . 'app/views/layouts/partials/_header.php' ?>
+    <!-- End Main Top -->
+    <!-- Start Top Search -->
+    <?php include_once MAINPATH . 'app/views/layouts/partials/_startTopSearch.php' ?>
+    <!-- End Top Search -->
+
+    <main role="main"><?= $this->section('contents') ?></main>
+
+    <!-- Start Instagram Feed  -->
+    <?php include_once MAINPATH . 'app/views/layouts/partials/_startInstagram.php' ?>
+    <!-- End Instagram Feed  -->
+    <!-- Start Footer  -->
+    <?php include_once MAINPATH . 'app/views/layouts/partials/_footer.php' ?>
+    <!-- End Footer  -->
+
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
+            <a href="https://html.design/">html design</a>
+        </p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <!-- ALL JS FILES -->
+    <script src="<?= URL . 'js/jquery-3.2.1.min.js' ?>"></script>
+    <script src="<?= URL . 'js/popper.min.js' ?>"></script>
     <script src="<?= URL . 'js/bootstrap.min.js' ?>"></script>
-    <!-- Ajax Mail js -->
-    <script src="<?= URL . 'js/ajax-mail.js' ?>"></script>
-    <!-- Meanmenu js -->
-    <script src="<?= URL . 'js/jquery.meanmenu.min.js' ?>"></script>
-    <!-- Wow.min js -->
-    <script src="<?= URL . 'js/wow.min.js' ?>"></script>
-    <!-- Slick Carousel js -->
-    <script src="<?= URL . 'js/slick.min.js' ?>"></script>
-    <!-- Owl Carousel-2 js -->
+    <!-- ALL PLUGINS -->
+    <script src="<?= URL . 'js/jquery.superslides.min.js' ?>"></script>
+    <script src="<?= URL . 'js/bootstrap-select.js' ?>"></script>
+    <script src="<?= URL . 'js/inewsticker.js' ?>"></script>
+    <script src="<?= URL . 'js/bootsnav.js.' ?>"></script>
+    <script src="<?= URL . 'js/images-loded.min.js' ?>"></script>
+    <script src="<?= URL . 'js/isotope.min.js' ?>"></script>
     <script src="<?= URL . 'js/owl.carousel.min.js' ?>"></script>
-    <!-- Magnific popup js -->
-    <script src="<?= URL . 'js/jquery.magnific-popup.min.js' ?>"></script>
-    <!-- Isotope js -->
-    <script src="<?= URL . 'js/isotope.pkgd.min.js' ?>"></script>
-    <!-- Imagesloaded js -->
-    <script src="<?= URL . 'js/imagesloaded.pkgd.min.js' ?>"></script>
-    <!-- Mixitup js -->
-    <script src="<?= URL . 'js/jquery.mixitup.min.js' ?>"></script>
-    <!-- Countdown -->
-    <script src="<?= URL . 'js/jquery.countdown.min.js' ?>"></script>
-    <!-- Counterup -->
-    <script src="<?= URL . 'js/jquery.counterup.min.js' ?>"></script>
-    <!-- Waypoints -->
-    <script src="<?= URL . 'js/waypoints.min.js' ?>"></script>
-    <!-- Barrating -->
-    <script src="<?= URL . 'js/jquery.barrating.min.js' ?>"></script>
-    <!-- Jquery-ui -->
-    <script src="<?= URL . 'js/jquery-ui.min.js' ?>"></script>
-    <!-- Venobox -->
-    <script src="<?= URL . 'js/venobox.min.js' ?>"></script>
-    <!-- Nice Select js -->
-    <script src="<?= URL . 'js/jquery.nice-select.min.js' ?>"></script>
-    <!-- ScrollUp js -->
-    <script src="<?= URL . 'js/scrollUp.min.js' ?>"></script>
-    <!-- Main/Activator js -->
-    <script src="<?= URL . 'js/main.js' ?>"></script>
+    <script src="<?= URL . 'js/baguetteBox.min.js' ?>"></script>
+    <script src="<?= URL . 'js/form-validator.min.js' ?>"></script>
+    <script src="<?= URL . 'js/contact-form-script.js' ?>"></script>
+    <script src="<?= URL . 'js/custom.js' ?>"></script>
 
+    <?= $this->section('myModal') ?>
     <?= $this->section('scripts') ?>
-</body>
 
-<!-- index-431:47-->
+</body>
 
 </html>

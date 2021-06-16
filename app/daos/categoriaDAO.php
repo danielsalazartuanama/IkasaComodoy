@@ -17,7 +17,7 @@ class CategoriaDAO extends Dao
     public function getAll(bool $estado)
     {
         $result = CategoriaModel::where('Estado', $estado)
-            ->orderBy('IdCateg', 'DESC')
+            ->orderBy('IdCategoria', 'DESC')
             ->get();
         return $result;
     }
@@ -26,7 +26,7 @@ class CategoriaDAO extends Dao
         $model = CategoriaModel::find($id);
         if (is_null($model)) {
             $model = new StdClass();
-            $model->IdCateg = 0;
+            $model->IdCategoria = 0;
             $model->Nombre = '';
             $model->Descripcion = '';
             $model->Estado = 0;
@@ -34,16 +34,11 @@ class CategoriaDAO extends Dao
         return $model;
     }
 
-    public function getAllSimple(int $id)
-    {
-        $model = CategoriaModel::get();
-        return $model;
-    }
     public function create($obj)
     {
         //$model = CategoriaModel::get();
         $model = new CategoriaModel();
-        $model->IdCateg = $obj->IdCateg;
+        $model->IdCategoria = $obj->IdCategoria;
         $model->Nombre = $obj->Nombre;
         $model->Descripcion = $obj->Descripcion;
         $model->Estado = $obj->Estado;
@@ -51,7 +46,7 @@ class CategoriaDAO extends Dao
     }
     public function update($obj)
     {
-        $model = CategoriaModel::find($obj->IdCateg);
+        $model = CategoriaModel::find($obj->IdCategoria);
         //$model = new CategoriaModel();
         $model->Nombre = $obj->Nombre;
         $model->Descripcion = $obj->Descripcion;
@@ -65,7 +60,7 @@ class CategoriaDAO extends Dao
     }
     public function baja(int $id)
     {
-        $sql = "UPDATE categorias SET estado=0 where idcateg?";
+        $sql = "UPDATE categorias SET estado=0 where IdCategoria?";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(1, $id, \PDO::PARAM_INT);
         return $stmt->execute();
