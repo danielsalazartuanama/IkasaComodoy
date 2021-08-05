@@ -1,12 +1,12 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?>
+$this->layout('../../layouts/layout', ['title' => 'Ikasa Muebles|comprar correctamente']); ?>
 
 <?php $this->push('styles') ?>
 
 <?php $this->end() ?>
 
 <?php $this->start('contents') ?>
-<!-- breadcrumb area start -->
+
 <div class="breadcrumb-area">
     <div class="container">
         <div class="row">
@@ -15,7 +15,7 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                     <nav aria-label="breadcrumb">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">shop left sidebar</li>
+                            <li class="breadcrumb-item active" aria-current="page">shop right sidebar</li>
                         </ul>
                     </nav>
                 </div>
@@ -29,11 +29,111 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
 <div class="page-main-wrapper">
     <div class="container">
         <div class="row">
+            <!-- sidebar start -->
+            <div class="col-lg-3 order-2 order-lg-1">
+                <div class="shop-sidebar-wrap mt-md-28 mt-sm-28">
+                    <!-- sidebar categorie start -->
+                    <div class="sidebar-widget mb-30">
+                        <div class="sidebar-category">
+                            <ul>
+                                <li class="title"><i class="fa fa-bars"></i> categories</li>
+                                <li><a href="#">Oficina</a><span>(10)</span></li>
+                                <li><a href="#">Muebles exclusivos</a><span>(16)</span></li>
+                                <li><a href="#">Sala</a><span>(12)</span></li>
+                                <li><a href="#">Comedor</a><span>(08)</span></li>
+                                <li><a href="#">Dormitorio</a><span>(08)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- sidebar categorie start -->
+
+                    <!-- manufacturer start -->
+                    <div class="sidebar-widget mb-30">
+                        <div class="sidebar-title mb-10">
+                            <h3>Manufacturers</h3>
+                        </div>
+                        <div class="sidebar-widget-body">
+                            <ul>
+                                <li><i class="fa fa-angle-right"></i><a href="#">Ikasa</a><span>(10)</span></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">Comodoy</a><span>(12)</span></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- manufacturer end -->
+
+                    <!-- pricing filter start -->
+                    <!-- <div class="sidebar-widget mb-30">
+                        <div class="sidebar-title mb-10">
+                            <h3>filter by price</h3>
+                        </div>
+                        <div class="sidebar-widget-body">
+                            <div class="price-range-wrap">
+                                <div class="price-range" data-min="50" data-max="400"></div>
+                                <div class="range-slider">
+                                    <form action="#" class="d-flex justify-content-between">
+                                        <button class="filter-btn">filter</button>
+                                        <div class="price-input d-flex align-items-center">
+                                            <label for="amount">Price: </label>
+                                            <input type="text" id="amount">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- pricing filter end -->
+
+                    <!-- product size start -->
+                    <!-- <div class="sidebar-widget mb-30">
+                        <div class="sidebar-title mb-10">
+                            <h3>size</h3>
+                        </div>
+                        <div class="sidebar-widget-body">
+                            <ul>
+                                <li><i class="fa fa-angle-right"></i><a href="#">s</a><span>(10)</span></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">m</a><span>(12)</span></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">l</a><span>(20)</span></li>
+                                <li><i class="fa fa-angle-right"></i><a href="#">XL</a><span>(12)</span></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- product size end -->
+
+                    <!-- product tag start -->
+                    <div class="sidebar-widget mb-30">
+                        <div class="sidebar-title mb-10">
+                            <h3>tags</h3>
+                        </div>
+                        <div class="sidebar-widget-body">
+                            <div class="product-tag">
+                                <a href="#">Silla</a>
+                                <a href="#">Mesa</a>
+                                <a href="#">Sofa</a>
+                                <a href="#">Sillones</a>
+                                <a href="#">Butacas</a>
+                                <a href="#">Bancos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product tag end -->
+
+                    <!-- sidebar banner start -->
+                    <div class="sidebar-widget mb-30">
+                        <div class="img-container fix img-full">
+                            <a href="#"><img src="assets/img/banner/banner_shop.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- sidebar banner end -->
+                </div>
+            </div>
+            <!-- sidebar end -->
+
             <!-- product main wrap start -->
-            <div class="col-12">
-                <!-- <div class="shop-banner img-full">
-                    <img src="<?= URL . 'assets/img/shop/cama1.jpg' ?>" alt="">
-                </div> -->
+            <div class="col-lg-9 order-1  order-lg-2">
+                <div class="shop-banner img-full">
+                    <img src="assets/img/banner/banner_static1.jpg" alt="">
+                </div>
                 <!-- product view wrapper area start -->
                 <div class="shop-product-wrapper pt-34">
                     <!-- shop product top wrap start -->
@@ -77,8 +177,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/comedor9.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/restaurant9.png' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama1.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama2.jpeg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -112,8 +212,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/comedor1.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/comedor2.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama1.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama2.jpeg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -152,8 +252,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/comedor3.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/comedor4.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama3.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama4.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -187,8 +287,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/comedor3.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/comedor4.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama3.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama4.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -227,8 +327,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/comedor5.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/comedor6.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama5.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama6.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -262,9 +362,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-
-                                        <img src="<?= URL . 'assets/img/shop/comedor5.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/comedor6.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama5.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama6.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -303,8 +402,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/comedor7.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/comedor8.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama7.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama8.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -338,8 +437,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/comedor7.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/comedor8.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama7.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/cama8.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -452,7 +551,6 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-
                                         <img src="<?= URL . 'assets/img/shop/restaurant3.png' ?>" class="img-pri" alt="">
                                         <img src="<?= URL . 'assets/img/shop/restaurant4.png' ?>" class="img-sec" alt="">
                                     </a>
@@ -678,8 +776,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/cama2.jpeg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/cama3.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor1.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor2.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -713,8 +811,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/cama2.jpeg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/cama3.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor1.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor2.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -753,8 +851,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/cama4.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/cama5.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor3.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor4.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -788,8 +886,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/cama4.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/cama5.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor3.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor4.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -828,8 +926,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/cama6.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/cama7.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor5.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor6.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -863,8 +961,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/cama8.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/cama9.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor5.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor6.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -903,8 +1001,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/cama1.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/cama2.jpeg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor7.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor8.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -938,8 +1036,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla.png' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla2.png' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor7.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/comedor8.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -978,8 +1076,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla.png' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla2.png' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_escritorio1.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_escritorio2.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -1013,9 +1111,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla.png' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla2.png' ?>" class="img-sec" alt="">
-
+                                        <img src="<?= URL . 'assets/img/shop/oficina_escritorio1.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_escritorio2.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -1054,8 +1151,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_escritorio1.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_escritorio2.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_mesa.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_mesa2.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -1089,8 +1186,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_escritorio1.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_escritorio2.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_mesa.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_mesa2.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -1129,8 +1226,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla3.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla5.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_silla.png' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_silla2.png' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -1164,9 +1261,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla3.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_silla5.jpg' ?>" class="img-sec" alt="">
-
+                                        <img src="<?= URL . 'assets/img/shop/oficina_silla.png' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_silla2.png' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -1205,8 +1301,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-item fix mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_mesa.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_mesa2.jpg' ?>" class="img-sec" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_silla3.jpg' ?>" class="img-pri" alt="">
+                                        <img src="<?= URL . 'assets/img/shop/oficina_silla5.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -1240,8 +1336,8 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
                             <div class="product-list-item mb-30">
                                 <div class="product-thumb">
                                     <a href="product-details.html">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_mesa.jpg' ?>" class="img-pri" alt="">
-                                        <img src="<?= URL . 'assets/img/shop/oficina_mesa2.jpg' ?>" class="img-sec" alt="">
+                                        <<img src="<?= URL . 'assets/img/shop/oficina_silla3.jpg' ?>" class="img-pri" alt="">
+                                            <img src="<?= URL . 'assets/img/shop/oficina_silla5.jpg' ?>" class="img-sec" alt="">
                                     </a>
                                     <div class="product-label">
                                         <span>hot</span>
@@ -1304,7 +1400,7 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
 <!-- page wrapper end -->
 
 <!-- brand area start -->
-<div class="brand-area pt-26 pb-30">
+<div class="brand-area pt-4 pb-30">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -1320,33 +1416,31 @@ $this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Comprar todo']); ?
             <div class="col-12">
                 <div class="brand-active slick-padding slick-arrow-style">
                     <div class="brand-item text-center">
-                        <a href="#"><img src="<?= URL . 'assets/img/brand/br1.png' ?>" alt=""></a>
+                        <a href="#"><img src="assets/img/brand/br1.png" alt=""></a>
                     </div>
                     <div class="brand-item text-center">
-                        <a href="#"><img src="<?= URL . 'assets/img/brand/br2.png' ?>" alt=""></a>
+                        <a href="#"><img src="assets/img/brand/br2.png" alt=""></a>
                     </div>
                     <div class="brand-item text-center">
-                        <a href="#"><img src="<?= URL . 'assets/img/brand/br3.png' ?>" alt=""></a>
+                        <a href="#"><img src="assets/img/brand/br3.png" alt=""></a>
                     </div>
                     <div class="brand-item text-center">
-                        <a href="#"><img src="<?= URL . 'assets/img/brand/br4.png' ?>" alt=""></a>
+                        <a href="#"><img src="assets/img/brand/br4.png" alt=""></a>
                     </div>
                     <div class="brand-item text-center">
-                        <a href="#"><img src="<?= URL . 'assets/img/brand/br5.png' ?>" alt=""></a>
+                        <a href="#"><img src="assets/img/brand/br5.png" alt=""></a>
                     </div>
                     <div class="brand-item text-center">
-                        <a href="#"><img src="<?= URL . 'assets/img/brand/br6.png' ?>" alt=""></a>
+                        <a href="#"><img src="assets/img/brand/br6.png" alt=""></a>
                     </div>
                     <div class="brand-item text-center">
-                        <a href="#"><img src="<?= URL . 'assets/img/brand/br4.png' ?>" alt=""></a>
+                        <a href="#"><img src="assets/img/brand/br4.png" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- brand area end -->
-
 <?php $this->stop() ?>
 
 <?php $this->push('scripts') ?>

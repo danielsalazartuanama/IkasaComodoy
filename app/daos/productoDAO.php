@@ -31,10 +31,11 @@ class ProductoDAO extends Dao
             $model->PrecioVenta = 0;
             $model->Stock = 0;
             $model->StockMinimo = 0;
+            $model->Imagen = '';
             $model->Estado = 0;
         }
         return $model;
-    }    
+    }
     public function create($obj)
     {
         $model = new ProductoModel();
@@ -47,6 +48,7 @@ class ProductoDAO extends Dao
         $model->PrecioVenta = $obj->PrecioVenta;
         $model->Stock = $obj->Stock;
         $model->StockMinimo = $obj->StockMinimo;
+        $model->Imagen = $obj->Imagen;
         $model->Estado = $obj->Estado;
         return $model->save();
     }
@@ -61,6 +63,7 @@ class ProductoDAO extends Dao
         $model->PrecioVenta = $obj->PrecioVenta;
         $model->Stock = $obj->Stock;
         $model->StockMinimo = $obj->StockMinimo;
+        $model->Imagen = $obj->Imagen;
         $model->Estado = $obj->Estado;
         return $model->save();
     }

@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'HTGVentas| Login']); ?>
+$this->layout('../../layouts/layout', ['title' => 'HTGVentas| Login']); ?>
 <!----------------------------------------------------------------------------------->
 
 <?php $this->push('styles') ?>

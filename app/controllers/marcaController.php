@@ -56,7 +56,7 @@ class marcaController extends Controller
             if ($rpta) {
                 $response = [
                     'success' => 1,
-                    'message' => 'Categoria guardada correctamente',
+                    'message' => 'Marca guardada correctamente',
                     'redirection' => URL . 'marca/index'
                 ];
             } else {

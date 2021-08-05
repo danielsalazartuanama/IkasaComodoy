@@ -35,7 +35,7 @@ $this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Venta']); ?>
                         <h4 class="card-title">Venta</h4>
                        
                             <div class="btn-group">
-                            <a is-modal="true" href="<?= URL . 'venta/detail' ?>" type="button" class="btn btn-primary btn-icon-text mb-4" >Agregar<i class="btn-icon-append fas fa-plus"></i></a>
+                            <a href="<?= URL . 'venta/detail' ?>" type="button" class="btn btn-primary btn-icon-text mb-4" >Agregar<i class="btn-icon-append fas fa-plus"></i></a>
                             </div>
 
                     </div>
@@ -96,13 +96,7 @@ $this->layout('../../layouts/admin', ['title' => 'IkasaComodoy| Venta']); ?>
 <?php $this->stop() ?>
 
 <!-----scripts personalizados-->
-<?php $this->start('myModal') ?>
-<?php
-$title = 'Venta Insertar';
-$size = NORMAL;
-include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 
-<?php $this->stop() ?>
 <!-----scripts personalizados-->
 <?php $this->push('scripts') ?>
 <script src="<?= URL . 'assets/js/scripts/alert.js' ?>"></script>

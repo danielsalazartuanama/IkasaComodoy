@@ -1,5 +1,5 @@
 <?php
-$this->layout('../layouts/layout', ['title' => 'Ikasa Muebles|Productos Comparar']); ?>
+$this->layout('../../layouts/layout', ['title' => 'Ikasa Muebles|Productos Comparar']); ?>
 
 <?php $this->push('styles') ?>
 

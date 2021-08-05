@@ -32,9 +32,7 @@ class VentaController extends Controller
         $formapagos = formapagoModel::get();
         $comprobantes = ComprobanteModel::get();
         $productos = ProductoModel::get();
-        foreach ($param->IdProduct as $key => $product) {
-            $results[] = array("idpro" => $param->IdProduct[$key], "precio" => $param->PrecioCosto[$key]);
-        }
+        
         echo $this->template->render('detail', [
             'data' => $data,
             'usuarios' => $usuarios,

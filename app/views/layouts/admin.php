@@ -28,7 +28,7 @@
 
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="#"><img src="<?= URL . 'melody/images/log.png' ?>" alt="brand logo" />
+                <a class="navbar-brand brand-logo" href="#"><img src="<?= URL . 'melody/images/ikasalogo.png' ?>" alt="brand logo" />
                 </a>
 
             </div>
@@ -160,7 +160,7 @@
     <script src=<?= URL . 'melody/js/settings.js' ?>></script>
     <script src=<?= URL . 'melody/js/todolist.js' ?>></script>
     <script src=<?= URL . 'melody/js/dashboard.j' ?>></script>
-    
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <?= $this->section('myModal') ?>
     <?= $this->section('scripts') ?>

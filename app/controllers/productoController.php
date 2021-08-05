@@ -30,7 +30,7 @@ class ProductoController extends Controller
         $categorias = CategoriaModel::get();
         $marcas = MarcaModel::get();
         $proveedores = ProveedorModel::get();
-        $productos = ProductoModel::get();
+        //$productos = ProductoModel::get();
         echo $this->template->render('detail', [
             'data' => $data,
             'categorias' => $categorias,
@@ -55,6 +55,11 @@ class ProductoController extends Controller
             $obj->PrecioVenta = isset($_POST['precioventa']) ? $_POST['precioventa'] : '';
             $obj->Stock = isset($_POST['stock']) ? $_POST['stock'] : '';
             $obj->StockMinimo = isset($_POST['stockminimo']) ? $_POST['stockminimo'] : '';
+
+            $archivo = $_FILES["imagen"];
+            $extension = pathinfo($archivo["name"], PATHINFO_EXTENSION);
+            $obj->Imagen = $obj->Nombre . date('m-d-Y') . "-" . time() . "." . $extension;
+            move_uploaded_file($archivo["tmp_name"],  "img/ $obj->Imagen");
 
             if (isset($_POST['estado'])) {
                 if ($_POST['estado'] == 'on') {

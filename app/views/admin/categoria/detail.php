@@ -1,23 +1,23 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Categorias-<small>Detalle</small></h1>
+            <!-- <h1>Categorias-<small>Detalle</small></h1> -->
             <form id="myForm" action="<?= URL . 'categoria/save' ?>" method="post">
                 <input type="text" name="idcateg" value="<?= $data->IdCateg ?>">
-              
-                   
-                        <div class="form-group">
-                            <label for="id_nombre">Nombre</label>
-                            <input type="text" placeholder="Nombre Completo" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control" required>
-                        </div>
-                   
-                    
-                        <div class="form-group">
-                            <label for="id_descripcion">Descripcion</label>
-                            <input type="text" placeholder="Agregar descripcion" name="descripcion" id="id_descripcion" value="<?= $data->Descripcion ?>" class=" form-control" >
-                        </div>
-                    
-               
+
+
+                <div class="form-group">
+                    <label for="id_nombre">Nombre</label>
+                    <input type="text" placeholder="Nombre Completo" name="nombre" id="id_nombre" value="<?= $data->Nombre ?>" class=" form-control" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="id_descripcion">Descripcion</label>
+                    <input type="text" placeholder="Agregar descripcion" name="descripcion" id="id_descripcion" value="<?= $data->Descripcion ?>" class=" form-control">
+                </div>
+
+
                 <div class="row">
                     <div class="col-sm-4">
 

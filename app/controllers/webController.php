@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+
 use Libs\Controller;
 
 class WebController extends Controller
@@ -37,7 +38,9 @@ class WebController extends Controller
     }
     public function shop_left()
     {
-        echo $this->template->render('shop_left');
+        echo $this->template->render(
+            'shop_left'
+        );
     }
     public function shop_full()
     {

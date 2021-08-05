@@ -9,7 +9,7 @@
 
             </div>
         </li>
-       
+
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#page-layouts1" aria-expanded="false" aria-controls="page-layouts">
                 <i class="fas fa-chart-line menu-icon"></i>
@@ -29,7 +29,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="../compra/index">
                 <i class="fas fa-cart-plus menu-icon"></i>
                 <span class="menu-title">Compras</span>
             </a>
@@ -48,10 +48,10 @@
                 <span class="menu-title">Pedidos</span>
             </a>
         </li>
-        
-      
 
-        
+
+
+
 
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#page-layouts" aria-expanded="false" aria-controls="page-layouts">
@@ -62,24 +62,22 @@
             <div class="collapse" id="page-layouts">
                 <ul class="nav flex-column sub-menu">
 
-                <li class="nav-item ">
+                    <li class="nav-item ">
                         <a class="nav-link" href="../producto/index">Producto</a>
-                </li>  
-                <li class="nav-item ">
+                    </li>
+                    <li class="nav-item ">
                         <a class="nav-link" href="../categoria/index">Categoria</a>
-                </li> 
-                <li class="nav-item ">
-                        <a class="nav-link" href="#">Etiiquetas</a>
-                </li> 
-                <li class="nav-item ">
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Etiquetas</a>
+                    </li>
+                    <li class="nav-item ">
                         <a class="nav-link" href="../marca/index">Marcas</a>
-                </li> 
-                   
+                    </li>
+
                 </ul>
             </div>
         </li>
-
-       
 
 
         <li class="nav-item">
@@ -122,7 +120,7 @@
             </a>
         </li>
 
-       
-       
+
+
     </ul>
 </nav>

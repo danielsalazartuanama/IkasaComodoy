@@ -1,5 +1,5 @@
 <?php
-$this->layout('../../layouts/admin', ['title' => 'HTGVentas| Categorias']); ?>
+$this->layout('../../layouts/admin', ['title' => 'HTGVentas| Compras']); ?>
 <!----------------------------------------------------------------------------------->
 <!--Colocar los links a los archivos css-->
 <?php $this->push('styles') ?>
@@ -10,18 +10,16 @@ $this->layout('../../layouts/admin', ['title' => 'HTGVentas| Categorias']); ?>
 
 <!--contenido de la pagina-->
 <?php $this->start('contents') ?>
-<!-- <?php myEcho($data) ?> -->
-
 
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
-            Categorías
+            Compras
         </h3>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="../inicio/index">Panel administrador</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Categorías</li>
+                <li class="breadcrumb-item active" aria-current="page">Compras</li>
             </ol>
         </nav>
     </div>
@@ -33,10 +31,24 @@ $this->layout('../../layouts/admin', ['title' => 'HTGVentas| Categorias']); ?>
                 <div class="card-body">
 
                     <div class="d-flex justify-content-between">
-                        <h4 class="card-title">Categorías</h4>
+                        <h4 class="card-title">Compras</h4>
 
                         <div class="btn-group">
-                            <a is-modal="true" href="<?= URL . 'categoria/detail' ?>" type="button" class="btn btn-primary btn-icon-text mb-4">Agregar<i class="btn-icon-append fas fa-plus"></i></a>
+                            <a href="<?= URL . 'compra/detail' ?>" type="button" class="btn btn-primary btn-icon-text mb-4">Agregar<i class="btn-icon-append fas fa-plus"></i></a>
+                        </div>
+                        <!-- <div class="btn-group">
+                            <input type="checkbox" style="width: 50px;height: 50px;position: relative;left: 25px; " ; name="estado" id="id_estado" class="form-check-input" <?php if ($estado  == "1") echo "checked"; ?> checked>
+                            <label class="form-check-label" style="left: 45px;position: relative;" for="id_estado"><strong>Estado</strong></label>
+                        </div> -->
+                        <div class="dropdown">
+                            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Estado
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="../compra/index">True</a>
+                                <a class="dropdown-item" href="../compra/indexd">False</a>
+                            </div>
                         </div>
 
                     </div>
@@ -47,22 +59,26 @@ $this->layout('../../layouts/admin', ['title' => 'HTGVentas| Categorias']); ?>
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Nombre</th>
-                                    <th>Descripción</th>
+                                    <th>IdProvedor</th>                                    
+                                    <th>Dato compra</th>
+                                    <th>Impuesto</th>
+                                    <th>Total</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($data as $row) : ?>
                                     <tr>
-                                        <td><?= $row->IdCateg ?></td>
-                                        <td><?= $row->Nombre ?></td>
-                                        <td><?= $row->Descripcion ?></td>
+                                        <td><?= $row->IdCompras ?></td>
+                                        <td><?= $row->IdProve ?></td>                                        
+                                        <td><?= $row->DatoCompra ?></td>
+                                        <td><?= $row->Impuesto ?></td>
+                                        <td><?= $row->Total ?></td>
                                         <td>
 
 
-                                            <form action="<?= URL . "categoria/eliminar/{$row->IdCateg}" ?>" class="formulario-eliminar" method="POST">
-                                                <a is-modal="true" href="<?= URL . "categoria/detail/{$row->IdCateg}" ?>" class="btn btn-primary"> <i style="height: 25px;" class="far fa-edit"></i></a>
+                                            <form action="<?= URL . "compra/eliminar/{$row->IdCompras}" ?>" class="formulario-eliminar" method="POST">
+                                                <a is-modal="true" href="<?= URL . "compra/detail/{$row->IdCompras}" ?>" class="btn btn-primary"> <i style="height: 25px;" class="far fa-edit"></i></a>
 
                                                 <button type="submit" class="btn btn-warning" style="margin-left: 4px;"><i style="height: 25px;" class="fa fa-trash"></i></button>
                                             </form>
@@ -82,16 +98,7 @@ $this->layout('../../layouts/admin', ['title' => 'HTGVentas| Categorias']); ?>
         </div>
     </div>
 </div>
-<!-- Button trigger modal -->
 <?php $this->stop() ?>
-<?php $this->start('myModal') ?>
-<?php
-$title = 'Categoria-Detalle';
-include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
-
-<?php $this->stop() ?>
-<!-----scripts personalizados-->
-
 <?php $this->push('scripts') ?>
 
 <script src="<?= URL . 'assets/js/scripts/modal_crud.js' ?>"></script>
@@ -101,3 +108,4 @@ include_once MAINPATH . 'app/views/layouts/partials/_modalGenerico.php'; ?>
 <?php $this->end() ?>
 
 
+<!----------------------------------------------------------------------------------->

@@ -2,8 +2,8 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h1>Producto-<small>Detalle</small></h1>
-            <form id="myForm" action="<?= URL . 'producto/save' ?>" method="post">
+            <!-- <h1>Producto-<small>Detalle</small></h1> -->
+            <form id="myForm" action="<?= URL . 'producto/save' ?>" method="post" enctype="multipart/form-data" onsubmit="return validar();">
                 <input type="text" name="idproduct" value="<?= $data->IdProduct ?>">
                 <div class="row">
                     <div class="col-sm-4">
@@ -70,7 +70,10 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input type="file" name="imagen" class="form-control-file" id="imagen">
+                </div>
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form group">
@@ -80,15 +83,21 @@
                     </div>
                     <div class="col-sm-8">
                         <div id="mis_errores"></div>
-                        <div id="mis_errores"></div>s
+                        <div id="mis_errores"></div>
                     </div>
                 </div>
 
                 <br>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <div class="form group">
                             <button type="submit" class="btn btn-primary btn-block"> Guardar</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form group">
+
+                            <a href="../producto/index" class="btn btn-danger btn-block"> Cancelar</a>
                         </div>
                     </div>
                 </div>
